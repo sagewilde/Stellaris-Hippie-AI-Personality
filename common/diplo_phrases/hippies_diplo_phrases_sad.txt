@@ -1,0 +1,500 @@
+### Hippies Greetings But in a Minor Key
+greetings = {
+    PC_HOSTILE_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+                OR = {
+                    has_ethic = ethic_gestalt_consciousness
+                    is_xenophobe = yes
+                }
+            }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_03 = {
+		weight = { weight = 10000 }
+		trigger = {
+            has_ai_personality = peaceful_counterculture
+            has_technology = tech_pk_shielder
+			NOR = { 
+				is_same_species = FROM 
+				is_at_war_with = FROM 
+			}
+			FROM = { is_militarist = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+    PC_HOSTILE_GREETING_PK_SHIELDER_04 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_spiritualist = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_05 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+				OR = {
+					has_valid_civic = "civic_police_state"
+					has_valid_civic = "civic_dystopian_society"
+					has_valid_civic = "civic_individual_machine_warbots"
+				}
+			}
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+				is_domineering_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_06 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = "civic_naval_contractors"
+					has_valid_civic = "civic_private_military_contractors"
+					has_valid_civic = "civic_corporate_death_cult"
+					has_valid_civic = "civic_permanent_employment"
+					has_valid_civic = "civic_crusader_spirit_corporate"
+				}
+			}
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+				is_domineering_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_07 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+				is_domineering_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_HUMAN_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_human_species = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_HOSTILE_GREETING_PK_SHIELDER_HUMAN_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_human_species = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_MECH_HOSTILE_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_species_class = ROBOT }
+			OR = {
+				is_hostile_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+    }
+    PC_PROTECTIVE_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_protective_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_same_species = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_03 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOR = { 
+				is_same_species = FROM
+				is_at_war_with = FROM 
+			}
+            FROM = { is_pacifist = yes }
+			is_neutral_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_04 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOR = { 
+				is_same_species = FROM 
+				is_at_war_with = FROM 
+			}
+			FROM = { is_spiritualist = yes }
+			is_neutral_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_05 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+    }
+    PC_NEUTRAL_GREETING_PK_SHIELDER_06 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+				OR = {
+					has_ai_personality = honorbound_warriors
+					has_ai_personality = democratic_crusaders
+					has_ai_personality = utopia_builders
+					has_ai_personality = federation_builders
+				}
+			}
+			is_neutral_to = FROM
+		}
+    }
+	PC_NEUTRAL_GREETING_PK_SHIELDER_07 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+    }
+	PC_NEUTRAL_GREETING_PK_SHIELDER_08 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_neutral_to = FROM
+		}
+    }
+    PC_THREATENED_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_threatened_to = FROM
+		}
+	}
+    PC_FRIENDLY_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			is_in_federation_with = FROM
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_03 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = {
+                OR = {
+                    is_pacifist = yes
+                    is_egalitarian = yes
+                    is_xenophile = yes
+                }
+			}
+			OR = {
+				is_friendly_to = FROM
+				is_protective_to = FROM
+			}
+		}
+
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_04 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_militarist = yes }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_05 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_06 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			has_ascension_perk = ap_mind_over_matter
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_PK_SHIELDER_07 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_HUMAN_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { is_human_species = yes }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_FRIENDLY_GREETING_HM_PK_SHIELDER = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			NOT = { is_at_war_with = FROM }
+			FROM = { has_ethic = ethic_gestalt_consciousness }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			FROM = {
+				OR = {
+					is_militarist = yes
+					is_xenophobe = yes
+				}
+			}
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_03 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			FROM = {
+                OR = {
+                    has_authority = auth_imperial
+                    has_authority = auth_dictatorial
+                    has_authority = auth_corporate
+                }
+			}
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_04 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			FROM = {
+				NOR = {
+					has_ethic = ethic_green
+					has_ethic = ethic_fanatic_green
+				}
+			}
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_05 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			is_domineering_to = FROM
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_06 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			FROM = { is_homicidal = yes }
+		}
+    }
+    PC_WAR_GREETING_PK_SHIELDER_HUMAN_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			is_at_war_with = FROM
+			FROM = { is_human_species = yes }
+		}
+    }
+}
+
+action_insult = {
+	select = {
+        PC_PREINSULT_HIPPIE_PK_SHIELDER = {
+            weight = { weight = 10000 }
+            trigger = {
+                has_ai_personality = peaceful_counterculture
+                has_technology = tech_pk_shielder
+            }
+        }
+	}
+	propose = {
+        PC_INSULT_HIPPIE_PK_SHIELDER = {
+            trigger = {
+                has_ai_personality = peaceful_counterculture
+                has_technology = tech_pk_shielder
+            }
+        }
+	}
+	accept = {
+        PC_INSULTED_HIPPIE_PK_SHIELDER = {
+            weight = { weight = 10000 }
+            trigger = {
+				has_ai_personality = peaceful_counterculture
+				has_technology = tech_pk_shielder
+			}
+		}
+	}
+}

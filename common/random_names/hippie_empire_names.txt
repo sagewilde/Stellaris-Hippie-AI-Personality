@@ -1,0 +1,533 @@
+# Naturalist Commune Parts List
+empire_name_parts_list = {
+	key = hippie_nat
+	parts = {
+		Circle = 3
+		Gathering = 2
+		Tribe = 2
+		Garden-Worlds = 2
+		Union = 1
+		Guardians = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_nat_desc
+	parts = {
+		Peaceful = 3
+		Bohemian = 2
+		Harmonious = 2
+		Mindful = 1
+		Aquarian = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_nat_mid_desc
+	parts = {
+		Interstellar = 3
+		Allied = 3
+		Gaian = 2
+		United = 2
+		Brotherly = 1
+		Sisterly = 1
+	}
+}
+
+# Altruistic Utopia Parts List
+empire_name_parts_list = {
+	key = hippie_alt
+	parts = {
+		Circle = 3
+		Peoples_Gathering = 2
+		Community = 2
+		Commonality = 2
+		Union = 1
+		Polity = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_alt_desc
+	parts = {
+		Peaceful = 3
+		Bohemian = 2
+		Harmonious = 2
+		Mindful = 1
+		Aquarian = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_alt_mid_desc
+	parts = {
+		Interstellar = 3
+		Allied = 3
+		Communal = 2
+		United = 2
+		Brotherly = 1
+		Sisterly = 1
+	}
+}
+
+# Monastic Collective
+empire_name_parts_list = {
+	key = hippie_mon
+	parts = {
+		Circle = 3
+		Seekers = 2
+		Cloister = 2
+		Monastery = 2
+		Union = 1
+		Brotherhood = 1
+		Sisterhood = 1
+		Coven = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_mon_desc
+	parts = {
+		Peaceful = 3
+		Bohemian = 2
+		Harmonious = 2
+		Mindful = 1
+		Aquarian = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_mon_mid_desc
+	parts = {
+		Interstellar = 3
+		Allied = 3
+		Sacred = 2
+		United = 2
+		Holy = 1
+		Sheltering = 1
+	}
+}
+
+# Star Travelers
+empire_name_parts_list = {
+	key = hippie_sta
+	parts = {
+		Circle = 3
+		Seekers = 2
+		Libraries = 2
+		Archivists = 2
+		Union = 1
+		Conservatories = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_sta_desc
+	parts = {
+		Peaceful = 3
+		Bohemian = 2
+		Harmonious = 2
+		Mindful = 1
+		Aquarian = 1
+	}
+}
+
+empire_name_parts_list = {
+	key = hippie_sta_mid_desc
+	parts = {
+		Interstellar = 3
+		Allied = 3
+		United = 2
+		Scholastic = 2
+		Preservational = 1
+		Archival = 1
+	}
+}
+
+### Naturalist Commune
+
+# Naturalist Commune 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_naturalist_commune"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB {<hippie_nat> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <hippie_nat>}}"
+	# Empire of Sol
+}
+
+# Naturalist Commune 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_naturalist_commune"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB{<hippie_nat> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <hippie_nat>}}"
+	# Empire of Earth
+}
+
+# Naturalist Commune 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = "gov_naturalist_commune"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_nat>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_nat>}}"
+	# Human Empire
+}
+
+# Naturalist Commune 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_naturalist_commune"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{<hippie_nat_desc> {[This.GetSpeciesAdj] {<hippie_nat>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_nat>}}"
+	# Great Human Empire
+}
+
+# Naturalist Commune 5
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_naturalist_commune"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_nat_mid_desc> {<hippie_nat>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_nat>}}"
+	# Human Star Empire
+}
+
+### Altruistic Utopia
+
+# Altruistic Utopia 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_altruistic_utopia"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB {<hippie_alt> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <hippie_alt>}}"
+	# Empire of Sol
+}
+
+# Altruistic Utopia 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_altruistic_utopia"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB{<hippie_alt> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <hippie_alt>}}"
+	# Empire of Earth
+}
+
+# Altruistic Utopia 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = "gov_altruistic_utopia"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_alt>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_alt>}}"
+	# Human Empire
+}
+
+# Altruistic Utopia 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_altruistic_utopia"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{<hippie_mon_desc> {[This.GetSpeciesAdj] {<hippie_alt>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_alt>}}"
+	# Great Human Empire
+}
+
+# Altruistic Utopia 5
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_altruistic_utopia"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_alt_mid_desc> {<hippie_alt>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_alt>}}"
+	# Human Star Empire
+}
+
+### Monastic Collective
+
+# Monastic Collective 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_monastic_collective"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB {<hippie_mon> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <hippie_mon>}}"
+	# Empire of Sol
+}
+
+# Monastic Collective 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_monastic_collective"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB{<hippie_mon> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <hippie_mon>}}"
+	# Empire of Earth
+}
+
+# Monastic Collective 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = "gov_monastic_collective"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_mon>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_mon>}}"
+	# Human Empire
+}
+
+# Monastic Collective 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_monastic_collective"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{<hippie_mon_desc> {[This.GetSpeciesAdj] {<hippie_mon>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_mon>}}"
+	# Great Human Empire
+}
+
+# Monastic Collective 5
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_monastic_collective"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_mon_mid_desc> {<hippie_mon>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_mon>}}"
+	# Human Star Empire
+}
+
+### Star Travelers
+
+# Star Travelers 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_star_travelers"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB {<hippie_sta> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <hippie_sta>}}"
+	# Empire of Sol
+}
+
+# Star Travelers 2
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = "gov_star_travelers"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{AofB{<hippie_sta> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <hippie_sta>}}"
+	# Empire of Earth
+}
+
+# Star Travelers 3
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 5
+			has_government = "gov_star_travelers"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_sta>}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_sta>}}"
+	# Human Empire
+}
+
+# Star Travelers 4
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_star_travelers"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{<hippie_sta_desc> {[This.GetSpeciesAdj] {<hippie_sta>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_sta>}}"
+	# Great Human Empire
+}
+
+# Star Travelers 5
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 2
+			has_government = "gov_star_travelers"
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "{[This.GetSpeciesAdj] {<hippie_sta_mid_desc> {<hippie_sta>}}}"
+	adjective = "{[This.GetSpeciesAdj]}"
+	prefix_format = "{[This.GetSpeciesAdj] {<hippie_sta>}}"
+	# Human Star Empire
+}

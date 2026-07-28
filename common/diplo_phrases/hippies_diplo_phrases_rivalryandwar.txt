@@ -1,0 +1,584 @@
+action_make_rival = {
+	select = {
+		PC_MAKE_RIVAL_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_HIP_DFLT_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+				NOR = {
+					is_human_species = yes
+					is_megacorp = yes
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		PC_DFLT_HIP_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				from = {
+					NOR = {
+						is_human_species = yes
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+				is_megacorp = yes
+				NOT = {
+					is_human_species = yes
+				}
+			}
+		}
+		PC_CORPO_TO_HIPPIE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				from = {
+					is_megacorp = yes
+					NOT = {
+						is_human_species = yes
+					}
+				}
+			}
+		}
+		PC_HIP_HUM_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+				is_human_species = yes
+				NOT = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_HUM_HIP_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				from = {
+					is_human_species = yes
+					is_megacorp = no
+				}
+			}
+		}
+		PC_HIPPIE_TO_HIPPIE_MAKE_RIVAL_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_ANY_TO_HIPPIE_PK = {
+			weight = { weight = 10000 }
+			trigger = {
+				from = { 
+					has_ai_personality = peaceful_counterculture
+					has_technology = tech_pk_shielder
+				}
+			}
+		}
+	}
+	accept = {
+		PC_HIP_DFLT_MAKE_RIVAL_ACCEPT_HOSTILE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_human_species = yes
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		PC_HIP_DFLT_MAKE_RIVAL_ACCEPT_NEUTRAL = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_human_species = yes
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_HIP_DFLT_MAKE_RIVAL_ACCEPT_FRIENDLY = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_human_species = yes
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_HOSTILE = {
+			weight = { weight = 1000 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+				NOR = {
+					is_human_species = yes
+					is_megacorp = yes
+					has_ai_personality = peaceful_counterculture
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_NEUTRAL = {
+			weight = { weight = 1000 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+				NOR = {
+					is_human_species = yes
+					is_megacorp = yes
+					has_ai_personality = peaceful_counterculture
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_FRIENDLY = {
+			weight = { weight = 1000 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+				NOR = {
+					is_human_species = yes
+					is_megacorp = yes
+					has_ai_personality = peaceful_counterculture
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_RIVAL_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					is_megacorp = yes
+					NOT = { is_human_species = yes }
+				}
+			}
+		}
+		PC_CORPO_TO_HIPPIE_RIVAL_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+				is_megacorp = yes
+				NOT = { is_human_species = yes }
+			}
+		}
+		PC_HIPPIE_TO_HIPPIE_RIVAL_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_ai_personality = peaceful_counterculture
+					NOT = { is_human_species = yes }
+				}
+			}
+		}
+	}
+}
+
+action_end_rivalry = {
+	select = {
+		PC_END_RIVAL_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_HIP_DFLT_END_RIVALRY_FRIENDLY = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_HIP_DFLT_END_RIVALRY_NEUTRAL = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_HIP_DFLT_END_RIVALRY_HOSTILE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+		}
+		PC_DFLT_HIP_END_RIVALRY_HOSTILE = {
+			weight = { weight = 1000 }
+			trigger = {
+				NOR = {
+					has_ai_personality = peaceful_counterculture
+					is_megacorp = yes
+				}
+				FROM = { has_ai_personality = peaceful_counterculture }
+				OR = {
+					is_unfriendly_to = FROM
+					is_domineering_to = FROM
+					is_hostile_to = FROM
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_END_RIVALRY_FRIENDLY = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_megacorp = yes }
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_CORPO_TO_HIPPIE_END_RIVALRY_FRIENDLY= {
+			weight = { weight = 1000 }
+			trigger = {
+				NOR = {
+					has_ai_personality = peaceful_counterculture
+					is_megacorp = yes
+					is_human_species = yes
+					has_ethic = ethic_gestalt_consciousness
+				}
+				FROM = { has_ai_personality = peaceful_counterculture }
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_END_RIVALRY_NEUTRAL= {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_megacorp = yes }
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_CORPO_TO_HIPPIE_END_RIVALRY_NEUTRAL= {
+			weight = { weight = 1000 }
+			trigger = {
+				is_megacorp = yes
+				FROM = { has_ai_personality = peaceful_counterculture }
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_END_RIVALRY_HOSTILE= {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_megacorp = yes }
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+			
+		}
+		PC_CORPO_TO_HIPPIE_END_RIVALRY_HOSTILE= {
+			weight = { weight = 1000 }
+			trigger = {
+				is_megacorp = yes
+				FROM = { has_ai_personality = peaceful_counterculture }
+				OR = {
+					is_unfriendly_to = FROM
+					is_threatened_to = FROM
+					is_domineering_to = FROM
+				}
+			}
+		}
+		PC_HIPPIE_TO_HIPPIE_END_RIVALRY= {
+			weight = { weight = 10000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		# Hippies to Default
+		PC_HIP_DFLT_END_RIVALRY_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					NOR = {
+						is_megacorp = yes
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_END_RIVALRY_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		PC_HIPPIE_TO_CORPO_END_RIVALRY_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+}
+
+action_declare_war = {
+	propose = {
+		# Generic
+		PC_DOW_PROPOSE_01 = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		# Crisis or Homicidal
+		PC_DOW_PROPOSE_02 = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = {
+					has_ai_personality = peaceful_counterculture
+				}
+				OR = { 
+					has_crisis_level = 5
+					is_homicidal = yes
+				}
+			}
+		}
+		# Subject
+		PC_VASSAL_DOW_PROPOSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					exists = overlord
+					overlord = { is_same_value = ROOT }
+				}
+			}
+		}
+	}
+	accept = {
+		# Generic
+		PC_DOW_ACCEPT = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOT = { has_technology = tech_pk_shielder }
+			}
+		}
+		# Unlocked Global Pacifier
+		PC_DOW_ACCEPT_PK = {
+			weight = { weight = 1000 }
+			trigger = {
+				AND = {
+					has_ai_personality = peaceful_counterculture
+					has_technology = tech_pk_shielder
+				}
+			}
+		}
+	}
+	propose_vote = {
+		PC_DOW_VOTE_PROPOSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+}
+
+action_offer_peace = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		# Generic Empires
+		PC_PEACE_PROPOSE_01 = {
+			weight = { weight = 1000 }
+			trigger = {
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		# Plants
+		PC_PEACE_PROPOSE_02 = {
+			weight = { weight = 1000 }
+			trigger = {
+				OR = {
+					is_species_class = FUN
+					is_species_class = PLANT
+				}
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		# Peace with Humans
+		PC_PEACE_PROPOSE_03 = {
+			weight = { weight = 1000 }
+			trigger = {
+				is_human_species = yes 
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		# Hippie-Haters
+		PC_PEACE_PROPOSE_04 = {
+			weight = { weight = 1000 }
+			trigger = {
+				is_anti_hippie = yes
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+		# Global Pacifier Unlocked
+		PC_PEACE_PROPOSE_PK = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = {
+					AND = {
+						has_ai_personality = peaceful_counterculture
+						has_technology = tech_pk_shielder
+					}
+				}
+			}
+		}
+	}
+	accept = {
+		# Generic Empires
+		PC_PEACE_ACCEPT_01 = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOT = { has_technology = tech_pk_shielder }
+			}
+		}
+		# Peace with Humans
+		PC_PEACE_ACCEPT_02 = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOT = { has_technology = tech_pk_shielder }
+				FROM = { is_human_species = yes	}
+			}
+		}
+		# Global Pacifier Unlocked
+		PC_PEACE_ACCEPT_PK = {
+			weight = { weight = 10000 }
+			trigger = {
+				AND = {
+					has_ai_personality = peaceful_counterculture
+					has_technology = tech_pk_shielder 
+				}
+			}
+		}
+	}
+	refuse = {
+		PC_PEACE_REFUSE = {
+			weight = { weight = 1000 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}

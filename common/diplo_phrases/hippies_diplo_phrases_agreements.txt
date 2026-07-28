@@ -1,0 +1,1747 @@
+##########################
+# HIPPIE DIPLOMACY PHRASES
+##########################
+
+# COMMERCE
+
+action_offer_trade_deal = {
+	propose = {
+		PC_OFFER_TRADE_DEAL_PROPOSE_1 = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				NOR = {
+					is_machine_empire = yes
+					has_ai_personality = benevolent_wilderness
+				}
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_PROPOSE_2 = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				NOR = {
+					is_machine_empire = yes
+					has_ai_personality = benevolent_wilderness
+				}
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_PROPOSE_3 = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				is_machine_empire = yes
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_PROPOSE_4 = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = benevolent_wilderness
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_1 = {
+			only_for_gift = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				FROM = { NOT = { has_ai_personality = benevolent_wilderness } }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_2 = {
+			only_for_gift = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				FROM = { NOT = { has_ai_personality = benevolent_wilderness } }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_HOSTILE_1 = {
+			only_for_gift = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_HOSTILE_2 = {
+			only_for_gift = yes
+			trigger = {
+				NOR = {
+					is_country_type = fallen_empire
+					is_machine_empire = yes
+					is_megacorp = yes
+				}
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_BW_1 = {
+			only_for_gift = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				FROM = { has_ai_personality = benevolent_wilderness }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_GIFT_ACCEPT_BW_2 = {
+			only_for_gift = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+				FROM = { has_ai_personality = benevolent_wilderness }
+			}
+		}
+		PC_OFFER_TRADE_DEAL_ACCEPT = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_OFFER_TRADE_DEAL_REFUSE = {
+			only_for_trade = yes
+			weight = { weight = 100 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+		PC_CONSIDER_BAD = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+}
+
+# DEFENSIVE PACTS
+
+action_form_defensive_pact = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_FORM_DP_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_FORM_DP_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_FORM_DP_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_FORM_DP_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_break_defensive_pact = {
+	select = {
+		PC_BREAK_DP_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_BREAK_DP_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_BREAK_DP_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+# NON-AGGRESSION & INDEPENDENCE
+
+action_form_non_aggression_pact = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_FORM_NAP_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_FORM_NAP_PROPOSE_01 = {
+			weight = { weight = 50 }
+			trigger = {
+				NOT = { is_anti_hippie = yes }
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+		PC_FORM_NAP_PROPOSE_02 = {
+			weight = { weight = 50 }
+			trigger = {
+				is_anti_hippie = yes
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_FORM_NAP_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_FORM_NAP_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_break_non_aggression_pact = {
+	select = {
+		PC_BREAK_NAP_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+
+	propose = {
+		PC_BREAK_NAP_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+
+	accept = {
+		PC_BREAK_NAP_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_guarantee_independence = {
+	select = {
+		PC_GUARANTEE_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+
+	propose = {
+		PC_GUARANTEE_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+
+	accept = {
+		PC_GUARANTEE_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_break_guarantee = {
+	select = {
+		PC_REVOKE_GUARANTEE_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+
+	propose = {
+		PC_REVOKE_GUARANTEE_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+
+	accept = {
+		PC_REVOKE_GUARANTEE_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_support_independence = {
+	select = {
+		PC_SUPPORT_INDEPENDENCE_SELECT_LOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+		PC_SUPPORT_INDEPENDENCE_SELECT_DISLOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+
+	propose = {
+		PC_SUPPORT_INDEPENDENCE_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+	}
+
+	accept = {
+		PC_SUPPORT_INDEPENDENCE_ACCEPT_LOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+		PC_SUPPORT_INDEPENDENCE_ACCEPT_DISLOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+}
+
+action_break_support = {
+	select = {
+		PC_REVOKE_INDEPENDENCE_SELECT_LOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+		PC_REVOKE_INDEPENDENCE_SELECT_DISLOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+
+	propose = {
+		PC_REVOKE_INDEPENDENCE_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = {
+					has_ai_personality = peaceful_counterculture
+				}
+			}
+		}
+	}
+
+	accept = {
+		PC_REVOKE_INDEPENDENCE_ACCEPT_LOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+		PC_REVOKE_INDEPENDENCE_ACCEPT_DISLOYAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_at_war_with = overlord
+					is_disloyal_to = overlord
+				}
+			}
+		}
+	}
+}
+
+# BORDERS & MIGRATION
+
+action_form_migration_pact = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_FORM_MIGRATION_PACT_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_FORM_MIGRATION_PACT_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_FORM_MIGRATION_PACT_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_FORM_MIGRATION_PACT_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_break_migration_pact = {
+	select = {
+		PC_BREAK_MIGRATION_PACT_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_BREAK_MIGRATION_PACT_PROPOSE_01 = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_BREAK_MIGRATION_PACT_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_BREAK_MIGRATION_PACT_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_open_borders = {
+	select = {
+		PC_OPEN_BORDERS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_OPEN_BORDERS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_OPEN_BORDERS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_OPEN_BORDERS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_close_borders = {
+	select = {
+		PC_CLOSE_BORDERS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_CLOSE_BORDERS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_CLOSE_BORDERS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+# FEDERATIONS
+
+action_invite_to_federation = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ITOA_SELECT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		PC_ITOA_SELECT_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+	propose = {
+		PC_ITOA_PROPOSE_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { 
+					has_federation = yes
+					has_ai_personality = peaceful_counterculture 
+				}
+			}
+		}
+		PC_ITOA_PROPOSE_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { 
+					has_federation = no
+					has_ai_personality = peaceful_counterculture 
+				}
+			}
+		}
+	}
+	accept = {
+		PC_ITOA_ACCEPT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		PC_ITOA_ACCEPT_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+	refuse = {
+		PC_ITOA_REFUSE_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = yes
+				}
+			}
+		}
+		PC_ITOA_REFUSE_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = {
+					has_federation = no
+				}
+			}
+		}
+	}
+}
+
+action_ask_to_join_federation = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_TO_JOIN_A_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_TO_JOIN_A_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_TO_JOIN_A_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_TO_JOIN_A_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_leave_federation = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_TO_LEAVE_A_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_TO_LEAVE_A_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_TO_LEAVE_A_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_kick_from_federation = {
+	select = {
+		PC_KICK_FROM_ALLIANCE_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_KICK_FROM_ALLIANCE_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_KICK_FROM_ALLIANCE_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_offer_federation_association_status = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_OFFER_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_OFFER_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_OFFER_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_OFFER_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_revoke_federation_association_status = {
+	select = {
+		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_ask_for_federation_association_status = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_end_federation_association_status = {
+	select = {
+		PC_END_FEDERATION_ASSOCIATION_STATUS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_END_FEDERATION_ASSOCIATION_STATUS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_END_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_ask_to_leave_federation = {
+	select = {
+		PC_LEAVE_A_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_LEAVE_A_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_LEAVE_A_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+# SUBJUGATION
+
+action_demand_subjugation = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		# Vassalization Select
+		 PC_DEMAND_VASS_SELECT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		# Vassalization Select (Hostile)
+		PC_DEMAND_VASS_SELECT_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOT = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+	}
+	propose = {
+		PC_DEMAND_VASS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		# Accept
+		PC_DEMAND_VASS_ACCEPT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+		# Accept Wilderness
+		PC_DEMAND_VASS_ACCEPT_2 = {
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { has_ai_personality = benevolent_wilderness }
+			}
+		}
+		# Accept Humans
+		PC_DEMAND_VASS_ACCEPT_3 = {
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_human_species = yes }
+			}
+		}
+	}
+	refuse = {
+		# Refuse
+		PC_DEMAND_VASS_REFUSE_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		# Refuse Hostile
+		PC_DEMAND_VASS_REFUSE_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				NOT = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+	}
+}
+
+action_ask_to_become_subjugated = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_FOR_VASS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_FOR_VASS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_FOR_VASS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_FOR_VASS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_demand_subsidiary = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		# Tankies
+		PC_DEMAND_SUBS_SELECT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		PC_DEMAND_SUBS_SELECT_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	propose = {
+		PC_DEMAND_VASS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		# Tankies
+		PC_DEMAND_SUBS_ACCEPT_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		PC_DEMAND_SUBS_ACCEPT_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	refuse = {
+		# Tankies
+		PC_DEMAND_SUBS_REFUSE_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		PC_DEMAND_SUBS_REFUSE_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+}
+
+action_ask_to_become_subsidiary = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_FOR_VASS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		# Tankies
+		PC_ASK_FOR_SUBS_PROPOSE_1 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_socialism = yes }
+			}
+		}
+		# Capitalists
+		PC_ASK_FOR_SUBS_PROPOSE_2 = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				FROM = { is_capitalism = yes }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_FOR_VASS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_FOR_VASS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_release_subject = {
+	select = {
+		PC_RELEASE_SUBJECT_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_RELEASE_SUBJECT_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_RELEASE_SUBJECT_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_ask_to_be_released_subject = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_TO_BE_RELEASED_SUBJECT_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_TO_BE_RELEASED_SUBJECT_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_TO_BE_RELEASED_SUBJECT_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_TO_BE_RELEASED_SUBJECT_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_demand_tributary = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_DEMAND_TRIBUTARY_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_DEMAND_VASS_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_DEMAND_TRIBUTARY_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_DEMAND_TRIBUTARY_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_ask_to_become_tributary = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {
+		PC_ASK_FOR_VASS_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ASK_BECOME_TRIBUTARY_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ASK_FOR_VASS_ACCEPT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	refuse = {
+		PC_ASK_FOR_VASS_REFUSE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+# COOPERATION
+
+action_form_commercial_pact = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = {	}
+	propose = { }
+	accept = {	}
+	refuse = {	}
+}
+
+action_form_research_agreement = {
+	consider = {
+		PC_CONSIDER = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	select = { }
+	propose = {	}
+	accept = { }
+	refuse = { }
+}
+
+# EMBASSIES
+
+action_embassy = {
+	select = {
+		PC_ESTABLISH_EMBASSY_SELECT = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_ESTABLISH_EMBASSY_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ESTABLISH_EMBASSY_ACCEPT_FRIENDLY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_ESTABLISH_EMBASSY_ACCEPT_NEUTRAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_ESTABLISH_EMBASSY_ACCEPT_HOSTILE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+	refuse = { }
+}
+
+action_recall_embassy = {
+	select = {
+		PC_RECALL_EMBASSY_FRIENDLY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		PC_RECALL_EMBASSY_NEUTRAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		PC_RECALL_EMBASSY_HOSTILE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+	propose = {
+		PC_RECALL_EMBASSY_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		01_RECALL_EMBASSY_ACCEPT_FRIENDLY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_friendly_to = FROM
+					is_cordial_to = FROM
+					is_protective_to = FROM
+				}
+			}
+		}
+		01_RECALL_EMBASSY_ACCEPT_NEUTRAL = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_neutral_to = FROM
+					is_threatened_to = FROM
+				}
+			}
+		}
+		01_RECALL_EMBASSY_ACCEPT_HOSTILE = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+					is_unfriendly_to = FROM
+				}
+			}
+		}
+	}
+}
+
+# AGREEMENTS AND FEALTY
+
+action_negotiate_existing_agreement = {
+	propose = {
+		PC_NEGOTIATE_EXISTING_AGREEMENT_PROPOSE = {
+			weight = { weight = 50 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ACCEPT_NEGOTIATE_EXISTING_AGREEMENT = {
+			weight = { weight = 50 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	refuse = {
+		PC_DECLINE_NEGOTIATE_EXISTING_AGREEMENT = {
+			weight = { weight = 50 }
+			trigger = {
+				FROM = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+}
+
+action_pledge_secret_fealty = {
+	select = {
+		PC_SELECT_PLEDGE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_PROPOSE_PLEDGE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ACCEPT_PLEDGE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_propose_secret_fealty = {
+	select = {
+		PC_SELECT_PROPOSE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_PROPOSE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ACCEPT_PROPOSE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	reject = {
+		PC_REJECT_PROPOSE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_propose_to_break_secret_fealty = {
+	select = {
+		PC_SELECT_REVOKE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_PROPOSE_REVOKE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ACCEPT_REVOKE_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
+
+action_break_secret_fealty = {
+	select = {
+		PC_SELECT_BREAK_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	propose = {
+		PC_PROPOSE_BREAK_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				from = { has_ai_personality = peaceful_counterculture }
+			}
+		}
+	}
+	accept = {
+		PC_ACCEPT_BREAK_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+	reject = {
+		PC_REJECT_BREAK_SECRET_FEALTY = {
+			weight = { weight = 50 }
+			trigger = {
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}

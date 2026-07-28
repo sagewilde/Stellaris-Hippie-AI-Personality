@@ -1,0 +1,3 @@
+empire_hippies = {
+	flags = { hippies custom_start_screen }
+}

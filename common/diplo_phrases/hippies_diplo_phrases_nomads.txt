@@ -1,0 +1,340 @@
+greetings = {
+	PC_NOMAD_HOSTILE_GREETING_FROM = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { NOT = { is_nomadic = yes } }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_HOSTILE_GREETING_TO = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOR = { 
+				is_at_war_with = FROM 
+				is_nomadic = yes 
+			}
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_HOSTILE_GREETING_BOTH = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_NEUTRAL_GREETING_FROM = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { NOT = { is_nomadic = yes } }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_NEUTRAL_GREETING_TO = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOR = { 
+				is_at_war_with = FROM 
+			 	is_nomadic = yes 
+			}
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_NEUTRAL_GREETING_BOTH = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_FRIENDLY_GREETING_FROM_01 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { NOT = { is_nomadic = yes } }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_FRIENDLY_GREETING_FROM_02 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { NOT = { is_nomadic = yes } }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_FRIENDLY_GREETING_TO = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOR = { 
+				is_at_war_with = FROM
+				is_nomadic = yes 
+			}
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_FRIENDLY_GREETING_BOTH = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_at_war_with = FROM }
+			is_nomadic = yes
+			FROM = { is_nomadic = yes }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+		}
+	}
+	PC_NOMAD_WAR_GREETING_FROM = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			is_nomadic = yes
+			NOT = { has_technology = tech_pk_shielder }
+			is_at_war_with = FROM
+			FROM = { NOT = { is_nomadic = yes } }
+		}
+	}
+	PC_NOMAD_WAR_GREETING_TO = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { has_technology = tech_pk_shielder }
+			NOT = { is_nomadic = yes }
+			is_at_war_with = FROM
+			FROM = { 
+				is_nomadic = yes 
+			 	has_valid_civic = civic_caravan_masters 
+			}
+		}
+	}
+	PC_NOMAD_WAR_GREETING_BOTH = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			is_nomadic = yes
+			is_at_war_with = FROM
+			FROM = { is_nomadic = yes }
+		}
+	}
+	PC_NOMAD_OVERLORD_GREETING_FROM = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			is_nomadic = yes
+			FROM = {
+				NOT = { is_nomadic = yes }
+				is_overlord_to = ROOT
+			}
+		}
+	}
+	PC_NOMAD_OVERLORD_GREETING_TO = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { is_nomadic = yes }
+			FROM = { is_nomadic = yes }
+			is_overlord_to = FROM
+		}
+	}
+	PC_NOMAD_OVERLORD_GREETING_BOTH = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			is_nomadic = yes
+			FROM = { is_nomadic = yes }
+			is_overlord_to = FROM
+		}
+	}
+}
+
+action_form_waystation_pact = {
+	select = {
+		# Settled grants to nomad
+		PC_GRANT_WAYSTATION_PACT_SELECT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+		# Nomad requests from settled
+		PC_REQUEST_WAYSTATION_PACT_SELECT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = no 
+				}
+			}
+		}
+		# Nomad shares with nomad
+		PC_SHARE_WAYSTATION_PACT_SELECT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+	}
+	propose = {
+		PC_GRANT_WAYSTATION_PACT_PROPOSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+		PC_REQUEST_WAYSTATION_PACT_PROPOSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = no
+				}
+			}
+		}
+		PC_SHARE_WAYSTATION_PACT_PROPOSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+	}
+	accept = {
+		PC_GRANT_WAYSTATION_PACT_ACCEPT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+		PC_REQUEST_WAYSTATION_PACT_ACCEPT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = no 
+				}
+			}
+		}
+		PC_SHARE_WAYSTATION_PACT_ACCEPT = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+	}
+	refuse = {
+		PC_GRANT_WAYSTATION_PACT_REFUSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+		PC_REQUEST_WAYSTATION_PACT_REFUSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = no 
+				}
+			}
+		}
+		PC_SHARE_WAYSTATION_PACT_REFUSE = {
+			weight = { weight = 10000 }
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					has_ai_personality = peaceful_counterculture
+					is_nomadic = yes 
+				}
+			}
+		}
+	}
+}

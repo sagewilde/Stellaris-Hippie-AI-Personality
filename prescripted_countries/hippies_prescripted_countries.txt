@@ -1,0 +1,78 @@
+# Land of Peace and Harmony (Default)
+hippies = {
+	name = "EMPIRE_DESIGN_hippies"
+	adjective = "PRESCRIPTED_adjective_hippies"
+	spawn_enabled = yes
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+    flag = empire_hippies
+
+	species = {
+		class = "REP"
+		portrait = "rep14"
+		name = "PRESCRIPTED_species_hippies"
+		plural = "PRESCRIPTED_species_plural_hippies"
+		adjective = "PRESCRIPTED_species_adjective_hippies"
+		name_list = "fantasy_hippies_2"
+		gender = not_set
+		trait = "trait_organic"
+		trait = "trait_shelled"
+		trait = "trait_conservational"
+		trait = "trait_weak"
+		trait = "trait_sedentary"
+	}
+
+    ship_prefix = "PRESCRIPTED_ship_prefix_hippies"	
+
+    planet_name = "PRESCRIPTED_planet_name_hippies"
+	planet_class = "pc_continental"
+	system_name = "PRESCRIPTED_system_name_hippies"
+	initializer = "custom_starting_init_06"
+    
+	room = "solarpunk_room"
+
+    ethic = "ethic_egalitarian"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_fanatic_pacifist"
+	ethic = "ethic_green"
+	authority = auth_direct_democratic
+	government = gov_naturalist_commune
+    civics = {
+		"civic_beastmasters"
+		"civic_naturalism"
+		"civic_peaceful_republic"
+	}
+	origin = "origin_default"
+	
+	graphical_culture = "plantoid_01"
+	city_graphical_culture = "solarpunk_01"
+
+	empire_flag = {
+		icon = {
+			category = "human"
+			file = "flag_human_3.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "flag_BG_37.dds"
+		}
+		colors = {
+			"light_grey"
+			"moss_green"
+			"black"
+			"null"
+		}
+	}
+
+	ruler = {
+		gender = female
+		name = "PRESCRIPTED_ruler_name_hippies"
+		portrait = "rep14"
+		texture = 0
+		evolution_mask = 0
+		attachment = 0
+		clothes = 0
+		trait = "trait_ruler_eye_for_talent"
+		leader_class = "official"
+	}
+}

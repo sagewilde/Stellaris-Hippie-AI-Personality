@@ -1,0 +1,25 @@
+# Hippies vs 'The Man'
+opinion_pc_vs_the_man = {
+	trigger = {
+		has_hippie_government = yes
+		FROM = { is_anti_hippie = yes }
+	}
+	opinion = {
+		modifier = {
+			add = -50
+		}
+	}
+}
+
+# 'The Man' vs Hippies
+opinion_the_man_vs_pc = {
+	trigger = {
+		is_anti_hippie = yes
+		FROM = { has_hippie_government = yes }
+	}
+	opinion = {
+		modifier = {
+			add = -50
+		}
+    }
+}

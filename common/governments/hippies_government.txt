@@ -1,0 +1,247 @@
+# Naturalist Commune
+gov_naturalist_commune = {
+	ruler_title = RT_GARDENER
+
+	should_force_rename = yes
+
+	possible = {
+		has_ethic = ethic_fanatic_pacifist
+		OR = {
+			has_ethic = ethic_green
+			has_ethic = ethic_fanatic_green
+		}
+		NOT = { has_murderous_civic_or_origin = yes }
+		NOR = { 
+			has_origin = origin_default_nomads
+			has_origin = origin_forever_cruise
+			has_origin = origin_sacred_path
+		}
+	}
+
+	weight = {
+		base = 500
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_green
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_valid_civic = civic_agrarian_idyll
+				has_valid_civic = civic_astrometeorology
+				has_valid_civic = civic_circular_economy
+				has_valid_civic = civic_environmentalist
+				has_valid_civic = civic_guided_sapience
+				has_valid_civic = civic_naturalism
+				has_valid_civic = civic_primitive_enthusiasts
+				has_valid_civic = civic_terraforming
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_anglers
+				has_civic = civic_beastmasters
+				has_civic = civic_idyllic_bloom
+				has_civic = civic_here_be_dragons
+				has_civic = PrimPlayer_civic_environmental_synergy
+				has_civic = PrimPlayer_civic_here_be_dragons
+				has_origin = origin_fruitful
+				has_origin = origin_here_be_dragons
+				has_origin = origin_life_seeded
+				has_origin = origin_nomadic_settled
+				has_origin = origin_ocean_paradise
+				has_origin = origin_primal_calling
+			}
+		}
+	}
+}
+
+# Altruistic Utopia
+gov_altruistic_utopia = {
+	ruler_title = RT_ELECTED_VOCALIST
+
+	should_force_rename = yes
+
+	possible = {
+		has_ethic = ethic_fanatic_pacifist
+		OR = {
+			has_ethic = ethic_green
+			has_ethic = ethic_fanatic_green
+		}
+		OR = {
+			has_ethic = ethic_egalitarian
+			has_ethic = ethic_fanatic_egalitarian
+			has_ethic = ethic_socialism 
+			has_ethic = ethic_fanatic_socialism
+		}
+		NOT = { has_murderous_civic_or_origin = yes	}
+	}
+
+	weight = {
+		base = 500
+		modifier = {
+			factor = 10
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_socialism
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_valid_civic = civic_anarchy_ideals
+				has_valid_civic = civic_anarchy_utopia
+				has_valid_civic = civic_bureaucracy
+				has_valid_civic = civic_civil_education
+				has_valid_civic = civic_executive_committee
+				has_valid_civic = civic_idealistic_foundation
+				has_valid_civic = civic_labour_unions
+				has_valid_civic = civic_parliamentary_system
+				has_valid_civic = civic_peaceful_republic
+				has_valid_civic = civic_shared_burden
+				has_valid_civic = civic_welfare_state
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_symbiotic_race
+				has_civic = PrimPlayer_civic_symbiotic_presapients
+				has_origin = origin_broken_shackles
+				has_origin = origin_common_ground
+				has_origin = origin_default
+				has_origin = origin_forever_cruise
+				has_origin = origin_shoulders_of_giants
+				has_origin = origin_syncretic_evolution
+			}
+		}
+	}
+}
+
+# Monastic Collective
+gov_monastic_collective = {
+	ruler_title = RT_ELDER
+	
+	should_force_rename = yes
+
+	possible = {
+		has_ethic = ethic_fanatic_pacifist
+		OR = {
+			has_ethic = ethic_green
+			has_ethic = ethic_fanatic_green
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOT = { has_murderous_civic_or_origin = yes	}
+	}
+
+	weight = {
+		base = 500
+		modifier = {
+			factor = 10
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_valid_civic = civic_asceticism
+				has_valid_civic = civic_dimensional_worship
+				has_valid_civic = civic_divine_council
+				has_valid_civic = civic_enlightment
+				has_valid_civic = civic_evangelism
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_keepers_harmony
+				has_valid_civic = civic_spiritual_democracy
+				has_valid_civic = civic_spiritual_seekers
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_chosen
+				has_civic = civic_pyrolatry
+				has_civic = civic_scion_spiritualist
+				has_civic = civic_secret_societies
+				has_civic = civic_storm_callers
+				has_civic = civic_superstitious_beliefs
+				has_civic = PrimPlayer_civic_scion_spiritualist
+				has_origin = origin_remnants
+				has_origin = origin_sacred_path
+				has_origin = origin_scion
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
+	}
+}
+
+# Star Travelers
+gov_star_travelers = {
+	ruler_title = RT_STARGAZER
+
+	should_force_rename = yes
+
+	possible = {
+		has_ethic = ethic_fanatic_pacifist
+		OR = {
+			has_ethic = ethic_green
+			has_ethic = ethic_fanatic_green
+		}
+		OR = {
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		NOT = { has_murderous_civic_or_origin = yes	}
+	}
+
+	weight = {
+		base = 500
+		modifier = {
+			factor = 10
+			OR = { 
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+                has_valid_civic = civic_exploration
+				has_valid_civic = civic_flight_schools
+				has_valid_civic = civic_free_haven
+				has_valid_civic = civic_heroic_tales
+				has_valid_civic = civic_hyperspace_specialty
+				has_valid_civic = civic_innovative_economy
+				has_valid_civic = civic_memory_vault
+				has_valid_civic = civic_peacekeepers
+				has_valid_civic = civic_star_settlers
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				has_civic = civic_eager_explorers
+				has_civic = civic_galactic_curators
+				has_civic = civic_star_seekers
+				has_civic = civic_scion_materialist
+				has_civic = PrimPlayer_civic_scion_materialist
+				has_civic = PrimPlayer_civic_stargazers
+				has_origin = origin_default_nomads
+				has_origin = origin_doomsday
+				has_origin = origin_galactic_doorstep
+				has_origin = origin_lost_colony
+				has_origin = origin_scion
+				has_origin = origin_shattered_ring
+				has_origin = origin_star_slingshot
+				has_origin = origin_storm_chasers
+				has_origin = origin_treasure_hunters
+				has_origin = origin_void_dwellers
+			}
+		}
+	}
+}

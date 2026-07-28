@@ -1,0 +1,404 @@
+#################
+# APOCALYPSE ASCENSION PERKS
+#################
+
+ap_colossus = {
+	potential = {
+		host_has_dlc = "Apocalypse"
+		NOT = {
+			has_ascension_perk = ap_colossus
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = enable_colossus_project
+		custom_tooltip = describe_colossus_project
+		hidden_effect = {
+			country_event = { id = apoc.100 }
+		}
+	}
+
+	possible = {
+		has_technology = tech_titans
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+	}
+
+	modifier = {
+		country_war_exhaustion_mult = -0.15
+		ships_upkeep_mult = -0.05
+		add_attunement_the_eater_of_worlds = @ascension_perk_attunement1
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 10
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+		modifier = {
+			factor = 0.1
+            AND = {
+			    OR = {
+			    	is_xenophile = yes
+			    	has_valid_civic = civic_hive_familiar_face
+			    }
+                NOT = { has_ai_personality = peaceful_counterculture }
+            }
+		}
+		modifier = {
+			factor = 0.25
+			is_pacifist = yes
+			NOT = { has_ai_personality = peaceful_counterculture }
+		}
+		modifier = {
+			factor = 2
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		modifier = {
+			factor = 2
+			is_machine_empire = yes #just because
+		}
+		modifier = {
+			factor = 2
+			has_ascension_perk = ap_become_the_crisis
+		}
+		modifier = {
+			factor = 0
+			has_crisis_level = crisis_level_5
+		}
+		modifier = {
+			factor = 1000	# Two words for you; Nuclear Gandhi. They get the Global Pacifier and someone gives them a reason to use it, by god, they will use it.
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}
+
+#################
+# GENERIC ASCENSION PERKS
+#################
+
+ap_world_shaper = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_tech_climate_restoration"
+			has_technology = tech_climate_restoration
+		}
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_1"
+			num_ascension_perks > 0
+		}
+	}
+
+	modifier = {
+		terraforming_cost_mult = -0.25
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
+	}
+
+	on_enabled = {
+		custom_tooltip = "allow_gaia"
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_world_shaper
+		}
+		OR = {
+			is_hive_empire = no
+			is_wilderness_empire = yes
+		}
+		OR = {
+			is_machine_empire = no
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 0
+			OR = {
+				is_void_dweller_empire = yes
+				has_origin = origin_shattered_ring
+				has_trait = trait_aquatic
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_xenophobe
+			}
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_fanatic_xenophobe
+				is_wilderness_empire = yes
+			}
+		}
+		modifier = { #only way to get more nice planets
+			factor = 100
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture # Hippies and gaia worlds go together like weed and brownies.
+		}
+	}
+}
+
+ap_eternal_vigilance = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_technology_starbase_4"
+			OR = {
+				has_technology = tech_starbase_4
+				has_tradition = tr_unyielding_finish
+			}
+		}
+	}
+
+	modifier = {
+		country_commander_cap_add = 1
+		shipclass_starbase_damage_mult = 0.25
+		shipclass_starbase_hull_mult = 0.25
+		shipclass_military_station_damage_mult = 0.25
+		starbase_defense_platform_capacity_add = 5
+		ship_military_station_small_upkeep_mult = -0.5
+		add_attunement_the_cradle_of_souls = @ascension_perk_attunement1
+	}
+
+	triggered_modifier = {
+		potential = {
+			has_biogenesis_dlc = yes
+		}
+		deep_space_citadel_limit_add = 1
+	}
+
+	on_enabled = {
+		custom_tooltip = ap_eternal_vigilance_tt
+		hidden_effect = {
+			country_event = {
+				id = country.2050
+				days = 180
+			}
+		}
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_eternal_vigilance
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 5
+			has_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 5
+			has_civic = civic_sovereign_guardianship
+		}
+		modifier = {
+			factor = 5
+			has_tradition = tr_unyielding_finish
+		}
+		modifier = {
+			factor = 1.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 1.5
+			any_neighbor_country = {
+				is_country_type = default
+				opinion_level = { who = root level <= poor }
+				relative_power = { who = root value >= superior }
+			}
+		}
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture # Listen, everybody picks on them! They gotta be able to defend themselves!
+		}
+	}
+}
+
+ap_consecrated_worlds = {
+	on_enabled = {
+		custom_tooltip = "allow_edict_consectrated_worlds"
+		custom_tooltip = "describe_edict_consectrated_worlds"
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_consecrated_worlds
+		}
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+
+	modifier = {
+		add_attunement_the_composer_of_strands = @ascension_perk_attunement1
+	}
+
+	ai_weight = {
+		base = 10
+		modifier = {
+			factor = 100
+			has_ai_personality = peaceful_counterculture # They're earth-worshippers. Duh.
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = civic_machine_cult_machine
+				has_valid_civic = civic_machine_cult
+			}
+		}
+	}
+}
+
+#################
+# MEGACORP ASCENSION PERKS
+#################
+
+ap_arcology_project = {
+    potential = {
+        host_has_dlc = "Megacorp"
+        OR = {
+            is_regular_empire = yes
+            has_valid_civic = civic_machine_servitor
+            has_valid_civic = civic_machine_cult_machine
+            is_xenophile = yes
+        }
+        NOT = {
+            has_valid_civic = civic_agrarian_idyll
+        }
+        NOT = {
+            has_ascension_perk = ap_arcology_project
+        }
+    }
+    possible = {
+        custom_tooltip = {
+            fail_text = "requires_technology_housing_2"
+            has_technology = tech_housing_2
+        }
+        custom_tooltip = {
+            fail_text = "requires_ascension_perks_2"
+            num_ascension_perks > 1
+        }
+    }
+    on_enabled = {
+        custom_tooltip = "allow_arcology_project"
+        custom_tooltip = "decision_arcology_project_effects"
+    }
+    modifier = {
+        add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
+    }
+    ai_weight = {
+        factor = 10
+        modifier = {
+            factor = 2
+            has_ethic = ethic_pacifist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_pacifist
+        }
+        modifier = {
+            factor = 2
+            has_ethic = ethic_materialist
+        }
+        modifier = {
+            factor = 3
+            has_ethic = ethic_fanatic_materialist
+        }
+        modifier = {
+            factor = 5
+            OR = {
+                has_valid_civic = civic_machine_cult_machine
+                has_valid_civic = civic_machine_cult
+            }
+        }
+        modifier = {
+            factor = 0
+            has_ai_personality = peaceful_counterculture
+        }
+    }
+}
+
+#################
+# TOXIC ASCENSION PERKS
+#################
+
+ap_detox = {
+    potential = {
+        host_has_dlc = "Toxoids Species Pack"
+        NOT = {
+            has_ascension_perk = ap_detox
+            has_country_flag = knights_detox
+        }
+    }
+    possible = {
+        if = {
+            limit = {
+                has_origin = origin_primitive_player_early_space_age
+            }
+            custom_tooltip = {
+                fail_text = "requires_technology_terrestrial_sculpting"
+                has_technology = tech_terrestrial_sculpting
+            }
+        }
+        else = {
+            custom_tooltip = {
+                fail_text = "requires_technology_tech_climate_restoration"
+                has_technology = tech_climate_restoration
+            }
+        }
+    }
+    on_enabled = {
+        custom_tooltip = "detox_tox_worlds"
+    }
+    modifier = {
+        add_attunement_the_composer_of_strands = @ascension_perk_attunement1
+    }
+    ai_weight = {
+        factor = 20
+        modifier = {
+            factor = 0
+            NOT = {
+                any_planet_within_border = {
+                    has_modifier = toxic_terraforming_candidate
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            count_planet_within_border = {
+                count > 2
+                limit = {
+                    has_modifier = toxic_terraforming_candidate
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            has_ai_personality = peaceful_counterculture
+        }
+    }
+}

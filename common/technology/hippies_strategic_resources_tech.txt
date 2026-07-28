@@ -1,0 +1,121 @@
+#######################################
+######### STRATEGIC RESOURCES #########
+#######################################
+
+#Zro Distillation
+tech_mine_zro = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_sensors_3" }
+	is_reverse_engineerable = no
+	weight = @tier3weight2
+
+	technology_swap = {
+		name = tech_mine_zro_machine_gestalt
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_gestalt = yes
+			is_robot_empire = yes
+		}
+	}
+
+	technology_swap = {
+		name = tech_mine_zro_machine_non_gestalt
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_gestalt = no
+			is_robot_empire = yes
+		}
+	}
+
+	technology_swap = {
+		name = tech_mine_zro_hive
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_hive_empire = yes
+			is_wilderness_empire = no
+		}
+	}
+
+	technology_swap = {
+		name = tech_mine_zro_wilderness
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_wilderness_empire = yes
+		}
+	}
+
+	## unlock see zro ore
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.10
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		modifier = {
+			factor = 0.10
+			NOT = {
+				has_technology = "tech_psionic_theory"
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_mine_zro
+		}
+		modifier = {
+			factor = 2
+			any_owned_pop_group = {
+				is_psionic_species = yes
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_pop_group = {
+				is_latent_psionic_species = yes
+			}
+			NOT = {
+				any_owned_pop_group = {
+					is_psionic_species = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+		modifier = {
+			factor = 2	# On top of regular bonus from trait.
+			has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+		}
+	}
+
+	ai_weight = {
+		factor = 2.5 # extremely rare tech (especially if you don't have psionic theory)
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+		}
+		modifier = {
+			factor = 5
+			has_tradition = tr_psionics_finish
+		}
+	}
+}
+

@@ -1,0 +1,253 @@
+### Vanilla Overwrites
+
+triggered_opinion_cyborgs_fanatic = {
+	trigger = {
+		has_ethic = ethic_fanatic_spiritualist
+		NOR = {
+			is_cyborg_empire = yes
+			is_mechanical_empire = yes
+			has_origin = origin_cybernetic_creed
+			has_ai_personality = peaceful_counterculture
+		}
+		FROM = {
+			is_cyborg_empire = yes
+		}
+	}
+
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_opinion_cyborgs_normal = {
+	trigger = {
+		has_ethic = ethic_spiritualist
+		NOR = {
+			is_cyborg_empire = yes
+			is_mechanical_empire = yes
+			has_origin = origin_cybernetic_creed
+			has_ai_personality = peaceful_counterculture
+		}
+		FROM = {
+			is_cyborg_empire = yes
+		}
+	}
+
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_synthetics_normal = {
+	trigger = {
+		has_ethic = ethic_spiritualist
+		is_cyborg_empire = no
+		is_mechanical_empire = no
+		from = { is_mechanical_empire = yes }
+		NOT = { has_ai_personality = peaceful_counterculture }
+	}
+
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_opinion_synthetics_fanatic = {
+	trigger = {
+		has_ethic = ethic_fanatic_spiritualist
+		is_cyborg_empire = no
+		is_mechanical_empire = no
+		NOT = { has_ai_personality = peaceful_counterculture }
+		from = {
+			is_mechanical_empire = yes
+			is_spiritualist = no
+		}
+	}
+
+	opinion = {
+		base = -60
+	}
+}
+
+triggered_spiritualist_opinion_of_machine_empires = {
+	trigger = {
+		is_country_type = default
+		has_ethic = ethic_spiritualist
+		is_individual_machine = no
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+		NOT = { has_ai_personality = peaceful_counterculture }
+		FROM = {
+			OR = {
+				is_machine_empire = yes
+				is_individual_machine = yes
+			}
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_fanatic_spiritualist_opinion_of_machine_empires = {
+	trigger = {
+		is_country_type = default
+		has_ethic = ethic_fanatic_spiritualist
+		is_individual_machine = no
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+		NOT = { has_ai_personality = peaceful_counterculture }
+		FROM = {
+			OR = {
+				is_machine_empire = yes
+				is_individual_machine = yes
+			}
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+	opinion = {
+		base = -60
+	}
+}
+
+triggered_spiritualist_opinion_of_spiritualists_machine_empires = {
+	trigger = {
+		is_country_type = default
+		has_ethic = ethic_spiritualist
+		is_individual_machine = no
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+		NOT = { has_ai_personality = peaceful_counterculture }
+		FROM = {
+			is_individual_machine = yes
+			is_spiritualist = yes
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_fanatic_spiritualist_opinion_of_spiritualists_machine_empires = {
+	trigger = {
+		is_country_type = default
+		has_ethic = ethic_fanatic_spiritualist
+		is_individual_machine = no
+		is_mechanical_empire = no
+		is_cyborg_empire = no
+		NOT = { has_ai_personality = peaceful_counterculture }
+		FROM = {
+			is_individual_machine = yes
+			is_spiritualist = yes
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_machine_assimilator
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+	}
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_spiritualist_negative_opinion_of_assimilators = {
+	trigger = {
+		is_country_type = default
+		is_individual_machine = no
+		is_spiritualist = yes
+		NOT = { has_ai_personality = peaceful_counterculture }
+		FROM = { has_valid_civic = civic_machine_assimilator }
+	}
+	opinion = {
+		base = -200
+	}
+}
+
+### Modded
+triggered_opinion_treehuggers = {
+	trigger = {
+		is_country_type = default
+		has_ai_personality = peaceful_counterculture
+		from = {
+			has_ai_personality = benevolent_wilderness
+		}
+	}
+	opinion = {
+		base = 100
+	}
+}
+
+triggered_opinion_defilers = {
+	trigger = {
+		is_wilderness_empire = yes
+		OR = {
+			from = { has_origin = origin_toxic_knights }
+			from = { has_origin = origin_mechanists }
+			from = { has_origin = origin_arc_welders }
+			from = { has_origin = origin_machine }
+			from = { has_ethic = "ethic_industrial" }
+			from = { has_ethic = "ethic_fanatic_industrial" }
+		}
+	}
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_attuned_xenos = {
+	trigger = {
+		has_ai_personality = benevolent_wilderness
+		OR = {
+			from = { has_origin = origin_fruitful }
+			from = { has_origin = origin_primal_calling }
+			from = { has_civic = civic_idyllic_bloom }
+			from = { has_civic = civic_hive_idyllic_bloom }
+			from = { has_ethic = "ethic_green" }
+			from = { has_ethic = "ethic_fanatic_green" }
+		}
+	}
+	opinion = {
+		base = 10
+	}
+}
+
+triggered_opinion_unbridled_nature = {
+	trigger = {
+		is_country_type = default
+		is_green = yes
+		FROM = { is_wilderness_empire = yes }
+	}
+	opinion = {
+		base = 35
+	}
+}
+
+triggered_opinion_love_for_all_sapients = {
+	trigger = {
+		is_country_type = default
+		has_ai_personality = peaceful_counterculture
+		FROM = {
+			is_country_type = default
+			is_homicidal = no
+			is_unfriendly = no
+		}
+	}
+	opinion = {
+		base = 10
+	}
+}

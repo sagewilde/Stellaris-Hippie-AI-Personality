@@ -1,0 +1,54 @@
+﻿l_english:
+
+ personality_peaceful_counterculture:0 "Peaceful Counterculture"
+ personality_peaceful_counterculture_desc:0 "A Peaceful Counterculture seeks nothing more than sedentary harmony with their natural environment. They believe in resolving conflict through non-violent means wherever possible, and tend to eschew material comforts such as money or property. While peaceful, they harbor an eternal grudge against The Man, who seeks to 'keep them down'."
+
+### Opinion Modifiers
+
+ opinion_pc_vs_the_man:0 "Stick it to The Man"
+ opinion_the_man_vs_pc:0 "Filthy Hippies"
+ triggered_opinion_treehuggers:0 "Treehuggers"
+ triggered_opinion_attuned_xenos:0 "Attuned Xenos"
+ triggered_opinion_defilers:0 "Defilers"
+ triggered_opinion_unbridled_nature:0 "Unbridled Nature"
+ triggered_opinion_love_for_all_sapients:0 "Love for All Sapients"
+
+ UNIQUE_LIFEFORMS_DESC:0 "Owning a world with §YNemma§!, §YTitanic Life§! or §YAlien Pets§! will greatly please the [Root.GetName]."
+
+ ### Prescripted Nation
+ PRESCRIPTED_ship_prefix_hippies: "PAX"
+ PRESCRIPTED_species_hippies: "Tortle"
+ PRESCRIPTED_species_plural_hippies: "Tortles"
+ PRESCRIPTED_species_adjective_hippies: "Tortle"
+ PRESCRIPTED_planet_name_hippies: "Mother Gaia"
+ PRESCRIPTED_system_name_hippies: "Beautiful Dream"
+ PRESCRIPTED_ruler_name_hippies: "Starchild"
+ PRESCRIPTED_adjective_hippies: "Peacelander"
+
+ EMPIRE_DESIGN_hippies:0 "Land of Peace and Harmony"
+ EMPIRE_DESIGN_hippies_desc:0 "The Tortles do not know how their planet came to be. But they know why it was shaped. Their world was left to them an eon ago, as part of an experiment by an ancient elder race, to determine the effects of a violent environment on a nascent species. Previously, it was a highly deadly tempest-world, with violent wildlife, vicious parasites, and unpredictable weather. On a planet that was, very literally, engineered by some sick creator to torment them, they did the unexpected; they survived. They survived through extending a nurturing, compassionate hand to a world that intended to rip them limb from limb.\n\n With gradual effort, they tamed their world and turned it into a paradise. And through this effort, the philosophical question was at last solved; it is possible to give peace a chance.\n\nAs they grew from their huts and into their cities, they reached out to the stars to find like-minded others, out of a deep love for the unknown, to see what new wisdom they could collect from a wild and dangerous galaxy. The first fragmented television and radio broadcasts they received were quite... 'bodacious'."
+
+ ### Many thanks to Cybrxkhan for providing the namelist that gave me such a hilariously awful idea. If you're reading this, try out their AI Personality mod. It's a lot more diverse than mine!
+ name_list_fantasy_hippies_2:0 "Cybrxkhan's Space Hippie (Improved)"
+ name_list_fantasy_hippies_2_desc:0 "Now with 30% more Groovy Granola crunch!"
+
+# Government Forms and Ruler Titles
+ gov_naturalist_commune: "Naturalist Commune"
+ gov_naturalist_commune_desc: "A society entirely and completely devoted to its peaceful coexistence with nature. A Naturalist Commune centers their entire government around minimizing their economic needs for the sake of preserving their planets' pristine quality."
+ RT_GARDENER: "Custodian-Gardener"
+
+ gov_altruistic_utopia: "Altruistic Utopia"
+ gov_altruistic_utopia_desc: "Prizing peace, freedom, and harmony above all, an Altruistic Utopia's entire culture is built around principles of nonviolence and constructive dialogue. They carefully build their societies around the ideal that no one should want for anything."
+ RT_ELECTED_VOCALIST: "Elected Vocalist"
+
+ gov_monastic_collective: "Monastic Collective"
+ gov_monastic_collective_desc: "This monk-like culture has withdrawn from worldly cares and devotes nearly all its time to meditation and inner perfection. Their inner peace is nearly unbreakable, and as a result, their collective harmony is assured."
+ RT_ELDER: "Wise Elder"
+
+ gov_star_travelers: "Star Travelers"
+ gov_star_travelers_desc: "Springing from a culture that breathlessly catalogued the stars and charted their distances long before they ever left their homeworld, Star Travelers are utterly enthralled with the universe around them. Their economic and government schemes typically revolve around exploring every nook and cranny of every moon they find."
+ RT_STARGAZER: "Stargazer-in-Chief"
+
+ civic_anarchy_utopia_effects:0 "$civic_crowdsourcing_anarchy_effects$\n$civic_anarchy_ideals_effects$$TABBED_NEW_LINE$- The §HXenoist§! faction will provide higher §YFaction Output§! whenever a large number of §YUnique Species§! are within the empire (greater than 5, 7 or 10).\n\nAllows the §Y$trade_policy_mutual_aid$§! Trade Policy, which converts $r_trade$ to $r_energy$, $r_minerals$ and $r_food$."
+
+ TORTLE_POWER: "§G+ Groovy Affinity§!"

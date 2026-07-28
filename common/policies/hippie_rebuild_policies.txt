@@ -1,0 +1,1760 @@
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################+
+
+
+border_policy = {
+
+	potential = {
+		always = yes
+	}
+
+	option = {
+		name = "border_policy_open"
+
+		policy_flags = {
+			border_policy_open
+		}
+
+		potential = {
+			OR = {
+				is_country_type = default
+				is_country_type = mirrored_country
+				is_primitive = yes
+			}
+		}
+
+		valid = {
+			OR = {
+				NOR = {
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_inwards_perfection
+				}
+				is_primitive = yes
+			}
+		}
+	}
+
+	option = {
+		name = "border_policy_closed"
+
+		policy_flags = {
+			border_policy_closed
+		}
+		modifier = {}
+
+		valid = {
+			is_primitive = no
+			NOT = { has_civic = civic_anarchy_utopia }
+			hidden_trigger = { NOT = { has_origin = "origin_slavers" } }
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_megacorp = yes
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = isolationist
+					has_ai_personality_behaviour = attack_neutrals
+				}
+			}
+			modifier = {
+				factor = 0
+				has_valid_ai_personality = no
+				is_xenophobe = no
+			}
+			modifier = {
+				factor = 0
+				has_hippie_government = yes	# Hippies don't believe in borders.
+			}
+			#modifier = {
+			#	factor = 10
+			#	has_been_declared_crisis = yes
+			#}
+			modifier = {
+				factor = 10
+				has_crisis_level = crisis_level_5
+			}
+		}
+	}
+}
+
+trade_policy = {
+	potential = {
+		is_gestalt = no
+	}
+	
+	option = {
+		name = "trade_policy_leader"	#Modded
+
+		policy_flags = {
+			trade_policy_leader
+		}
+		
+		on_enabled = {						#Stellaris 4.0 Vanilla
+			hidden_effect = {
+				set_trade_conversions = {
+					trade = 0.25
+					energy = 0.25
+					influence = 0.002
+				}
+			}
+		}
+
+		valid = {
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+				has_valid_civic = civic_military_dictatorship_corporate
+				has_civic = civic_pirate_mercenary_enclave
+				has_authority  = auth_dictatorial
+				has_authority = auth_imperial	
+			}
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_default"
+
+		potential = {
+			is_worker_coop_empire = no	# Stellaris 4.0 Vanilla
+			hidden_trigger = { NOT = { has_civic = civic_pirate_mercenary_enclave } }
+		}
+
+		policy_flags = {
+			trade_policy_default
+		}
+
+		on_enabled = {						# Stellaris 4.0 Vanilla
+			hidden_effect = {
+				set_trade_conversions = {
+					trade = 0.5
+					energy = 0.5
+				}
+			}
+		}
+
+		on_disabled = {
+			hidden_effect = {
+				set_trade_conversions = { }
+			}
+		}
+
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_consumer_goods"
+		potential = {
+			OR = {
+				has_federation = no
+				AND = {
+					has_federation = yes
+					federation = { NOT = { has_federation_perk = trade_federation_passive } }
+				}
+			}
+			has_tradition = tr_mercantile_adaptive_economic_policies
+			is_worker_coop_empire = no
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				consumer_goods = 0.25
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_consumer_goods
+		}
+
+		valid = {
+			is_country_type = default
+			NOT = {
+				has_policy_flag = "economic_stance_planned"
+			}
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = "trade_policy_unity"
+		potential = {
+			OR = {
+				has_federation = no
+				AND = {
+					has_federation = yes
+					federation = {
+						NOR = {
+							has_federation_perk = trade_federation_passive
+							has_federation_perk = unity_trade_1
+						}
+					}
+				}
+			}
+			has_tradition = tr_mercantile_adaptive_economic_policies
+			is_worker_coop_empire = no
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				unity = 0.25
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_unity
+		}
+
+		valid = {
+			is_country_type = default
+			NOR = {
+				has_policy_flag = "economic_stance_criminal_market"
+				has_policy_flag = "economic_stance_market"
+			}
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_trade_league"
+		potential = {
+			has_federation = yes
+			federation = { has_federation_perk = trade_federation_passive }
+		}
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.50
+				energy = 0.15
+				consumer_goods = 0.15
+				unity = 0.15
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_trade_league
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+	option = {
+		name = "trade_policy_holy_covenant"
+		potential = {
+			has_federation = yes
+			federation = { has_federation_perk = unity_trade_1 }
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.5
+				unity = 0.375
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_holy_covenant
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+	option = {
+		name = "trade_policy_mutual_aid"
+		potential = {
+			OR = {
+				is_worker_coop_empire = yes
+				has_valid_civic = civic_anarchy_utopia	# Dunno why this isn't in EaC. Anarchists invented mutual aid. --SageWilde
+				AND = {
+					has_valid_civic = civic_primitive_enthusiasts
+					is_egalitarian = yes
+					is_socialism = yes
+				}
+			}
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.25
+				energy = 0.20
+				minerals = 0.20
+				food = 0.20
+				unity = 0.15
+			}
+		}
+
+		policy_flags = {
+			trade_conversion_mutual_aid
+		}
+
+		modifier = {
+		}
+
+		AI_weight = {
+			factor = 1000
+		}
+	}
+
+	# Growth & Development
+	option = {
+		name = "trade_policy_growth_dev"	#Modded
+
+		policy_flags = {
+			trade_conversion_growth_dev
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.25
+				society_research = 0.15
+				consumer_goods = 0.30
+				food = 0.30
+			}
+		}
+
+		valid = {
+			is_country_type = default
+			has_policy_flag = "economic_stance_planned"
+		}
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	# Development
+	option = {
+		name = "trade_policy_development"	#Modded
+
+		policy_flags = {
+			trade_conversion_development
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.50
+				minerals = 0.30
+				alloys = 0.20
+			}
+		}
+
+		valid = {
+			is_country_type = default
+			has_policy_flag = "economic_stance_planned"
+		}
+
+		modifier = {
+			planet_building_build_speed_mult = 0.1
+			starbase_shipyard_build_speed_mult = 0.1
+			planet_colony_development_speed_mult = 0.1
+		}
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	# Innovation
+	option = {
+		name = "trade_policy_innovation"	#Modded
+
+		policy_flags = {
+			trade_conversion_innovation
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.30
+				physics_research = 0.20
+				society_research = 0.20
+				engineering_research = 0.20
+			}
+		}
+
+		valid = {
+			is_country_type = default
+			OR = {
+				has_technology = tech_innovations
+				custom_tooltip = {
+					text = has_valid_civic_for_tooltip_tooltip
+					OR = {	
+						has_valid_civic = civic_beacon_of_liberty
+						has_valid_civic = civic_innovative_economy
+						has_valid_civic = civic_innovative_economy_corporate
+					}
+				}
+			}
+			NOT = {
+				has_valid_civic = civic_ultimate_collective
+			}
+			OR = {
+				NOR = {
+					has_policy_flag = "economic_stance_criminal_market"
+					has_policy_flag = "economic_stance_market"
+					has_policy_flag = "economic_stance_planned"
+				}
+				has_valid_civic = civic_beacon_of_liberty
+				custom_tooltip = {
+					text = has_valid_civic_civic_innovative_economy
+					OR = {
+						has_valid_civic = civic_innovative_economy
+						has_valid_civic = civic_innovative_economy_corporate
+					}
+				}
+			}
+		}
+
+		modifier = {
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	# Growth
+	option = {
+		name = "trade_policy_growth"
+
+		policy_flags = {
+			trade_conversion_growth
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.25
+				food = 1
+			}
+		}
+
+		modifier = {
+			planet_districts_farming_cost_mult = -0.33
+			planet_district_farming_build_speed_mult = 1
+			pop_ethic_green_attraction_mult = 0.25
+		}
+
+		valid = {
+			is_country_type = default
+			has_technology = tech_agri_consortium
+			NOR = {
+				has_policy_flag = "economic_stance_criminal_market"
+				has_policy_flag = "economic_stance_market"
+				has_policy_flag = "economic_stance_planned"
+			}
+		}
+		
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+
+	option = {
+		name = "trade_policy_mining"
+
+		policy_flags = {
+			trade_conversion_mining
+		}
+
+		on_enabled = {
+			set_trade_conversions = {
+				trade = 0.40
+				minerals = 0.60
+			}
+		}
+
+		modifier = {
+			planet_districts_mining_cost_mult = -0.33
+			planet_district_mining_build_speed_mult = 1
+			pop_ethic_industrial_attraction_mult = 0.25
+		}
+
+		valid = {
+			is_country_type = default
+			OR = {
+				has_technology = tech_mining_consortium
+				has_valid_civic = civic_mining_guilds
+			}
+			NOR = {
+				has_policy_flag = "economic_stance_criminal_market"
+				has_policy_flag = "economic_stance_market"
+				has_policy_flag = "economic_stance_planned"
+			}
+		}
+		
+
+		AI_weight = {
+			factor = 0
+		}
+	}
+	
+	#For Monopolist Mod Compatibility
+	inline_script = {
+		script = overwrites/Monopolist_Mod_overwrite
+		overwrite = trade_policies
+		mod = jam_mcp
+		x = @has_jam_mcp
+	}
+}
+
+artificial_intelligence_policy = {
+	potential = {
+		is_gestalt = no
+		OR = {
+			has_origin = origin_synthetic_fertility
+			can_set_ai_policy = yes
+			has_country_flag = synthetic_empire
+			is_individual_machine = yes
+		}
+	}
+
+	option = {
+		name = "ai_outlawed"
+
+		potential = {
+			is_individual_machine = no
+		}
+		valid = {
+			NOR = {
+				is_materialist = yes
+				has_origin = origin_synthetic_fertility
+				custom_tooltip = {
+					success_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
+				}
+				has_valid_civic = civic_machine_cult
+				has_valid_civic = civic_machine_cult_machine
+				is_individual_machine = yes
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			ai_outlawed
+		}
+
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.25
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
+			}
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 5
+				AND = {
+					is_spiritualist = yes
+					NOT = {
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ai_servitude"
+
+		potential = {
+			is_individual_machine = no
+		}
+
+		valid = {
+			NOT = {	has_origin = origin_synthetic_fertility }
+			custom_tooltip = {
+				fail_text = is_a_synthetic_empire_fail
+				NOT = { has_country_flag = synthetic_empire }
+			}
+			OR = {
+				is_country_type = fallen_empire
+				NOR = {
+					has_valid_civic = civic_machine_cult
+					has_valid_civic = civic_machine_cult_machine
+				}
+			}
+			is_individual_machine = no
+		}
+
+		policy_flags = {
+			ai_servitude
+		}
+
+		modifier = {
+			pop_ethic_materialist_attraction_mult = 0.10
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_exploiter
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_machine_cult
+					has_valid_civic = civic_machine_cult_machine
+				}
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_individual_machine = yes
+			}
+		}
+	}
+
+	option = {
+		name = "ai_full_rights"
+
+		valid = {
+			OR = {
+				custom_tooltip = {
+					fail_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
+				}
+				is_spiritualist = no
+				OR = {
+					has_valid_civic = civic_machine_cult
+					has_valid_civic = civic_machine_cult_machine
+				}
+				is_individual_machine = yes
+				hidden_trigger = { has_ai_personality = peaceful_counterculture }	# Backdoor for Monastic Collectives
+			}
+			NOR = { 
+				has_policy_flag = robots_outlawed 
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			ai_full_rights
+		}
+
+		modifier = {
+			pop_ethic_materialist_attraction_mult = 0.25
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_divinity_a_defined_purpose
+			}
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			modifier = {
+				factor = 0.5
+				is_materialist = no
+				NOR = {
+					is_synthetic_empire = yes
+					has_technology = tech_synthetic_workers
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_spiritualist = yes
+					NOT = { has_ai_personality = peaceful_counterculture }	# Just to make sure.
+				}
+			}
+		}
+	}
+}
+
+robot_pop_policy = {
+
+	potential = {
+		NOR = {
+			is_gestalt = yes
+			is_individual_machine = yes
+		}
+	}
+
+	option = {
+		name = "robot_pops_outlawed"
+
+		valid = {
+			NOR = {
+				is_materialist = yes
+				has_valid_civic = civic_machine_cult
+				has_valid_civic = civic_machine_cult_machine
+				has_origin = origin_synthetic_fertility
+				has_policy_flag = ai_full_rights
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+			is_individual_machine = no
+		}
+
+		policy_flags = {
+			robots_outlawed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				every_owned_species = {
+					limit = { is_robotic_species = yes }
+					set_citizenship_type = {
+						type = citizenship_purge
+						country = root
+					}
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 10
+				has_valid_ai_personality = yes
+				NOR = {
+					has_ai_personality_behaviour = robot_exploiter
+					has_ai_personality_behaviour = robot_liberator
+				}
+			}
+			modifier = {
+				factor = 5
+				AND = { 
+					has_ethic = "ethic_spiritualist"
+					NOT = { has_ai_personality = peaceful_counterculture }	# Hippies value all life.
+				}
+			}
+			modifier = {
+				factor = 10
+				AND = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					NOT = { has_ai_personality = peaceful_counterculture }	# Even artificial life. 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "robot_pops_allowed"
+
+		policy_flags = {
+			robots_allowed
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				country_event = {
+					id = action.56 # Failsafe if you don't have a robot species to assemble.
+				}
+			}
+		}
+
+		AI_weight = {
+			factor = 2
+			modifier = {
+				factor = 0
+				AND = {
+					has_ethic = "ethic_fanatic_spiritualist"
+					NOT = { has_ai_personality = peaceful_counterculture }
+				}
+			}
+		}
+	}
+}
+
+pre_sapients = {
+	potential = {
+		OR = {
+			has_country_flag = found_presapients
+			any_planet_within_border = {
+				any_owned_pop_group = {
+					is_sapient = no
+				}
+			}
+			is_guided_sapience_empire = yes
+		}
+	}
+	option = {
+		name = "pre_sapients_protect"
+
+		potential = {
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_protect
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				values_others = no
+			}
+			modifier = {
+				factor = 2
+				is_green = yes
+			}
+		}
+	}
+
+	option = {
+		name = "pre_sapients_allow"
+
+		potential = {
+			NOR = {
+				has_valid_civic = civic_machine_terminator
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_fanatic_purifiers
+				is_guided_sapience_empire = yes
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_allow
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = "pre_sapients_eat"
+
+		potential = {
+			host_has_dlc = "Utopia"
+			is_synthetic_empire = no
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				is_guided_sapience_empire = yes
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_eat
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
+			}
+		}
+	}
+
+	option = {
+		name = "pre_sapients_purge"
+
+		valid = {
+			NOR = {
+				has_civic = civic_anarchy_utopia
+				has_ethic = "ethic_xenophile"
+				has_ethic = "ethic_fanatic_xenophile"
+				has_ethic = "ethic_green"
+				has_ethic = "ethic_fanatic_green"
+				has_valid_civic = civic_guided_sapience
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		on_enabled = {
+			hidden_effect = {
+				set_country_flag = found_presapients
+			}
+		}
+
+		policy_flags = {
+			pre_sapients_purge
+		}
+
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_country_type = default
+				NOR = {
+					has_valid_civic = civic_machine_terminator
+					has_valid_civic = civic_fanatic_purifiers
+					is_industrial = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				is_industrial = yes
+			}
+		}
+	}
+}
+
+population_controls = {
+	potential = {
+		NOT = { has_ethic = "ethic_gestalt_consciousness" }
+	}
+
+	option = {
+		name = "population_controls_not_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_population_control } }
+		}
+
+		policy_flags = {
+			population_controls_not_allowed
+		}
+	}
+
+	option = {
+		name = "population_controls_allowed"
+
+		on_enabled = {
+			hidden_effect = { every_owned_planet = { remove_modifier = planet_growth_discouraged } }
+		}
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_anarchy_utopia
+				has_valid_civic = civic_anarchy_ideals
+				has_valid_civic = civic_spiritual_democracy
+			}
+		}
+
+		policy_flags = {
+			population_controls_allowed
+		}
+		modifier = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 0
+				OR = {
+					is_egalitarian = yes
+					is_xenophile = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				has_ai_personality = peaceful_counterculture	# Make love, not war.
+			}
+		}
+	}
+}
+
+nomad_deterrence = {
+
+	potential = {
+		has_nomads_dlc = yes
+		is_nomadic = no
+	}
+
+	option = {
+		name = "nomad_deterrence_do_no_harm"
+
+		policy_flags = {
+			arkship_raid_do_no_harm
+		}
+
+		potential = {}
+		valid = {
+			is_homicidal = no
+			is_xenophobe = no
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 5
+				is_xenophile = yes
+			}
+			modifier = {
+				factor = 0
+				is_homicidal = yes
+			}
+			modifier = {
+				factor = 0
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 0
+				has_ai_personality = fanatic_befrienders
+			}
+			modifier = {
+				factor = 5
+				has_ai_personality = servitors
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = evangelising_zealots
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = harmonious_hierarchy
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = democratic_crusaders
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+
+	option = {
+		name = "nomad_deterrence_relocate_pops"
+
+		policy_flags = {
+			arkship_raid_relocate_pops
+		}
+
+		potential = {}
+		valid = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_authoritarian = yes
+			}
+			modifier = {
+				factor = 0
+				has_ethic = ethic_gestalt_consciousness
+			}
+			modifier = {
+				factor = 4
+				has_ai_personality = slaving_despots
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = decadent_hierarchy
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = assimilators
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = hegemonic_imperialists
+			}
+			modifier = {
+				factor = 1000
+				has_ai_personality = fanatic_befrienders
+			}
+		}
+	}
+
+	option = {
+		name = "nomad_deterrence_purge_pops"
+
+		policy_flags = {
+			arkship_raid_purge_pops
+		}
+
+		potential = {}
+		valid = {
+			OR = {
+				is_xenophobe = yes
+				is_homicidal = yes
+			}
+		}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 5
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 10
+				is_homicidal = yes
+			}
+			modifier = {
+				factor = 0
+				is_xenophile = yes
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = xenophobic_isolationists
+			}
+			modifier = {
+				factor = 0.1
+				has_ai_personality = fanatic_befrienders
+			}
+			modifier = {
+				factor = 0.2
+				has_ai_personality = peaceful_traders
+			}
+			modifier = {
+				factor = 0.2
+				has_ai_personality = honorbound_warriors
+			}
+			modifier = {
+				factor = 0.3
+				has_ai_personality = evangelising_zealots
+			}
+		}
+	}
+
+	option = {
+		name = "nomad_deterrence_strip_districts"
+
+		policy_flags = {
+			arkship_raid_strip_districts
+		}
+
+		potential = {}
+		valid = {}
+
+		AI_weight = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 2
+				is_megacorp = yes
+			}
+			modifier = {
+				factor = 4
+				has_ai_personality = ruthless_capitalists
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = decadent_capitalists
+			}
+			modifier = {
+				factor = 3
+				has_ai_personality = metalhead
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = machine_intelligence
+			}
+		}
+	}
+}
+
+# E&CC Exclusive
+economic_stance = {
+	potential = {
+		is_country_type = default
+		is_gestalt = no
+	}
+
+	# Criminal Market
+	option = {
+		name = "economic_stance_criminal_market"
+
+		policy_flags = {
+			economic_stance_criminal_market
+		}
+
+		modifier = {
+			country_trade_fee = -0.05
+			slave_market_cost_mult = -0.1
+			planet_branch_offices_cost_mult = -0.20
+			planet_jobs_trade_produces_mult = 0.2
+			# local_trade_protection_add = -5	# No Longer Used in Stellaris 4.0
+			country_base_influence_produces_add = -0.25
+			pop_ethic_capitalism_attraction_mult = 0.15
+			pop_ethic_authoritarian_attraction_mult = 0.05
+		}
+
+		valid = {
+			is_country_type = default
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+				has_valid_civic = civic_military_dictatorship_corporate
+				has_civic = civic_pirate_mercenary_enclave
+			}
+		}
+
+		AI_weight = {
+			weight = 1000
+		}
+	}
+	# Free Market
+	option = {
+		name = "economic_stance_market"
+
+		policy_flags = {
+			economic_stance_market
+		}
+
+		modifier = {
+			country_trade_fee = -0.1
+			planet_jobs_trade_produces_mult = 0.2
+			country_trade_attractiveness = 0.25
+			# local_trade_protection_add = -5	# No Longer Used in Stellaris 4.0
+			country_base_influence_produces_add = -0.25
+			pop_ethic_capitalism_attraction_mult = 0.2
+		}
+
+		valid = {
+			is_country_type = default
+			OR = {
+				has_policy_flag = trade_policy_default
+				has_policy_flag = trade_conversion_trade_league
+				has_policy_flag = trade_conversion_consumer_goods
+			}
+			OR = {
+				is_capitalism = yes
+				has_technology = tech_free_market
+			}
+			NOR = {
+				has_ethic = ethic_fanatic_socialism
+				has_ethic = ethic_socialism
+				has_valid_civic = civic_welfare_state
+				hidden_trigger = { has_civic = civic_pirate_mercenary_enclave }
+				has_policy_flag = trade_conversion_unity
+				has_ethic = ethic_fanatic_authoritarian
+				any_owned_pop_group = {
+					has_living_standard = { type = living_standard_good }
+				}
+			}
+		}
+
+		AI_weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				has_ethic = ethic_capitalism
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_capitalism
+			}
+			
+			modifier = {
+				factor = 0
+				has_ai_personality = peaceful_counterculture	# Hippies hate capitalism.
+			}
+		}
+	}
+	# Default
+	option = {
+		name = "economic_stance_default"
+
+		policy_flags = {
+			economic_stance_default
+		}
+
+		modifier = {
+		}
+
+		valid = {
+			is_country_type = default
+			NOT = { has_valid_civic = civic_beacon_of_liberty }
+		}
+
+		AI_weight = {
+			weight = 1
+		}
+	}
+	# Regulated Trade
+	option = {
+		name = "economic_stance_mixed"
+
+		policy_flags = {
+			economic_stance_mixed
+		}
+
+		modifier = {
+			country_base_influence_produces_mult = 0.15
+			# local_trade_protection_add = 10	# No Longer Used in Stellaris 4.0
+			country_trade_fee = 0.05
+		}
+
+		valid = {
+			is_country_type = default
+			NOR = {
+				has_valid_civic = civic_beacon_of_liberty
+				hidden_trigger = { has_civic = civic_pirate_mercenary_enclave }
+			}
+		}
+
+		AI_weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				has_ethic = ethic_authoritarian
+				NOR = {
+					is_socialism = yes
+					has_ethic = ethic_fanatic_capitalism
+				}
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_authoritarian
+				is_socialism = no
+			}
+		}
+	}
+	# Central Planned
+	option = {
+		name = "economic_stance_planned"
+
+		policy_flags = {
+			economic_stance_planned
+		}
+
+		modifier = {
+			country_energy_produces_mult = 0.05
+			country_minerals_produces_mult = 0.1
+			country_food_produces_mult = 0.15
+			planet_jobs_trade_produces_mult = -0.25
+			pop_ethic_socialism_attraction_mult = 0.2
+		}
+
+		valid = {
+			is_country_type = default
+			OR = {
+				is_socialism = yes
+				has_technology = tech_planned_economy
+			}
+			NOR = {
+				has_ethic = ethic_fanatic_capitalism
+				has_ethic = ethic_capitalism
+				has_valid_civic = civic_beacon_of_liberty
+				has_policy_flag = trade_conversion_consumer_goods
+				hidden_trigger = { has_civic = civic_pirate_mercenary_enclave }
+			}
+		}
+
+		AI_weight = {
+			weight = 1
+			modifier = {
+				factor = 5
+				has_ethic = ethic_socialism
+			}
+			modifier = {
+				factor = 10
+				has_ethic = ethic_fanatic_socialism
+			}
+			modifier = {
+				factor = 2
+				has_hippie_government = yes	# Hippies hate capitalism.
+			}
+		}
+	}
+}
+
+healthcare = {
+	potential = {
+		is_gestalt = no
+	}
+
+	option = {
+		name = "mixed_healthcare"
+
+		valid = {
+			NOR = { 
+				has_valid_civic = civic_private_healthcare_corporate 
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			mixed_healthcare
+		}
+
+		modifier = {
+		}
+	}
+
+	option = {
+		name = "private_healthcare"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_socialism"
+				has_valid_civic = civic_welfare_state
+			}
+		}
+
+		policy_flags = {
+			private_healthcare
+		}
+
+		modifier = {
+			leader_lifespan_add = 10
+			pop_cat_worker_happiness = -0.1
+			pop_ethic_capitalism_attraction_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				is_capitalism = yes
+			}
+			modifier = {
+				factor = 0
+				has_ai_personality = peaceful_counterculture	# Hippies hate private hospitals.
+			}
+		}
+	}
+
+	option = {
+		name = "public_healthcare"
+
+		valid = {
+			OR = {
+				custom_tooltip = {
+					text = civic_tooltip_not_capitalism
+					NOR = {	
+						has_ethic = "ethic_fanatic_capitalism"
+						has_ethic = "ethic_capitalism"
+					}
+				}
+				custom_tooltip = {
+					text = has_valid_civic_for_tooltip_tooltip
+					has_valid_civic = civic_welfare_state
+				}
+			}
+			NOR = {
+				has_valid_civic = civic_beacon_of_liberty
+				has_valid_civic = civic_private_healthcare_corporate
+			}
+		}
+
+		policy_flags = {
+			public_healthcare
+		}
+
+		modifier = {
+			founder_species_growth_mult = 0.05
+			army_health = 0.15
+			pop_ethic_socialism_attraction_mult = 0.05
+			planet_districts_cities_upkeep_mult = 0.1
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_fanatic_socialism"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality = peaceful_counterculture	# Hippies take care of each other.
+			}
+		}
+	}
+}
+
+education = {
+
+	potential = {
+		is_gestalt = no
+	}
+
+	option = {
+		name = "mixed_education"
+
+		valid = {
+			hidden_trigger = { NOT = { has_origin = "origin_slavers" } }
+		}
+
+		policy_flags = {
+			mixed_education
+		}
+
+		modifier = {
+		}
+	}
+
+	option = {
+		name = "private_education"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_socialism"
+				has_valid_civic = civic_welfare_state
+			}
+		}
+
+		policy_flags = {
+			private_education
+		}
+
+		modifier = {
+			leader_skill_levels = 1
+			planet_jobs_specialist_produces_mult = 0.05
+			planet_crime_mult = 0.15
+			pop_ethic_capitalism_attraction_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				is_capitalism = yes
+			}
+		}
+	}
+
+	option = {
+		name = "public_education"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_capitalism"
+				has_valid_civic = civic_beacon_of_liberty
+			}
+		}
+
+		policy_flags = {
+			public_education
+		}
+
+		modifier = {
+			pop_government_ethic_attraction = 0.15
+			country_unity_produces_mult = 0.05
+			planet_crime_mult = -0.15
+			planet_districts_cities_upkeep_mult = 0.1
+			pop_ethic_socialism_attraction_mult = 0.05
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					is_socialism = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				has_hippie_government = yes	# Hippies hate elitism.
+			}
+		}
+	}
+}
+
+bureaucracy = {
+
+	potential = {
+	}
+
+	option = {
+		name = "none_bureaucracy"
+
+		policy_flags = {
+			none_bureaucracy
+		}
+
+		modifier = {
+		}
+	}
+
+	option = {
+		name = "centralized_state"
+
+		valid = {
+			is_country_type = default
+			has_technology = tech_centralized_state
+			NOT = { has_valid_civic = civic_beacon_of_liberty }
+			NOT = { has_ethic = "ethic_fanatic_egalitarian" }
+		}
+
+		policy_flags = {
+			centralized_state
+		}
+
+		modifier = {
+			country_base_influence_produces_add = 0.5
+			ruler_skill_levels = 1
+			empire_size_penalty_mult = 0.25
+			pop_ethic_egalitarian_attraction_mult = -0.2
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_fanatic_authoritarian"
+				}
+			}
+			modifier = {
+				factor = 0
+				has_hippie_government = yes	# Hippies hate elitism.
+			}
+		}
+	}
+
+	option = {
+		name = "federal_state"
+
+		policy_flags = {
+			federal_state
+		}
+
+		valid = {
+			is_country_type = default
+			has_technology = tech_federal_state
+			NOT = { has_valid_civic = civic_ultimate_collective }
+			NOT = { has_ethic = "ethic_fanatic_authoritarian" }
+		}
+
+		modifier = {
+			empire_size_systems_mult = -0.33
+			official_skill_levels = 1
+			edicts_cost_mult = 0.25
+			pop_ethic_authoritarian_attraction_mult = -0.2
+		}
+
+		AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+					has_ethic = "ethic_fanatic_egalitarian"
+				}
+			}
+			modifier = {
+				factor = 2
+				has_hippie_government = yes	# Hippies love flexibility.
+			}
+		}
+	}
+}

@@ -1,0 +1,765 @@
+# ##################
+# Terraformation
+# ##################
+
+tech_terrestrial_sculpting = {
+	cost = @tier2cost3
+	area = society
+	tier = 1
+	category = { new_worlds }
+	prerequisites = { "tech_colonization_1" }
+	weight = @tier2weight3
+
+	feature_flags = {
+		build_terraform_station
+	}
+
+	weight_modifier = {
+		factor = 1.5	# terraforming needs to be a bit more common
+		modifier = {
+			factor = 0
+			is_lithoid_devouring_swarm = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_expansion_adopt
+		}
+		modifier = { #if you're a fish, you're definitely gonna prioritise finding out how to make more oceans
+			factor = 1.25
+			has_trait = trait_aquatic
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_robot_aquatic
+		}
+		modifier = {
+			factor = 1.25
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			add = 5
+			has_origin = origin_wilderness
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+
+	technology_swap = {
+		name = tech_terrestrial_sculpting_wilderness
+		inherit_icon = yes
+		inherit_effects = no
+		trigger = {
+			is_wilderness_empire = yes
+		}
+		modifier = {
+			custom_tooltip = tech_terrestrial_sculpting_wilderness_effect
+		}
+	}
+
+	ai_weight = {
+		factor = @terraforming_tech_ai_factor
+
+		modifier = {
+			factor = 2
+			OR = {
+				is_xenophobe = yes
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				has_origin = origin_shattered_ring
+				has_void_dweller_origin = yes
+			}
+			is_ai = yes
+		}
+		modifier = {
+			factor = 5
+			any_system_within_border = {
+				any_system_planet = {
+					is_colonizable = yes
+					habitability = {
+						who = root
+						value < 0.5
+					}
+				}
+			}
+		}
+		modifier = { #Hydrocentric is really good and needs this
+			factor = 1000
+			has_trait = trait_aquatic
+		}
+		modifier = {
+			factor = 1000
+			has_trait = trait_robot_aquatic
+		}
+		modifier = {
+			factor = 100
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+		modifier = {
+			factor = 2
+			is_ai = no #auto-research
+		}
+	}
+}
+
+#Ecological Adaptation
+tech_ecological_adaptation = {
+	cost = @tier3cost2
+	area = society
+	tier = 3
+	category = { new_worlds }
+	prerequisites = { "tech_terrestrial_sculpting" }
+	weight = @tier3weight2
+
+	feature_flags = {
+		terraform_inhabited
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_expansion_adopt
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+
+	}
+
+	ai_weight = {
+		factor = @terraforming_tech_ai_factor
+
+		modifier = {
+			factor = 2
+			OR = {
+				is_xenophobe = yes
+				is_hive_empire = yes
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				any_owned_planet = {
+					habitability = {
+						who = root
+						value < 0.5
+					}
+				}
+				any_system_within_border = {
+					any_system_planet = {
+						is_planet_class = pc_nuked
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 5
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+		modifier = {
+			factor = 2
+			is_ai = no #auto-research
+		}
+	}
+}
+
+#Climate Transformation
+tech_climate_restoration = {
+	cost = @tier4cost1
+	area = society
+	tier = 4
+	category = { new_worlds }
+	prerequisites = { "tech_terrestrial_sculpting" }
+	weight = @tier4weight1
+
+	# unlocks additional terraforming-options
+
+	prereqfor_desc = {
+		diplo_action = {
+			title = "TECH_UNLOCK_TERRAFORMING_NUKED_CHANGE_TITLE"
+			desc = "TECH_UNLOCK_TERRAFORMING_NUKED_CHANGE_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_expansion_adopt
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+
+	}
+
+	ai_weight = {
+		factor = @terraforming_tech_ai_factor
+
+		modifier = {
+			factor = 2
+			OR = {
+				is_xenophobe = yes
+				is_hive_empire = yes
+			}
+		}
+
+		modifier = {
+			factor = 5
+			has_origin = origin_life_seeded
+		}
+		modifier = {
+			factor = 5
+			any_system_within_border = {
+				any_system_planet = {
+					is_planet_class = pc_nuked
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}
+
+###########
+# Psionics
+###########
+
+# Psionic Theory
+tech_psionic_theory = {
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = { psionics }
+    is_rare = yes
+    weight = @tier3weight1
+    is_reverse_engineerable = no
+
+   gateway = psionics
+
+	potential = {	#Steam: This code and notes are from vanilla
+		OR = { #The OR is so that Gestalts can get Zro Distillation with that Resolution
+			has_civic = civic_machine_cult_machine
+			has_shroud_dlc = yes # Shroud allows everyone to become psionic
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
+			has_relic = r_zro_crystal
+		}
+		NOT = { has_origin = origin_mindwardens } # Except Mindwardens since they can't psionically ascend
+	}
+
+	modifier = {
+		empire_size_pops_mult = -0.10
+	}
+
+weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			has_shroud_dlc = no
+			has_ethic = ethic_gestalt_consciousness
+			NOT = { has_civic = civic_machine_cult_machine }
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = no
+		}
+		modifier = {
+			factor = 7
+			has_valid_civic = civic_spiritual_seekers
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 2
+			any_country = {
+				has_origin = origin_mindwardens
+				NOT = { is_same_value = prev }
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_psionic }
+				has_trait_in_council = { TRAIT = leader_trait_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_composer_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_instrument_chosen }
+				has_trait_in_council = { TRAIT = leader_trait_whisperers_chosen }
+			}
+		}
+		modifier = {
+			factor = 8
+			has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_psionic_theory
+		}
+		modifier = {
+			factor = 2
+			any_owned_pop_group = {
+				pop_group_has_trait = trait_psionic
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_owned_pop_group = {
+				OR = {
+					pop_group_has_trait = trait_latent_psionic
+					pop_group_has_trait = trait_robot_latent_psionic
+				}
+			}
+			NOT = {
+				any_owned_pop_group = {
+					pop_group_has_trait = trait_psionic
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
+		}
+		modifier = {
+			factor = 0
+			AND = {
+				is_materialist = yes
+				NOR = {
+					has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+					has_councilor = { COUNCILOR = "councilor_shroudwalker_teacher" }
+					any_owned_pop_group = {
+						OR = {
+							pop_group_has_trait = trait_psionic
+							pop_group_has_trait = trait_latent_psionic
+							pop_group_has_trait = trait_latent_machine
+						}
+					}
+				}
+			}
+		}
+        modifier = {
+            factor = 2
+            has_ai_personality = peaceful_counterculture
+        }
+    }
+	
+	ai_weight = {
+		factor = 5 # Very rare tech
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+		}
+        modifier = {
+            factor = 1000		# Guarantees that Hippies get this as a research option.
+            has_ai_personality = peaceful_counterculture
+        }
+    }
+}
+
+#Telepathy
+tech_telepathy = {
+	cost = @tier3cost3
+	area = society
+	tier = 3
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_psionic_theory" }
+	weight = @tier3weight3
+	is_reverse_engineerable = no
+
+	potential = {
+		OR = {
+			has_shroud_dlc = yes
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+
+	technology_swap = {
+		name = tech_telepathy_machine_gestalt
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+	}
+
+	technology_swap = {
+		name = tech_telepathy_hive
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_hive_empire = yes
+			is_wilderness_empire = no
+		}
+	}
+
+	technology_swap = {
+		name = tech_telepathy_wilderness
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_wilderness_empire = yes
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			OR = {
+				has_utopia = yes
+				has_shroud_dlc = yes
+			}
+			has_psionic_ascension = yes
+		}
+		modifier = {
+			factor = 0.50
+			NOT = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_telepathy
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 5
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}
+
+tech_precognition_interface = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_telepathy" }
+	weight = @tier4weight2
+	is_reverse_engineerable = no
+
+	# unlocks precognitive interface-component, combat-computer granting evasion to ships
+
+	prereqfor_desc = {
+		hide_prereq_for_desc = component
+		custom = {
+			title = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_TITLE"
+			desc = "TECH_UNLOCK_COMBAT_COMPUTER_PRECOG_DESC"
+		}
+	}
+
+	potential = {
+		OR = {
+			has_shroud_dlc = yes
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			host_has_dlc = "Utopia"
+		}
+		modifier = {
+			factor = 0.50
+			NOT = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_precognition_interface
+		}
+		modifier = {
+			factor = 2
+			has_ethic = "ethic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_ethic = "ethic_fanatic_spiritualist"
+		}
+		modifier = {
+			factor = 3
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			is_militarist = yes
+		}
+		modifier = {
+			factor = 2
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}
+
+tech_thought_enforcement = {
+	cost = @tier4cost2
+	area = society
+	tier = 4
+	category = { psionics }
+	is_rare = yes
+	prerequisites = { "tech_telepathy" }
+	weight = @tier4weight2
+	is_reverse_engineerable = no
+
+	# Unlocks thought enforcement edict
+
+	potential = {
+		OR = {
+			has_shroud_dlc = yes
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+
+	technology_swap = {
+		name = tech_thought_enforcement_gestalt
+		inherit_icon = yes
+		inherit_effects = yes
+		trigger = {
+			is_gestalt = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0
+			has_psionic_ascension = no
+		}
+		modifier = {
+			factor = 0.50
+			NOT = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_thought_enforcement
+		}
+		modifier = {
+			factor = 2
+			is_spiritualist = yes
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			is_spiritualist = yes
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_police_state
+		}
+		modifier = {
+			factor = 3
+			has_paragon_dlc = no
+			any_owned_leader = {
+				has_trait = leader_trait_shroudwalker
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+			}
+		}
+		modifier = {
+			factor = 2
+			has_shroud_dlc = yes
+			is_gestalt = yes
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			is_authoritarian = yes
+		}
+		modifier = {
+			factor = 0
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}
+
+tech_psi_jump_drive_1 = {
+	cost = @tier5cost2
+	area = society
+	tier = 5
+	category = { psionics }
+	ai_update_type = all
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { "tech_precognition_interface" }
+	weight = @tier5weight2
+	is_dangerous = yes
+	is_reverse_engineerable = no
+
+	feature_flags = {
+		jump_method
+	}
+
+	prereqfor_desc = {
+		component = {
+			title = "TECH_UNLOCK_PSI_JUMPDRIVE_1_TITLE"
+			desc = "TECH_UNLOCK_PSI_JUMPDRIVE_1_DESC"
+		}
+	}
+
+	potential = {
+		OR = {
+			has_shroud_dlc = yes
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+
+	technology_swap = {
+		name = tech_bio_psi_jump_drive_1
+		inherit_icon = no
+		inherit_effects = no
+		trigger = {
+			country_uses_bio_ships = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_TITLE"
+				desc = "TECH_UNLOCK_BIO_PSI_JUMPDRIVE_1_DESC"
+			}
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	weight_modifier = {
+		factor = 0.1
+		modifier = {
+			factor = 0
+			OR = {
+				has_utopia = yes
+				has_shroud_dlc = yes
+			}
+		}
+		modifier = {
+			factor = 0.1
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius }
+				has_trait_in_council = { TRAIT = leader_trait_spark_of_genius_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_2 }
+				has_trait_in_council = { TRAIT = leader_trait_maniacal_3 }
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_psi_jump_drive_1
+		}
+		modifier = {
+			factor = @ap_grasp_the_void_travel_tech
+			has_ascension_perk = ap_grasp_the_void
+		}
+		modifier = {
+			factor = @eager_explorer_effect
+			is_eager_explorer_empire = yes
+		}
+		modifier = {
+			factor = @ap_grasp_the_void_travel_tech
+			has_country_flag = jaunted_traveler_secret_revealed
+		}
+		modifier = {
+			factor = 2
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}

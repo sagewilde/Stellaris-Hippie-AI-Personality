@@ -1,0 +1,97 @@
+### Vanilla Overwrites
+
+values_others = {
+	AND = {
+		OR = {
+			is_xenophile = yes
+			has_valid_civic = civic_hive_empath
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_machine_exploration_protocol
+			has_origin = origin_fruitful
+			has_animal_handler_job = yes
+			has_symbiosis_integrator_job = yes
+			has_valid_civic = civic_hive_familiar_face
+			has_hippie_government = yes
+			#has_ai_personality = mirthful_bandits
+		}
+		NOT = {
+			has_menace_perk = menp_behemoth_ever_hungry
+		}
+	}
+}
+
+has_federator_personality = {
+	OR = {
+		has_ai_personality = federation_builders
+		has_ai_personality = spiritual_seekers
+		has_ai_personality = migrating_flock
+		has_ai_personality = peaceful_traders
+		has_ai_personality = hive_mind_friend
+		has_ai_personality = peaceful_counterculture
+	}
+}
+
+### Hippie Mod Only
+
+has_hippie_government = {
+	OR = {
+		has_government = gov_naturalist_commune
+		has_government = gov_altruistic_utopia
+		has_government = gov_monastic_collective
+		has_government = gov_star_travelers
+	}
+}
+
+is_anti_hippie = {
+	OR = {
+		has_total_war_cb = yes
+		is_homicidal = yes
+		is_slaver = yes
+		is_xenophage = yes
+		has_murderous_civic_or_origin = yes
+		AND = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+		AND = {
+			is_industrialism = yes
+			is_capitalism = yes
+		}
+		AND = {
+			is_militarism = yes
+			NOR = {
+				is_xenophile = yes
+				is_egalitarian = yes
+			}
+		}
+		AND = {
+			is_capitalism = yes
+			is_egalitarian = no
+		}
+		AND = {
+			is_authoritarian = yes
+			is_pacifist = no
+		}
+		AND = {
+			OR = {
+				allows_purge = yes
+				allows_slavery = yes
+			}
+			values_others = no
+			NOT = { has_ai_personality = benevolent_wilderness }
+		}
+		is_country_type = mindwarden_enclave
+		has_origin = origin_mindwardens
+		has_origin = origin_arc_welders
+		has_origin = origin_machine
+	}
+}
+
+is_special_personality = {
+#	OR = {
+		has_ai_personality = peaceful_counterculture
+#		has_ai_personality = mirthful_bandits
+#		has_ai_personality = cunning_raiders
+#		has_ai_personality = mega_union
+#	}
+}
