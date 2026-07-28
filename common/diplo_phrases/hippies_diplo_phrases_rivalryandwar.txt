@@ -403,7 +403,7 @@ action_end_rivalry = {
 				}
 			}
 		}
-		PC_HIPPIE_TO_CORPO_END_RIVALRY_ACCEPT = {
+		PC_HIPPIE_TO_HIPPIE_END_RIVALRY_ACCEPT = {
 			weight = { weight = 1000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture

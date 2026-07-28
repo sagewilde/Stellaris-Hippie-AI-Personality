@@ -545,7 +545,7 @@ action_break_migration_pact = {
 		}
 	}
 	propose = {
-		PC_BREAK_MIGRATION_PACT_PROPOSE_01 = {
+		PC_BREAK_MIGRATION_PACT_PROPOSE = {
 			weight = { weight = 50 }
 			trigger = {
 				from = { has_ai_personality = peaceful_counterculture }
@@ -589,14 +589,6 @@ action_open_borders = {
 	}
 	accept = {
 		PC_OPEN_BORDERS_ACCEPT = {
-			weight = { weight = 50 }
-			trigger = {
-				has_ai_personality = peaceful_counterculture
-			}
-		}
-	}
-	refuse = {
-		PC_OPEN_BORDERS_REFUSE = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -1558,7 +1550,7 @@ action_recall_embassy = {
 		}
 	}
 	accept = {
-		01_RECALL_EMBASSY_ACCEPT_FRIENDLY = {
+		PC_RECALL_EMBASSY_ACCEPT_FRIENDLY = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -1569,7 +1561,7 @@ action_recall_embassy = {
 				}
 			}
 		}
-		01_RECALL_EMBASSY_ACCEPT_NEUTRAL = {
+		PC_RECALL_EMBASSY_ACCEPT_NEUTRAL = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -1579,7 +1571,7 @@ action_recall_embassy = {
 				}
 			}
 		}
-		01_RECALL_EMBASSY_ACCEPT_HOSTILE = {
+		PC_RECALL_EMBASSY_ACCEPT_HOSTILE = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture

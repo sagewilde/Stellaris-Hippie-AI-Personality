@@ -259,7 +259,7 @@
  PC_SUPPORT_INDEPENDENCE_ACCEPT_DISLOYAL:0 "Absolutely godly, my good dude-protectors! With you backing us up, we feel like we might have a chance at sticking it to the Man!"
  PC_REVOKE_INDEPENDENCE_SELECT_LOYAL:0 "Huh? Sorry, wasn't paying attention."
  PC_REVOKE_INDEPENDENCE_SELECT_DISLOYAL:0 "But they're gonna make us wear suits and work office jobs! Don't leave us to the mercy of the Man, man!"
- PC_REVOKE_INDEPENDENCE_PROPOSE:0 "Okay, don't freak out, but solidarity forever might not quite be forever. We brought it up at the last drum circle, and it turns out, our navy is, like, a _lot_ of hands short."
+ PC_REVOKE_INDEPENDENCE_PROPOSE:0 "Okay, don't freak out, but solidarity forever might not quite be forever. We brought it up at the last drum circle, and it turns out, our navy is, like, a lot of hands short."
  PC_REVOKE_INDEPENDENCE_ACCEPT_LOYAL:0 "Oh? Yeah, sure, okay. Peace on, my siblings."
  PC_REVOKE_INDEPENDENCE_ACCEPT_DISLOYAL:0 "Aw. Dangit. I hate suits."
 ## Migration Pact
@@ -369,7 +369,7 @@
  PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_ACCEPT:0 "Aww... but I swear I'm not useless." 
 ## Ask for Assosciation
  PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_SELECT:0 "You wanna audition for the [Root.GetAllianceName]? Well, we're full right now, but what do you play?"
- PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_PROPOSE:0 "The [Root.GetName] would like to express its interest in joining your ban-- uh, Federation. We would be happy to join your league and share in the benefits of partial membership, until such a time as the [From.GetAllianceName] sees fit to extend full membership. ... Did that sound okay?"
+ PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_PROPOSE:0 "The [From.GetName] would like to express its interest in joining your ban-- uh, Federation. We would be happy to join your league and share in the benefits of provisional membership, until such a time as the [Root.GetAllianceName] sees fit to extend it in full. ... Was that alright? Did it sound okay? I-I can go again."
  PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_ACCEPT:0 "Great job, dude. The others talked it over, and you're in! ... I'm sorry, but I couldn't get them to agree to tickets. But the peace part's still solid!"
  PC_ASK_FOR_FEDERATION_ASSOCIATION_STATUS_REFUSE:0 "Sorry, dude. You kinda stumbled on those last couple measures, and the other guy said that he doesn't like some of your policy orientations."
 ## End Association
