@@ -87,12 +87,12 @@ greetings = {
 			FROM = {
 				has_authority = auth_corporate
 				OR = {
-					is_fanatic_militarist = yes
-					has_valid_civic = "civic_naval_contractors"
-					has_valid_civic = "civic_private_military_contractors"
-					has_valid_civic = "civic_corporate_death_cult"
-					has_valid_civic = "civic_permanent_employment"
+					has_ethic = ethic_fanatic_militarist
+					has_valid_civic = "civic_death_cult_corporate"
 					has_valid_civic = "civic_crusader_spirit_corporate"
+					has_valid_civic = "civic_naval_contractors"
+					has_valid_civic = "civic_permanent_employment"
+					has_valid_civic = "civic_private_military_companies"
 				}
 			}
 			OR = {
