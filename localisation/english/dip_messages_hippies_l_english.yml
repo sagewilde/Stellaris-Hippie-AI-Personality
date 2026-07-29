@@ -5,7 +5,7 @@
  PC_HOSTILE_GREETING_01:0 "[Root.GetSpeciesAdj] [Root.GetSpeciesNamePluralInsult]? Yeah, well, you know, that's just, like, your opinion, man. At least I'm housebroken."
  PC_HOSTILE_GREETING_02:0 "Come closer. Got a secret for you. Yeah, put your [From.GetSpeciesEarName] close to my [Root.GetSpeciesMouthName]. C'mere. Closer. YOU! HAVE! THE MOST! RANCID! VIBES!"
  PC_HOSTILE_GREETING_03:0 "You know, when I'm grumpy, it's usually because I got the munchies. You should go home, do some yoga, have a bite to eat, take a nap, and leave us alone."
- PC_HOSTILE_GREETING_04:0 "For dudes who are supposed to be in tune with the higher energies of the universe, your aura sure is dark. I don't think your priests have their chakras aligned right."
+ PC_HOSTILE_GREETING_04:0 "For dudes who are supposed to be in tune with the higher energies of the universe, your aura sure is dark. I don't think your [From.GetBureaucratPlural] have their chakras aligned right."
  PC_HOSTILE_GREETING_05:0 "Bad cop! Bad! No donut for you! Now go sit in the corner and think about what you've done!"
  PC_HOSTILE_GREETING_06:0 "[From.GetSpeciesNameInsultCap] of war and [From.GetSpeciesName] of hate... What are you expecting to achieve? Currency in flesh and bone? Hell opened up and put on sale? Your species has a dark side, and dealing in death is the nature of the beast." # kudos to Pink Floyd and Dogs Of War
  PC_HOSTILE_GREETING_07:0 "As long as there are people who think capitalism is a solution to any of society's problems, we'll be stuck in an endless cycle of oppression and bad vibes. Our only shot at Nirvana is to throw off people like you forever!"

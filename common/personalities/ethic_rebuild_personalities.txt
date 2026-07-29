@@ -106,7 +106,7 @@ utopia_builders = {
 	}
 
 	weight_modifier = {
-		weight = 10
+		weight = 5				# Reduced this weight to make other empires more common. --Sage
 	}
 }
 

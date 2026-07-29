@@ -101,20 +101,17 @@ honorbound_warriors = {
 
 	allow = {
 		is_country_type = default
-		OR = {
-			AND = {
-				has_ethic = "ethic_fanatic_militarist"
-				OR = {
-					has_ethic = "ethic_spiritualist"
-					has_ethic = "ethic_egalitarian"
-					has_ethic = "ethic_xenophile"
-				}
-			}
-			AND = {
-				has_ethic = "ethic_fanatic_xenophile"
-				has_ethic = "ethic_militarist"
-			}
-		}
+		is_militarist = yes				# Fixed this to make this spawn a little more common. -- Sage
+        OR = {
+            AND = {
+                is_xenophile = yes
+                is_authoritarian = no
+            }
+            AND = {
+                is_spiritualist = yes
+                is_xenophobe = no
+            }
+        }
 	}
 
 	weight_modifier = {
@@ -460,10 +457,7 @@ ruthless_capitalists = {
 
 	allow = {
 		is_country_type = default
-		NOR = {
-			has_ethic = "ethic_fanatic_pacifist"
-			is_socialism = yes	
-		}
+		NOT = {	has_ethic = ethic_fanatic_pacifist }
 		is_capitalism = yes
 		OR = {
 			is_industrial = yes
@@ -477,22 +471,30 @@ ruthless_capitalists = {
 		
 		modifier = {
 			factor = 10
-			has_valid_civic = civic_industrial_automation
+			OR = {
+				has_valid_civic = civic_industrial_automation
+				has_valid_civic = civic_twisted_experimenters
+				has_valid_civic = civic_twisted_experimenters_corporate
+			}
 		}
 		modifier = {
 			factor = 50
-			has_valid_civic = civic_merchant_guilds
+			OR = {
+				has_valid_civic = civic_criminal_heritage
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_ruthless_competition
+			}
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			has_trait = trait_thrifty
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			has_trait = trait_industrious
 		}
 		modifier = {
-			factor = 1
+			factor = 2
 			has_election_type = oligarchic
 		}
 	}
@@ -559,8 +561,11 @@ peaceful_traders = {
 		weight = 100
 		modifier = {
 			factor = 10
-			has_valid_civic = civic_corporate_dominion
-			has_trait = "trait_thrifty"
+			OR = {
+				has_valid_civic = civic_corporate_dominion
+				has_valid_civic = civic_distributism
+				has_trait = "trait_thrifty"
+			}
 		}
 	}
 }
@@ -691,7 +696,11 @@ slaving_despots = {
 
 	allow = {
 		is_country_type = default
-		has_valid_civic = civic_slaver_guilds
+		OR = {
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_indentured_assets
+			has_valid_civic = civic_divine_order			# Added the civics that have over 30% of the pop enslaved. -- Sage
+		}
 		OR = {
 			is_authoritarian = yes
 			is_xenophobe = yes
@@ -706,10 +715,10 @@ slaving_despots = {
 
 	weight_modifier = {
 		weight = 200
-			modifier = {
-				weight = 1000
-				has_civic = civic_state_monopoly
-			}
+		modifier = {
+			weight = 1000
+			has_civic = civic_state_monopoly
+		}
 	}
 }
 
@@ -767,7 +776,11 @@ decadent_hierarchy = {
 
 	allow = {
 		is_country_type = default
-		has_valid_civic = civic_slaver_guilds
+		OR = {
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_indentured_assets
+			has_valid_civic = civic_divine_order			# Added the civics that have over 30% of the pop enslaved. -- Sage
+		}
 		OR = {
 			is_authoritarian = yes
 			is_capitalism = yes
@@ -776,10 +789,11 @@ decadent_hierarchy = {
 			is_pacifist = yes
 			is_xenophile = yes
 		}
-		OR = {
-			has_trait = "trait_decadent"
-			is_xenophobe = yes
-		}
+		is_xenophobe = no
+		#OR = {
+		#	has_trait = "trait_decadent"								# Removed this requirement --Sage
+		#	is_xenophobe = yes
+		#}
 		NOR = {
 			is_egalitarian = yes
 			is_socialism = yes
@@ -788,6 +802,34 @@ decadent_hierarchy = {
 
 	weight_modifier = {
 		weight = 200
+		modifier = {													# Added the following weights --Sage
+			weight = 10
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_valid_civic = civic_aristocratic_elite_corporate
+				has_valid_civic = civic_genetic_aristocracy
+			}
+		}
+		modifier = {
+			weight = 10
+			OR = {
+				has_valid_civic = civic_consumerism
+				has_valid_civic = civic_consumerism_corporate
+			}
+		}
+		modifier = {
+			weight = 100
+			OR = {
+				has_origin = origin_forever_cruise						
+				has_valid_civic = civic_corporate_hedonism
+				has_valid_civic = civic_pleasure_seekers
+			}
+		}
+		modifier = {
+			weight = 1000
+			has_trait = "trait_decadent"							# Made Decadent a weight instead of a requirement
+			NOT = { has_valid_civic = civic_fanatic_purifiers }
+		}
 	}
 }
 
@@ -1011,7 +1053,7 @@ federation_builders = {
 	}
 
 	weight_modifier = {
-		weight = 5 # Very common, so lower weight
+		weight = 10 # Very common, so lower weight
 	}
 }
 
