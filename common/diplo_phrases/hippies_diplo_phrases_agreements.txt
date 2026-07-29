@@ -1508,7 +1508,7 @@ action_embassy = {
 
 action_recall_embassy = {
 	select = {
-		PC_RECALL_EMBASSY_FRIENDLY = {
+		PC_RECALL_EMBASSY_SELECT_FRIENDLY = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -1519,7 +1519,7 @@ action_recall_embassy = {
 				}
 			}
 		}
-		PC_RECALL_EMBASSY_NEUTRAL = {
+		PC_RECALL_EMBASSY_SELECT_NEUTRAL = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -1529,7 +1529,7 @@ action_recall_embassy = {
 				}
 			}
 		}
-		PC_RECALL_EMBASSY_HOSTILE = {
+		PC_RECALL_EMBASSY_SELECT_HOSTILE = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture

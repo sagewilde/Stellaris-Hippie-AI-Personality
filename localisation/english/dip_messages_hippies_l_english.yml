@@ -377,9 +377,9 @@
  PC_END_FEDERATION_ASSOSICATION_STATUS_PROPOSE:0 "We need to talk about something important. I really wanted to join this band, but the tryout period has been way, way too long. And more importantly, you guys don't seem to value music like we do. The [Root.GetAllianceName] and the [From.GetName] are gonna have to split."
  PC_END_FEDERATION_ASSOSICATION_STATUS_ACCEPT:0 "That's hard to hear, but we understand. Safe travels, [From.GetAdj], dudes. And good luck with your music and wars and stuff."
 ## Leave Federation
- PC_LEAVE_A_SELECT:0 "What do you mean, 'you wanna break up the band'?!"
- PC_LEAVE_A_PROPOSE:0 "We kind of wanna start a solo career. We think we could really take our act big if we're alone. No hard feelings dude, but I finally learned how to play the drums. And how to use cannons! This is a big dream for me, and I want us both to be happy."
- PC_LEAVE_A_ACCEPT:0 "Bummer, man. That's so harsh... But if you wanna go it alone, we can't stop you. Safe travels, siblings."
+ PC_ASK_TO_LEAVE_A_SELECT:0 "What do you mean, 'you wanna break up the band'?!"
+ PC_ASK_TO_LEAVE_A_PROPOSE:0 "We kind of wanna start a solo career. We think we could really take our act big if we're alone. No hard feelings dude, but I finally learned how to play the drums. And how to use cannons! This is a big dream for me, and I want us both to be happy."
+ PC_ASK_TO_LEAVE_A_ACCEPT:0 "Bummer, man. That's so harsh... But if you wanna go it alone, we can't stop you. Safe travels, siblings."
 
 # Hippies, Nomads, and Hippie Nomads
 ## Hostile Greetings
