@@ -19,6 +19,7 @@
  PC_MECH_HOSTILE_GREETING_03:0 "You'd think that something as smart as you would know that war isn't the answer. Maybe you did your big fancy math wrong."
  PC_MECH_HOSTILE_GREETING_04:0 "When a [From.GetSpeciesName]'s an empty kettle, he should be on his mettle. But are you torn apart? Just because it'd be a blessing, if maybe we could be besties... if you only had a heart."
  PC_HOSTILE_GREETING_HUMAN_01:0 "Mohandas Gandhi, Greta Thunberg, Nelson Mandela, Israel Kamakawiwo'ole... if [From.GetRulerName] wanted to be in the history book next to them, then you super missed your chance, bud."
+ PC_HOSTILE_GREETING_TIYANKI:0 "What did those poor tiyanki ever do to you?! You monster! You absolute monster!"
 ## 'Sup, dudes!
  PC_NEUTRAL_GREETING_01:0 "'Sup, my dudes! We come in peace!"
  PC_NEUTRAL_GREETING_02:0 "Our [Root.GetRulerTitle] wants to ask; are you cool with recreational intoxicants? If not, that's chill, consent is king. We respect a straight-edge."
@@ -101,7 +102,7 @@
  PC_DEMAND_VASS_PROPOSE:0 "Look, dude, I swear we're cool. But we're worried about you, and we don't want you to get curb-stomped by some nutso fanatic purifier. Yea or nay, you've always got a couch to crash on at our place. Just say the word."
  PC_DEMAND_VASS_ACCEPT_1:0 "We accept your protection! You are hereby The Rainbow Warriors of the [Root.GetName]! We've made a spot on the [Ruler.GetTitle]'s personal couch for you!"
  PC_DEMAND_VASS_ACCEPT_2:0 "We spent thousands of years protecting the wilderness on our planets. Who knew that Mother Nature herself would be returning the favor? We accept!"
- PC_DEMAND_VASS_ACCEPT_3:0 "All our lives, we admired you. The first time we got radio broadcasts from [From.GetHomeWorldName], we were just starting to reach out into the cosmos. We were hoping we would find friends. It was magical, dude. We understood what you had to say, we _connected_. We really took what your world's heroes said to heart.\n\nThe [From.GetSpeciesNamePlural] are, well, kind of like the big brother we'd always heard about and hoped we'd meet. We might have only met kinda recently, but the [Root.GetSpeciesNamePlural] have idolized you for centuries. We accept. Can, uh... can I give you a hug?"
+ PC_DEMAND_VASS_ACCEPT_3:0 "All our lives, we admired you. The first time we got radio broadcasts from [From.GetHomeWorldName], we were just starting to reach out into the cosmos. The [From.GetSpeciesNamePlural] are, well, kind of like the big brother we'd always heard about and hoped we'd meet. We accept. Can, uh... can I give you a hug?"
  PC_DEMAND_VASS_REFUSE_1:0 "We brought it up at the drum circle, and put it to a vote. It was a pretty close margin, but we respect all the voices in our community. Sorry, dude."
  PC_DEMAND_VASS_REFUSE_2:0 "Oh, I'm gonna need a joint for this. No. Not just no, but you can go stick it where light can't escape. Let you in on a secret, we've spent years getting ready for this. Go ahead. Try it. We'll be the most annoying headache of a siege you've ever had to deal with in your civilization's entire history."
 ## Asking for Vassalization

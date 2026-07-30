@@ -278,6 +278,36 @@ greetings = {
 			}
 		}
     }
+	PC_HOSTILE_GREETING_TIYANKI = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			OR = {
+				has_opinion_modifier = {
+					who = from
+					modifier = opinion_killed_tiyanki_fleet_1
+				}
+				has_opinion_modifier = {
+					who = from
+					modifier = opinion_killed_tiyanki_fleet_2
+				}
+				has_opinion_modifier = {
+					who = from
+					modifier = opinion_killed_all_tiyanki_1
+				}
+				has_opinion_modifier = {
+					who = from
+					modifier = opinion_killed_all_tiyanki_2
+				}
+			}
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+		}
+	}
     PC_PROTECTIVE_GREETING_01 = {
 		weight = { weight = 10000 }
 		trigger = {
