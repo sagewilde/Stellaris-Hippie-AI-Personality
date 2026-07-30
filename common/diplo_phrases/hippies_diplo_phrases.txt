@@ -1003,7 +1003,7 @@ greetings = {
 action_insult = {
 	select = {
 		PC_PREINSULT_HIPPIE_01 = {
-		weight = { weight = 10000 }
+			weight = { weight = 10000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
 				OR = {
@@ -1016,7 +1016,7 @@ action_insult = {
 			}
 		}
 		PC_PREINSULT_HIPPIE_02 = {
-		weight = { weight = 10000 }
+			weight = { weight = 10000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
 				OR = {
@@ -1026,7 +1026,7 @@ action_insult = {
 			}
 		}
 		PC_PREINSULT_HIPPIE_03 = {
-		weight = { weight = 10000 }
+			weight = { weight = 10000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
 				OR = {
