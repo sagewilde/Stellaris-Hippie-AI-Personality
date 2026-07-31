@@ -50,6 +50,6 @@
  gov_star_travelers_desc: "Springing from a culture that breathlessly catalogued the stars and charted their distances long before they ever left their homeworld, Star Travelers are utterly enthralled with the universe around them. Their economic and government schemes typically revolve around exploring every nook and cranny of every moon they find."
  RT_STARGAZER: "Stargazer-in-Chief"
 
- civic_anarchy_utopia_effects:0 "$civic_crowdsourcing_anarchy_effects$\n$civic_anarchy_ideals_effects$$TABBED_NEW_LINE$- The §HXenoist§! faction will provide higher §YFaction Output§! whenever a large number of §YUnique Species§! are within the empire (greater than 5, 7 or 10).\n\nAllows the §Y$trade_policy_mutual_aid$§! Trade Policy, which converts $r_trade$ to $r_energy$, $r_minerals$ and $r_food$."
+ civic_anarchy_utopia_effects:0 "$civic_crowdsourcing_anarchy_effects$\n$civic_anarchy_ideals_effects$$TABBED_NEW_LINE$- The §HXenoist§! faction will provide higher §YFaction Output§! whenever a large number of §YUnique Species§! are within the empire (greater than 5, 7 or 10).$TABBED_NEW_LINE$- Allows the §Y$trade_policy_mutual_aid$§! Trade Policy, which converts $r_trade$ to $r_energy$, $r_minerals$ and $r_food$."
 
  TORTLE_POWER: "§G+ Groovy Affinity§!"

@@ -291,8 +291,9 @@ ethic_pacifist = {
 		modifier = {
 			factor = value:count_councilors_with_ethic|ETHIC|pacifist|
 		}
+		
 		modifier = {	# Ensures AI Hippies stay Hippies
-			factor = 5
+			factor = 10
 			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
