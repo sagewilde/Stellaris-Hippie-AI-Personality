@@ -12,7 +12,7 @@ values_others = {
 			has_symbiosis_integrator_job = yes
 			has_valid_civic = civic_hive_familiar_face
 			has_hippie_government = yes
-			#has_ai_personality = mirthful_bandits
+			has_ai_personality = mirthful_bandits		# For compatibility with Pirate AI Personalities
 		}
 		NOT = {
 			has_menace_perk = menp_behemoth_ever_hungry
@@ -85,10 +85,10 @@ is_anti_hippie = {
 }
 
 is_special_personality = {
-#	OR = {
+	OR = {
 		has_ai_personality = peaceful_counterculture
-#		has_ai_personality = mirthful_bandits
-#		has_ai_personality = cunning_raiders
-#		has_ai_personality = mega_union
-#	}
+		has_ai_personality = mirthful_bandits			# For compatibility with Pirate AI Personalities
+		has_ai_personality = cunning_raiders
+		#has_ai_personality = mega_union
+	}
 }

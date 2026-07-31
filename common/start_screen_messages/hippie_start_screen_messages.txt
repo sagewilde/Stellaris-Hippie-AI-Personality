@@ -4,6 +4,6 @@ part = {
 	localization = "START_SCREEN_HIPPIES"
 
 	trigger = {
-		has_country_flag = empire_hippies
+		has_country_flag = hippies
 	}
 }
