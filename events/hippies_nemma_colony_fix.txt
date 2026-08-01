@@ -153,7 +153,10 @@ planet_event = {
 				NOR = {
 					is_xenophobe = yes
 					is_homicidal = yes
-                    is_industrial = yes
+                    AND = {
+						is_industrial = yes
+						values_others = no
+					}
 					AND = {
 						is_machine_empire = yes
 						NOT = { has_civic = civic_machine_servitor }
@@ -166,16 +169,15 @@ planet_event = {
 			owner = root
 		}
 	}
-
 	option = {
 		name = colony.9010.b
 		trigger = {
 			owner = {
 				NOR = {
+					values_others = yes
 					is_egalitarian = yes
                     is_green = yes
                     is_socialism = yes
-					has_civic = civic_hive_empath
 					AND = {
 						is_machine_empire = yes
 						NOT = { has_civic = civic_machine_assimilator }
@@ -193,9 +195,8 @@ planet_event = {
 		trigger = {
 			owner = {
 				NOR = {
-					is_xenophile = yes
+					values_others = yes
                     is_green = yes
-					has_civic = civic_hive_empath
 					has_civic = civic_machine_servitor
 				}
 			}
