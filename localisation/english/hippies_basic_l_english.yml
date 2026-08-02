@@ -13,8 +13,6 @@
  triggered_opinion_unbridled_nature:0 "Unbridled Nature"
  triggered_opinion_love_for_all_sapients:0 "Love for All Sapients"
 
- UNIQUE_LIFEFORMS_DESC:0 "Owning a world with §YNemma§!, §YTitanic Life§! or §YAlien Pets§! will greatly please the [Root.GetName]."
-
  ### Prescripted Nation
  PRESCRIPTED_ship_prefix_hippies: "PAX"
  PRESCRIPTED_species_hippies: "Tortle"
