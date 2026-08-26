@@ -5,7 +5,8 @@ hippies = {
 	spawn_enabled = yes
 	spawn_as_fallen = no
 	ignore_portrait_duplication = no
-    flag = hippies
+
+    flag = empire_hippies
 
 	species = {
 		class = "REP"
