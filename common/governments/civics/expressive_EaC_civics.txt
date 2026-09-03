@@ -1423,7 +1423,6 @@ civic_naturalism = {
 
 	possible = {
 		ethics = {
-            is_nomadic = no
 			OR = {
 				text = civic_tooltip_pacifist
 				value = ethic_pacifist

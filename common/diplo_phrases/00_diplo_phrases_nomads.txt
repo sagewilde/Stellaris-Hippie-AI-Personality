@@ -1,0 +1,164 @@
+#################################################################################################################
+### These are all the vanilla overwrites necessary for Sage Wilde's Expressive AI Personalities. 
+###
+### This is a load-bearing file! Be advised; deleting, renaming, or otherwise fucking with this file or anything
+### in it could break important moving parts. Likewise, fucking with the "is_special_personality" trigger from 
+### the hippies_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
+### you do, sometimes). 
+###
+### If you are using this as a template to make your own hyper-detailed AI Personalities, then I'm sorry to say 
+### that you're going to have to write in a dialogue entry for every single instance that says 
+### "NOT = { is_special_personality = yes }" or includes "is_special_personality = yes" in a NOR argument. If it 
+### says 'trigger = { always = yes }', then REALLY don't fuck with it, that's hard-coded and cannot be changed, 
+### no matter what. When in doubt, check the diplo_phrases files. I tried my best to organize them by category 
+### to make them easy to read.
+### 
+### Like everything else I have ever coded, this was done by hand, the old-fashioned way, without an LLM. If you
+### catch a mistake, it's a mistake that I made, and I am terribly sorry. That was my bad. Please report the bug 
+### to me directly in the Discussions tab on Steam. Include the part in the code that I broke, and what you were 
+### doing when it shat the bed. Screenshots are great, so include them. I swear, I will try to fix it as soon as 
+### I am able. If I'm too slow, and you know how to fix it, feel free to make a patch. I'll merge it upstream 
+### eventually, and credit you for the contribution.
+###
+### Try not to break anything. If you do, it's your fault, Blorg-face. -- Sage Wilde
+#################################################################################################################
+
+####################
+# NOMADS DIPLOMACY PHRASES
+####################
+
+# FROM = initiator of the diplomatic action; ROOT = recipient of the diplomatic action
+
+action_form_waystation_pact = {
+	select = {
+		# Settled grants to nomad
+		01_GRANT_WAYSTATION_PACT_SELECT = {
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		# Nomad requests from settled
+		01_REQUEST_WAYSTATION_PACT_SELECT = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = no
+					NOT = { is_special_personality = yes } 
+				}
+			}
+		}
+		# Nomad shares with nomad
+		01_SHARE_WAYSTATION_PACT_SELECT = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = yes
+					NOT = { is_special_personality = yes } 
+				}
+			}
+		}
+	}
+	propose = {
+		01_GRANT_WAYSTATION_PACT_PROPOSE = {
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_REQUEST_WAYSTATION_PACT_PROPOSE = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = no 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_SHARE_WAYSTATION_PACT_PROPOSE = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+	}
+	accept = {
+		01_GRANT_WAYSTATION_PACT_ACCEPT = {
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_REQUEST_WAYSTATION_PACT_ACCEPT = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = no 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_SHARE_WAYSTATION_PACT_ACCEPT = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+	}
+	refuse = {
+		01_GRANT_WAYSTATION_PACT_REFUSE = {
+			trigger = {
+				FROM = { is_nomadic = no }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_REQUEST_WAYSTATION_PACT_REFUSE = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = no 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+		01_SHARE_WAYSTATION_PACT_REFUSE = {
+			trigger = {
+				FROM = { is_nomadic = yes }
+				ROOT = { 
+					is_nomadic = yes 
+					NOT = { is_special_personality = yes }
+				}
+			}
+		}
+	}
+}
+
+action_break_waystation_pact = {
+	select = {
+		01_BREAK_WAYSTATION_PACT_SELECT = {}
+	}
+	propose = {
+		01_BREAK_WAYSTATION_PACT_PROPOSE = {}
+	}
+	accept = {
+		01_BREAK_WAYSTATION_PACT_ACCEPT = {}
+	}
+}
