@@ -378,7 +378,6 @@ greetings = {
     }
 	PC_NEUTRAL_GREETING_06 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -389,7 +388,6 @@ greetings = {
 	}
 	PC_NEUTRAL_GREETING_07 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -410,7 +408,6 @@ greetings = {
 	}
 	PC_NEUTRAL_GREETING_09 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -581,7 +578,6 @@ greetings = {
     }
 	PC_FRIENDLY_GREETING_07 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -596,7 +592,6 @@ greetings = {
 	}
 	PC_FRIENDLY_GREETING_08 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -611,7 +606,6 @@ greetings = {
 	}
 	PC_FRIENDLY_GREETING_09 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -627,7 +621,6 @@ greetings = {
 	}
 	PC_FRIENDLY_GREETING_10 = {
 		weight = { weight = 10000 }
-		NOT = { is_at_war_with = FROM }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			NOT = { has_technology = tech_pk_shielder }
@@ -855,7 +848,7 @@ greetings = {
 			FROM = { has_ai_personality = benevolent_wilderness }
 		}
 	}
-	PC_VASSAL_GREETING_05 = {
+	PC_VASSAL_GREETING_O5 = {
 		weight = { weight = 10000 }
 		trigger = {
 			has_ai_personality = peaceful_counterculture

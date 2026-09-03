@@ -560,14 +560,6 @@ action_break_migration_pact = {
 			}
 		}
 	}
-	refuse = {
-		PC_BREAK_MIGRATION_PACT_REFUSE = {
-			weight = { weight = 50 }
-			trigger = {
-				has_ai_personality = peaceful_counterculture
-			}
-		}
-	}
 }
 
 action_open_borders = {
@@ -770,7 +762,7 @@ action_leave_federation = {
 		}
 	}
 	select = {
-		PC_ASK_TO_LEAVE_A_SELECT = {
+		PC_LEAVE_A_SELECT = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -778,7 +770,7 @@ action_leave_federation = {
 		}
 	}
 	propose = {
-		PC_ASK_TO_LEAVE_A_PROPOSE = {
+		PC_LEAVE_A_PROPOSE = {
 			weight = { weight = 50 }
 			trigger = {
 				from = { has_ai_personality = peaceful_counterculture }
@@ -786,7 +778,7 @@ action_leave_federation = {
 		}
 	}
 	accept = {
-		PC_ASK_TO_LEAVE_A_ACCEPT = {
+		PC_LEAVE_A_ACCEPT = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -884,14 +876,6 @@ action_revoke_federation_association_status = {
 	}
 	accept = {
 		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_ACCEPT = {
-			weight = { weight = 50 }
-			trigger = {
-				has_ai_personality = peaceful_counterculture
-			}
-		}
-	}
-	refuse = {
-		PC_REVOKE_FEDERATION_ASSOCIATION_STATUS_REFUSE = {
 			weight = { weight = 50 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture

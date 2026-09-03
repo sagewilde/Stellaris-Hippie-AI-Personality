@@ -190,7 +190,7 @@ action_make_rival = {
 				}
 			}
 		}
-		PC_HIPPIE_TO_CORPO_RIVAL_ACCEPT = {
+		PC_HIPPIE_TO_CORPO_MAKE_RIVAL_ACCEPT = {
 			weight = { weight = 1000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -200,7 +200,7 @@ action_make_rival = {
 				}
 			}
 		}
-		PC_CORPO_TO_HIPPIE_RIVAL_ACCEPT = {
+		PC_CORPO_TO_HIPPIE_MAKE_RIVAL_ACCEPT = {
 			weight = { weight = 1000 }
 			trigger = {
 				FROM = { has_ai_personality = peaceful_counterculture }
@@ -208,7 +208,7 @@ action_make_rival = {
 				NOT = { is_human_species = yes }
 			}
 		}
-		PC_HIPPIE_TO_HIPPIE_RIVAL_ACCEPT = {
+		PC_HIPPIE_TO_HIPPIE_MAKE_RIVAL_ACCEPT = {
 			weight = { weight = 1000 }
 			trigger = {
 				has_ai_personality = peaceful_counterculture
@@ -432,7 +432,7 @@ action_declare_war = {
 					has_ai_personality = peaceful_counterculture
 				}
 				OR = { 
-					has_crisis_level = 5
+					has_crisis_level = crisis_level_5
 					is_homicidal = yes
 				}
 			}

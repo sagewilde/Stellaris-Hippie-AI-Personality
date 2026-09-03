@@ -90,8 +90,9 @@ greetings = {
 				has_authority = auth_corporate
 				OR = {
 					has_valid_civic = "civic_naval_contractors"
-					has_valid_civic = "civic_private_military_contractors"
-					has_valid_civic = "civic_corporate_death_cult"
+					has_valid_civic = "civic_private_military_companies"
+					has_valid_civic = "civic_private_militaries"
+					has_valid_civic = "civic_death_cult"
 					has_valid_civic = "civic_permanent_employment"
 					has_valid_civic = "civic_crusader_spirit_corporate"
 				}
@@ -116,7 +117,7 @@ greetings = {
 			}
 		}
     }
-    PC_HOSTILE_GREETING_PK_SHIELDER_HUMAN_01 = {
+    PC_HOSTILE_GREETING_HUMAN_PK_SHIELDER_01 = {
 		weight = { weight = 10000 }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
@@ -129,26 +130,13 @@ greetings = {
 			}
 		}
     }
-    PC_HOSTILE_GREETING_PK_SHIELDER_HUMAN_02 = {
+    PC_HOSTILE_GREETING_HUMAN_PK_SHIELDER_02 = {
 		weight = { weight = 10000 }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
 			has_technology = tech_pk_shielder
 			NOT = { is_at_war_with = FROM }
 			FROM = { is_human_species = yes }
-			OR = {
-				is_hostile_to = FROM
-				is_unfriendly_to = FROM
-			}
-		}
-    }
-    PC_MECH_HOSTILE_GREETING_PK_SHIELDER_01 = {
-		weight = { weight = 10000 }
-		trigger = {
-			has_ai_personality = peaceful_counterculture
-			has_technology = tech_pk_shielder
-			NOT = { is_at_war_with = FROM }
-			FROM = { is_species_class = ROBOT }
 			OR = {
 				is_hostile_to = FROM
 				is_unfriendly_to = FROM
@@ -253,7 +241,7 @@ greetings = {
 			is_neutral_to = FROM
 		}
     }
-    PC_THREATENED_GREETING_PK_SHIELDER_01 = {
+    PC_THREATENED_GREETING_PK_SHIELDER = {
 		weight = { weight = 10000 }
 		trigger = {
 			has_ai_personality = peaceful_counterculture
@@ -481,7 +469,7 @@ action_insult = {
         }
 	}
 	propose = {
-        PC_INSULT_HIPPIE_PK_SHIELDER = {
+        PC_INSULT_PK_SHIELDER = {
             trigger = {
                 has_ai_personality = peaceful_counterculture
                 has_technology = tech_pk_shielder
