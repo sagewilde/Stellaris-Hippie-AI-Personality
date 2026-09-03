@@ -59,7 +59,7 @@ fantasy_hippies_2 = {
 			"Lucy in the Sky"
 			"Marie Juana"
 			"Maria Juanita"
-			"Maryjane"
+			"Mary Jane"
 			"Micah Sunrise"
 			"Michael Rainbow"
 			"Moon Beam"

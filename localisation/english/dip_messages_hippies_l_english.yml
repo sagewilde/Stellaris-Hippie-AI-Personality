@@ -257,7 +257,7 @@
  PC_SUPPORT_INDEPENDENCE_SELECT_LOYAL:0 "What do you mean 'We have a bad landlord'? We're buds, we're chill."
  PC_SUPPORT_INDEPENDENCE_SELECT_DISLOYAL:0 "You wanna help us get free? For serious? Do you have a spare couch?"
  PC_SUPPORT_INDEPENDENCE_PROPOSE:0 "Oppression anywhere is a threat to freedom everywhere. Solidarity forever, my dudes! If you tell the Man to go fly a kite, we'll be right there with you!"
- PC_SUPPORT_INDPENDENCE_ACCEPT_LOYAL:0 "I mean... thanks, I guess. That's nice of you. We'll call you if things get bad."
+ PC_SUPPORT_INDEPENDENCE_ACCEPT_LOYAL:0 "I mean... thanks, I guess. That's nice of you. We'll call you if things get bad."
  PC_SUPPORT_INDEPENDENCE_ACCEPT_DISLOYAL:0 "Absolutely godly, my good dude-protectors! With you backing us up, we feel like we might have a chance at sticking it to the Man!"
  PC_REVOKE_INDEPENDENCE_SELECT_LOYAL:0 "Huh? Sorry, wasn't paying attention."
  PC_REVOKE_INDEPENDENCE_SELECT_DISLOYAL:0 "But they're gonna make us wear suits and work office jobs! Don't leave us to the mercy of the Man, man!"
