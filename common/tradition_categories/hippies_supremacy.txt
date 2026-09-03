@@ -49,6 +49,17 @@ tradition_supremacy = {
 			is_homicidal = yes
 		}
 		modifier = {
+			factor = 4
+			OR = {
+				has_khan_civic_or_origin = yes
+				is_pirate_empire = yes
+			}
+		}
+		modifier = {
+			factor = @ap_pending_tradition_suppress
+			has_ap_pending = yes
+		}
+		modifier = {
 			factor = 0
 			has_ai_personality = peaceful_counterculture
 		}

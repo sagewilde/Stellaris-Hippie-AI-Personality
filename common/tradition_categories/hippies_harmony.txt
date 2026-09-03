@@ -45,8 +45,20 @@ tradition_harmony = {
 			has_origin = origin_necrophage
 		}
 		modifier = {
-            factor = 10
-            has_ai_personality = peaceful_counterculture
+			factor = 2
+			OR = {
+				has_valid_civic = civic_shared_burden
+				is_worker_coop_empire = yes
+				is_anarchist_empire = yes
+			}
+		}
+		modifier = {
+			factor = @ap_pending_tradition_suppress
+			has_ap_pending = yes
+		}
+		modifier = {
+			factor = 4
+			has_ai_personality = peaceful_counterculture
 		}
 	}
 }

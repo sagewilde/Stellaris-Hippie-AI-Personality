@@ -1,9 +1,10 @@
 #################################################################################################################
-### These are all the vanilla overwrites necessary for Sage Wilde's AI personalities. 
+### These are all the vanilla overwrites necessary for Sage Wilde's Expressive AI Personalities. 
 ###
 ### This is a load-bearing file! Be advised; deleting, renaming, or otherwise fucking with this file or anything
 ### in it could break important moving parts. Likewise, fucking with the "is_special_personality" trigger from 
-### the hippie_scripted_triggers.txt file WILL break dialogue. 
+### the hippies_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
+### you do, sometimes). 
 ###
 ### If you are using this as a template to make your own hyper-detailed AI Personalities, then I'm sorry to say 
 ### that you're going to have to write in a dialogue entry for every single instance that says 
@@ -2765,7 +2766,7 @@ action_ask_for_federation_association_status = {
 		}
 		HM_CONSIDER_02 = {
 			trigger = {
-					OR = {
+				OR = {
 					has_ai_personality = hive_mind
 					has_ai_personality = devouring_swarm
 				}
@@ -3411,7 +3412,7 @@ action_demand_subjugation = {
 		}
 		HM_CONSIDER_02 = {
 			trigger = {
-					OR = {
+				OR = {
 					has_ai_personality = hive_mind
 					has_ai_personality = devouring_swarm
 				}
@@ -4053,7 +4054,7 @@ action_ask_to_become_subjugated = {
 		}
 		HM_CONSIDER_02 = {
 			trigger = {
-					OR = {
+				OR = {
 					has_ai_personality = hive_mind
 					has_ai_personality = devouring_swarm
 				}
@@ -9855,5 +9856,639 @@ action_break_secret_fealty = {
 				has_ai_personality = fanatic_purifiers
 			}
 		}
+	}
+}
+
+# CORPORATE GREETINGS
+
+### Corporate Greetings
+CORP_HOSTILE_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_HOSTILE_GREETING_04 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_HOSTILE_GREETING_05 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_CORP_HOSTILE_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_CORP_HOSTILE_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_CORP_HOSTILE_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+CORP_NEUTRAL_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+CORP_NEUTRAL_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+CORP_NEUTRAL_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+CORP_NEUTRAL_GREETING_04 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+CORP_CORP_NEUTRAL_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { is_megacorp = yes }
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+CORP_THREATENED_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = from }
+		is_threatened_to = FROM
+	}
+}
+CORP_FRIENDLY_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_friendly_to = FROM
+			is_cordial_to = FROM
+			is_protective_to = FROM
+		}
+	}
+}
+CORP_CORP_FRIENDLY_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_friendly_to = FROM
+			is_cordial_to = FROM
+			is_protective_to = FROM
+		}
+	}
+}
+CORP_WAR_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_at_war_with = FROM
+	}
+}
+CORP_WAR_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_at_war_with = FROM
+	}
+}
+CORP_WAR_GREETING_04 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_at_war_with = FROM
+	}
+}
+CORP_CORP_WAR_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		is_at_war_with = FROM
+	}
+}
+CORP_CORP_WAR_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		FROM = { is_megacorp = yes }
+		is_at_war_with = FROM
+	}
+}
+CORP_OVERLORD_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_overlord_to = FROM
+	}
+}
+CORP_OVERLORD_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_overlord_to = FROM
+	}
+}
+CORP_VASSAL_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		NOR = {
+			is_at_war_with = FROM
+			is_disloyal_to = FROM
+		}
+	}
+}
+CORP_VASSAL_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		NOR = {
+			is_at_war_with = FROM
+			is_disloyal_to = FROM
+		}
+	}
+}
+CORP_VASSAL_GREETING_DISLOYAL_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		is_disloyal_to = FROM
+		NOT = { is_at_war_with = FROM }
+	}
+}
+CORP_VASSAL_DOMINEERING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		is_megacorp = yes
+		NOT = { is_special_personality = yes }
+		is_domineering_to = FROM
+		NOT = { is_at_war_with = FROM }
+	}
+}
+### Greetings to Corporations
+TO_CORP_HOSTILE_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_HOSTILE_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_HOSTILE_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_HOSTILE_GREETING_04 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_HOSTILE_GREETING_05 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_HOSTILE_GREETING_06 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_GREETING_HOSTILE_EG_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		is_egalitarian = yes
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_hostile_to = FROM
+			is_domineering_to = FROM
+			is_unfriendly_to = FROM
+		}
+	}
+}
+TO_CORP_NEUTRAL_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+TO_CORP_NEUTRAL_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_neutral_to = FROM
+			is_threatened_to = FROM
+		}
+	}
+}
+TO_CORP_THREATENED_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = from }
+		is_threatened_to = FROM
+	}
+}
+TO_CORP_FRIENDLY_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_friendly_to = FROM
+			is_cordial_to = FROM
+			is_protective_to = FROM
+		}
+	}
+}
+TO_CORP_FRIENDLY_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_friendly_to = FROM
+			is_cordial_to = FROM
+			is_protective_to = FROM
+		}
+	}
+}
+TO_CORP_FRIENDLY_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		NOT = { is_at_war_with = FROM }
+		OR = {
+			is_friendly_to = FROM
+			is_cordial_to = FROM
+			is_protective_to = FROM
+		}
+	}
+}
+TO_CORP_WAR_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		is_at_war_with = FROM
+	}
+}
+TO_CORP_WAR_GREETING_02 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		is_at_war_with = FROM
+	}
+}
+TO_CORP_WAR_GREETING_03 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		is_at_war_with = FROM
+	}
+}
+TO_CORP_VASSAL_GREETING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		NOR = {
+			is_at_war_with = FROM
+			is_disloyal_to = FROM
+		}
+	}
+}
+TO_CORP_VASSAL_GREETING_DISLOYAL_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		is_disloyal_to = FROM
+		NOT = { is_at_war_with = FROM }
+	}
+}
+TO_CORP_VASSAL_DOMINEERING_01 = {
+	weight = {
+		weight = 3
+	}
+	trigger = {
+		FROM = { 
+			is_megacorp = yes 
+			NOT = { is_special_personality = yes }
+		}
+		is_domineering_to = FROM
+		NOT = { is_at_war_with = FROM }
 	}
 }

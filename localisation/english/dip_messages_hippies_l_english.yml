@@ -30,7 +30,7 @@
  PC_NEUTRAL_GREETING_07:0 "We're super proud of teaching our [Root.GetSpeciesSpawnNamePlural] to understand and love the universe. Hate is a learned thing, you know?"
  PC_NEUTRAL_GREETING_08:0 "Dude... how wild is it that we get to talk to aliens? Every day! I think that's the trippiest thing ever."
  PC_NEUTRAL_GREETING_09:0 "We got exactly one rule in the [Root.GetName], and it's 'embody the spirit of love'. Ideas like 'private property' are just how the Man keeps us down."
- PC_MECH_NEUTRAL_GREETING_01:0 "So... I'm guessing offering you food's out of the question... Do you wanna join the drum circle instead?"
+ PC_MECH_NEUTRAL_GREETING_01:0 "So... I'm guessing offering you food's out of the question... Do you wanna watch holo-movies with us instead?"
  PC_MECH_NEUTRAL_GREETING_02:0 "Wait. There are dudes who think that you aren't people? And they're using their religion as an excuse for it? That's totally bogus!"
  PC_MECH_NEUTRAL_GREETING_03:0 "So, like... did turning into a robo-dude hurt? How do you feel? Like, about the universe in general."
 ## Let the good times--and joints--roll!
@@ -84,8 +84,8 @@
  PC_FRIENDLY_GREETING_PK_SHIELDER_05:0 "Were we naive, thinking that peace was something everyone would want? Is utopia really something we can just... have? Is it worth the price?"
  PC_FRIENDLY_GREETING_PK_SHIELDER_06:0 "You know the worst part about being psychic? You can literally feel it when people are absolutely miserable. And it starts affecting you, bad."
  PC_FRIENDLY_GREETING_PK_SHIELDER_07:0 "Hm? Oh, yeah, I'm okay today. Thanks for asking, bud, I really appreciate it. Are you doing okay?"
- PC_FRIENDLY_GREETING_HUMAN_PK_SHIELDER_01:0 "Hey. Do you wanna watch Monty Python with us for our next Peace Festival? No harm if you don't wanna, but it'd be nice..."
- PC_FRIENDLY_GREETING_HM_PK_SHIELDER_09:0 "What is it like? Not feeling any remorse or empathy? There are times, I kinda envy you. No pain. No regret. Just existing, doing anything you need to survive, without having to second-guess yourself. But I'd miss feeling love... I still wanna feel loved..."
+ PC_FRIENDLY_GREETING_HUMAN_PK_SHIELDER_01:0 "Hey. We're streaming a Monty Python marathon across the [Root.GetName] for our next peace festival. Do you wanna join us? No harm if you don't wanna, but it'd be nice..."
+ PC_FRIENDLY_GREETING_HM_PK_SHIELDER_09:0 "What is it like? You know, being a hive mind? There are times, I kinda envy you. No pain. No regret. Just existing, doing anything you need to survive, never second-guessing yourself. But I'd miss feeling love... I still wanna feel loved..."
  PC_WAR_GREETING_PK_SHIELDER_01:0 "We can't stand by and watch you inflict suffering on the galaxy anymore! It's time to put you away for good!"
  PC_WAR_GREETING_PK_SHIELDER_02:0 "Do you know what 'Nuclear Gandhi' is? No? Well, you're gonna find out. Believe me, you are gonna find out, dude."
  PC_WAR_GREETING_PK_SHIELDER_03:0 "You will never--NEVER!--hurt ANYONE ever again! You'll have to learn to live with yourselves, because you're never leaving [From.Capital.GetName]! The cycle of abuse ends here and now!"
@@ -98,7 +98,7 @@
 # Subjugation/Vassalisation
 ## Demanding Vassalization
  PC_DEMAND_VASS_SELECT_1:0 "Well, the galaxy is a really dangerous place... You'd be willing to fight for us? You sure?"
- PC_DEMAND_VASS_SELECT_2:0 "Okay, I never thought I'd ask _you_ this, dude. But are you high right now?"
+ PC_DEMAND_VASS_SELECT_2:0 "Okay, I never thought I'd ask YOU this, dude. But are you high right now?"
  PC_DEMAND_VASS_PROPOSE:0 "Look, dude, I swear we're cool. But we're worried about you, and we don't want you to get curb-stomped by some nutso fanatic purifier. Yea or nay, you've always got a couch to crash on at our place. Just say the word."
  PC_DEMAND_VASS_ACCEPT_1:0 "We accept your protection! You are hereby The Rainbow Warriors of the [Root.GetName]! We've made a spot on the [Ruler.GetTitle]'s personal couch for you!"
  PC_DEMAND_VASS_ACCEPT_2:0 "We spent thousands of years protecting the wilderness on our planets. Who knew that Mother Nature herself would be returning the favor? We accept!"
@@ -116,7 +116,8 @@
  PC_DEMAND_SUBS_REFUSE_1:0 "Look, we appreciate the offer, but we're self-employed and self-sufficient, and pretty happy that way. No thanks, dudes."
  PC_DEMAND_SUBS_SELECT_2:0 "Could you say that again in not-Corporatese? Because that sounds like you wanna make us your little pet puppet."
  PC_DEMAND_SUBS_ACCEPT_2:0 "... wait, what did I just sign?"
- PC_DEMAND_SUBS_REFUSE_2:0 "You can take your fancy jargon and ball pits and jets and rich-guy bullshit, and go park it in a pulsar! We'll never sell out! Never!" PC_ASK_FOR_SUBS_PROPOSE_1:0 "So, we wanted to ask, just out of curiousity, what are the requirements to join a union?"
+ PC_DEMAND_SUBS_REFUSE_2:0 "You can take your fancy jargon and ball pits and jets and rich-guy bullshit, and go park it in a pulsar! We'll never sell out! Never!"
+ PC_ASK_FOR_SUBS_PROPOSE_1:0 "So, we wanted to ask, just out of curiousity, what are the requirements to join a union?"
  PC_ASK_FOR_SUBS_PROPOSE_2:0 "The [Root.GetName]'s hailing service seems to have gone haywire. They usually use this line to send insults and prank calls. But it appears that they've accidentally filed a request for subsidiariazation./n/nPerhaps this is another elaborate prank? Or quite possibly, a bug you should report to SageWilde on Steam in the comments section of this mod, given that they put a great deal of effort into making sure that Hippies and Capitalists are mortal enemies."
 ## Tributaries
  PC_DEMAND_TRIBUTARY_SELECT:0 "Money? You want money? What are you gonna do, ambush me at home? Give me swirlies in my own toilet? Piss on my rug?"
@@ -265,7 +266,7 @@
  PC_REVOKE_INDEPENDENCE_ACCEPT_DISLOYAL:0 "Aw. Dangit. I hate suits."
 ## Migration Pact
  PC_FORM_MIGRATION_PACT_SELECT:0 "You're serious? You wanna move here?"
- PC_FORM_MIGRATION_PACT_PROPOSE:0 "The winds of travel blow at our backs, my dudes! We're free spirits, and we go where the cosmos guides us. And it's guiding us to the [Root.GetName]!
+ PC_FORM_MIGRATION_PACT_PROPOSE:0 "The winds of travel blow at our backs, my dudes! We're free spirits, and we go where the cosmos guides us. And it's guiding us to the [Root.GetName]!"
  PC_FORM_MIGRATION_PACT_ACCEPT:0 "It's not abolishing borders, but it's one heck of a start! Welcome home to the [Root.GetName], buds!"
  PC_FORM_MIGRATION_PACT_REFUSE:0 "The crystals said we need to focus on inner peace right now. Maybe some other time, dudes?"
  PC_BREAK_MIGRATION_PACT_SELECT:0 "Aw, are you sure you wanna break our migration pact?"
@@ -411,7 +412,7 @@
  PC_GRANT_WAYSTATION_PACT_PROPOSE:0 "You nomad-dudes have good vibes! We wanna give you a pass to park at our campsites. We'd love to be hiking buddies!"
  PC_REQUEST_WAYSTATION_PACT_PROPOSE:0 "We need to find someplace to park the ol' camper, dudes. You got some bodacious hiking trails, and the vibe's good. Could we camp here?"
  PC_SHARE_WAYSTATION_PACT_PROPOSE:0 "We're both travelers on the road of light, dudes. Free like the wind! But we all gotta park somewhere. Do you wanna share park passes?"
- PC_GRANT_WAYSTATION_PACT_ACCEPT:0 "Gnarly! We promise, we're really excellent camp stewards. Our motto is 'Take nothing but pictures, leave nothing but footprints'."
+ PC_GRANT_WAYSTATION_PACT_ACCEPT:0 "Gnarly! We promise, we're really excellent camp stewards. Our motto is 'Take nothing but holo-pics, leave nothing but footprints'."
  PC_REQUEST_WAYSTATION_PACT_ACCEPT:0 "Sure thing, traveler dudes! Just be sure to keep your campsite clean. Pack it in, pack it out. Do you want a hiking map?"
  PC_SHARE_WAYSTATION_PACT_ACCEPT:0 "Radical notion, my dudes! We'd be happy to share our campsites with you. Van life for life!"
  PC_GRANT_WAYSTATION_PACT_REFUSE:0 "Sorry, dudes. That part of the galaxy isn't on our tour. But we'll swing by sometime later, okay?"

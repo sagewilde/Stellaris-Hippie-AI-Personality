@@ -11,6 +11,7 @@ tradition_unyielding = {
 	}
 
 	potential = {
+		is_nomadic = no
 		OR = {
 			host_has_dlc = "Apocalypse"
 			has_overlord_dlc = yes
@@ -52,8 +53,12 @@ tradition_unyielding = {
 			}
 		}
 		modifier = {
-			factor = 9999
-			has_ai_personality = peaceful_counterculture		# It's not easy, being green. Especially in a galaxy that wants to kill you.
+			factor = @ap_pending_tradition_suppress
+			has_ap_pending = yes
+		}
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture
 		}
 	}
 }

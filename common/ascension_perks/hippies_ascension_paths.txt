@@ -2,9 +2,9 @@
 # ASCENSION PATHS
 #################
 
-@ascension_path_base_weight = 100
+@ascension_path_base_weight = 500
 @ascension_path_synergy_weight = 2
-@ascension_path_anti_synergy_weight = 0.5
+@ascension_path_anti_synergy_weight = 0.25
 @ascension_path_mindwardens_present = 0.3
 
 # Genetic Ascension  (regular empires & Hive Minds)
@@ -379,7 +379,7 @@ ap_synthetic_evolution = {
 	}
 }
 
-# Psionic Ascension (regular empires)
+# Psionic Ascension
 ap_mind_over_matter = {
     on_enabled = {
         custom_tooltip = "mind_over_matter_tooltip"
@@ -387,9 +387,7 @@ ap_mind_over_matter = {
     possible = {
         custom_tooltip = {
             fail_text = "synthetic_empire_psionic_ascension"
-            NOT = {
-                has_trait = trait_mechanical
-            }
+            NOT = { has_trait = trait_mechanical }
         }
         if = {
             limit = {
@@ -412,27 +410,19 @@ ap_mind_over_matter = {
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_engineered_evolution"
-            NOT = {
-                has_ascension_perk = ap_engineered_evolution
-            }
+            NOT = { has_ascension_perk = ap_engineered_evolution }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_the_flesh_is_weak"
-            NOT = {
-                has_ascension_perk = ap_the_flesh_is_weak
-            }
+            NOT = { has_ascension_perk = ap_the_flesh_is_weak }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_synthetic_evolution"
-            NOT = {
-                has_ascension_perk = ap_synthetic_evolution
-            }
+            NOT = { has_ascension_perk = ap_synthetic_evolution }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_synthetic_age"
-            NOT = {
-                has_ascension_perk = ap_synthetic_age
-            }
+            NOT = { has_ascension_perk = ap_synthetic_age }
         }
         custom_tooltip = {
             fail_text = "requires_not_ap_organo_machine_interfacing"
@@ -455,9 +445,7 @@ ap_mind_over_matter = {
             }
         }
         if = {
-            limit = {
-                has_origin = origin_shroud_forged
-            }
+            limit = { has_origin = origin_shroud_forged }
             if = {
                 limit = {
                     any_situation = {
@@ -472,18 +460,17 @@ ap_mind_over_matter = {
             else = {
                 custom_tooltip = {
                     fail_text = "shroud_forged_liberation_acquired"
-                    NOT = {
-                        has_country_flag = finish_shroud_forged_liberation_flag
-                    }
+                    NOT = { has_country_flag = finish_shroud_forged_liberation_flag }
                 }
             }
         }
     }
+
     potential = {
         NOR = {
             has_country_flag = ratling_country
             has_ascension_perk = ap_engineered_evolution
-            has_ascension_perk = ap_the_flesh_is_weak
+            has_ascension_perk = ap_the_flesh_is_weak 
             has_ascension_perk = ap_organo_machine_interfacing
             has_ascension_perk = ap_organo_machine_interfacing_assimilator
             has_ascension_perk = ap_synthetic_evolution
@@ -499,37 +486,27 @@ ap_mind_over_matter = {
             has_origin = origin_endbringers
         }
         OR = {
-            has_shroud_dlc = yes
+            has_shroud_dlc = yes # Shroud DLC allows gestalt/machines to become Psionic
             AND = {
-                OR = {
-                    has_civic = civic_machine_cult_machine
-                    AND = {
-                        is_gestalt = no
-                        is_mechanical_empire = no
-                        is_individual_machine = no
-                    }
-                }
+                is_gestalt = no
+                is_mechanical_empire = no
                 OR = {
                     is_cyborg_empire = no
                     AND = {
                         has_origin = origin_unplugged
-                        NOT = {
-                            has_country_flag = is_cyberized
-                        }
+                        NOT = { has_country_flag = is_cyberized }
                     }
                 }
+                is_individual_machine = no
             }
         }
         is_natural_design_empire = no
         if = {
-            limit = {
-                has_origin = origin_shroud_forged
-            }
-            NOT = {
-                has_country_flag = finish_shroud_forged_control_flag
-            }
+            limit = { has_origin = origin_shroud_forged }
+            NOT = { has_country_flag = finish_shroud_forged_control_flag }
         }
     }
+
     tradition_swap = {
         name = ap_interdimensional_processing
         inherit_name = no
@@ -539,26 +516,28 @@ ap_mind_over_matter = {
             has_shroud_dlc = yes
             is_synthetic_empire = yes
         }
-        weight = {
-            factor = 1
-        }
+        weight = { factor = 1 }
     }
+
     ai_weight = {
         factor = @ascension_path_base_weight
+        modifier = {
+            factor = @ascension_path_synergy_weight
+            is_spiritualist = yes
+        }
         modifier = {
             factor = @ascension_path_synergy_weight
             OR = {
                 has_mind_over_matter_synergy = yes
                 any_country = {
                     has_origin = origin_mindwardens
-                    NOT = {
-                        is_same_value = prev
-                    }
+                    NOT = { is_same_value = prev }
                 }
             }
         }
         modifier = {
             factor = @ascension_path_synergy_weight
+            # We want more psionic AIs when someone's playing Mindwardens, so you should ascend if at least you're not materialist
             is_materialist = no
             any_country = {
                 has_origin = origin_mindwardens
@@ -582,9 +561,9 @@ ap_mind_over_matter = {
             factor = 0
             has_origin = origin_mindwardens
         }
-		modifier = {
-			factor = 1000
-			has_ai_personality = peaceful_counterculture # Hippies are crystal-waving new-agers, it's part of the aesthetic, they were literally the ones who popularized the idea of psychics in the first place!
-		}
-	}
+        modifier = {
+            factor = 1000
+            has_ai_personality = peaceful_counterculture
+        }
+    }
 }

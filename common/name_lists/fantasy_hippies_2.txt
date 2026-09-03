@@ -22,8 +22,8 @@ fantasy_hippies_2 = {
 			"Balbo Shrooms"
 			"Beetle"
 			"Biebo Suncloud"
-			"Bob Dylan
-			"Brian Joseph Lane""
+			"Bob Dylan"
+			"Brian Joseph Lane"
 			"Burgundy Skye"
 			"Carrie-Anne"
 			"Chasidy Rainbow Marie"

@@ -5,7 +5,7 @@ empire_name_parts_list = {
 		Circle = 3
 		Gathering = 2
 		Tribe = 2
-		Garden-Worlds = 2
+		Garden_Worlds = 2
 		Union = 1
 		Guardians = 1
 	}
@@ -26,9 +26,9 @@ empire_name_parts_list = {
 	key = hippie_nat_mid_desc
 	parts = {
 		Interstellar = 3
-		Allied = 3
+		Empathic = 3
 		Gaian = 2
-		United = 2
+		Rainbow = 2
 		Brotherly = 1
 		Sisterly = 1
 	}
@@ -62,9 +62,9 @@ empire_name_parts_list = {
 	key = hippie_alt_mid_desc
 	parts = {
 		Interstellar = 3
-		Allied = 3
+		Empathic = 3
 		Communal = 2
-		United = 2
+		Rainbow = 2
 		Brotherly = 1
 		Sisterly = 1
 	}
@@ -100,10 +100,10 @@ empire_name_parts_list = {
 	key = hippie_mon_mid_desc
 	parts = {
 		Interstellar = 3
-		Allied = 3
-		Sacred = 2
-		United = 2
-		Holy = 1
+		Empathic = 3
+		Astral = 2
+		Rainbow = 2
+		Healing = 1
 		Sheltering = 1
 	}
 }
@@ -116,7 +116,6 @@ empire_name_parts_list = {
 		Seekers = 2
 		Libraries = 2
 		Archivists = 2
-		Union = 1
 		Conservatories = 1
 	}
 }
@@ -136,8 +135,8 @@ empire_name_parts_list = {
 	key = hippie_sta_mid_desc
 	parts = {
 		Interstellar = 3
-		Allied = 3
-		United = 2
+		Empathic = 3
+		Rainbow = 2
 		Scholastic = 2
 		Preservational = 1
 		Archival = 1

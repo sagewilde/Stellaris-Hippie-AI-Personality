@@ -1,20 +1,3 @@
-# ####################
-# Planet killer beam?
-# ####################
-
-#weapon_component_template = {
-#	key = "PLANET_DESTRUCTION_COMPONENT"
-#	size = planet_killer
-#	type = planet_killer
-#	use_ship_main_target = no
-#
-#	icon = GFX_technology_unknown
-#	icon_frame = 1
-#
-#	component_set = "PLANET_KILLER_1"
-#
-#	planet_destruction_gfx = "neutron_planet_gfx"
-#}
 
 weapon_component_template = { # World Cracker
 	key = "PLANET_KILLER_CRACKER"
@@ -196,43 +179,6 @@ weapon_component_template = { # Deluge
 	}
 }
 
-weapon_component_template = {
-	key = "PLANET_KILLER_TOXIFIER"
-	size = planet_killer
-	type = planet_killer
-	use_ship_main_target = no
-
-	icon = GFX_ship_part_nanobot_diffuser
-	icon_frame = 1
-
-
-	potential = {
-		is_ship_size = toxic_god
-	}
-	component_set = "PLANET_KILLER_TOXIFIER"
-
-	planet_destruction_gfx = "planet_toxifier_gfx"
-}
-
-weapon_component_template = {
-	key = "PLANET_KILLER_STAR_CRACKER"
-	size = planet_killer
-	type = planet_killer
-	use_ship_main_target = no
-	can_destroy_stars = yes
-
-	prerequisites = { "tech_btc_1" }
-
-	icon = GFX_ship_part_nanobot_diffuser
-	icon_frame = 1
-
-	potential = {
-		ship_uses_star_eater_components = yes
-	}
-	component_set = "PLANET_KILLER_STAR_CRACKER"
-
-	planet_destruction_gfx = "star_destroyer_effect_gfx"
-}
 
 weapon_component_template = { # Archaeo Devolving Beam
 	key = "PLANET_KILLER_DEVOLUTION"

@@ -1,4 +1,73 @@
 
+tech_cruisers = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_destroyers" }
+	weight = @tier3weight1
+
+	gateway = ship
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	## unlock cruisers
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_CRUISER_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_CRUISER_CONSTRUCTION_DESC"
+		}
+	}
+
+	modifier = {
+		command_limit_add = 40
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0.1
+			NOT = { years_passed > 20 }
+		}
+		modifier = {
+			factor = 10
+			any_neighbor_country = {
+				has_technology = tech_cruisers
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 30
+		}
+		modifier = {
+			factor = 3
+			years_passed > 35
+		}
+		modifier = {
+			factor = 4
+			years_passed > 40
+		}
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_supremacy_adopt
+		}
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+
+	ai_weight = {
+		factor = @ai_ship_types_factor
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture
+		}
+
+	}
+}
+
 tech_battleships = {
 	cost = @tier4cost1
 	area = engineering
@@ -20,7 +89,7 @@ tech_battleships = {
 	}
 
 	modifier = {
-		command_limit_add = 20
+		command_limit_add = 60
 	}
 
 	weight_modifier = {
@@ -51,7 +120,7 @@ tech_battleships = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 10
+			factor = 1000
 			has_ai_personality = peaceful_counterculture
 		}
 	}
@@ -59,7 +128,7 @@ tech_battleships = {
 	ai_weight = {
 		factor = @ai_ship_types_factor
 		modifier = {
-			factor = 10
+			factor = 1000
 			has_ai_personality = peaceful_counterculture
 		}
 
@@ -81,7 +150,7 @@ tech_titans = {
 	ai_update_type = military
 
 	modifier = {
-		command_limit_add = 20
+		command_limit_add = 80
 	}
 
 	potential = {
@@ -97,6 +166,26 @@ tech_titans = {
 		custom = {
 			title = "TECH_UNLOCK_ION_CANNON_CONSTRUCTION_TITLE"
 			desc = "TECH_UNLOCK_ION_CANNON_CONSTRUCTION_DESC"
+		}
+	}
+
+	technology_swap = {
+		name = tech_nomads_titans
+		inherit_icon = yes
+		inherit_effects = no
+
+		trigger = {
+			is_nomadic = yes
+		}
+		prereqfor_desc = {
+			custom = {
+				title = "TECH_UNLOCK_ION_CANNON_CONSTRUCTION_TITLE"
+				desc = "TECH_UNLOCK_ION_CANNON_CONSTRUCTION_DESC"
+			}
+			custom = {
+				title = "TECH_UNLOCK_ARKSHIP_TITAN_AURAS_CONSTRUCTION_TITLE"
+				desc = "TECH_UNLOCK_ARKSHIP_TITAN_AURAS_CONSTRUCTION_DESC"
+			}
 		}
 	}
 
@@ -140,7 +229,7 @@ tech_titans = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 10
+			factor = 1000
 			has_ai_personality = peaceful_counterculture
 		}
 	}

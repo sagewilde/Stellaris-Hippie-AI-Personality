@@ -114,8 +114,11 @@ tech_mine_zro = {
 		}
 		modifier = {
 			factor = 5
-			has_tradition = tr_psionics_finish
+			has_finished_psionic_tradition = yes
+		}
+		modifier = {
+			factor = 1000
+			has_ai_personality = peaceful_counterculture
 		}
 	}
 }
-
