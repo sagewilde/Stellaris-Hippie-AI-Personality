@@ -51,7 +51,7 @@ is_anti_hippie = {
 			is_worker_coop_empire = no
 		}
 		AND = {
-			is_industrialism = yes
+			is_industrial = yes
 			is_capitalism = yes
 		}
 		AND = {
