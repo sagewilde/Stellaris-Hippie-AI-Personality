@@ -1,0 +1,201 @@
+
+artificial_intelligence_policy = {
+	potential = {
+		is_gestalt = no
+		OR = {
+			has_origin = origin_synthetic_fertility
+			can_set_ai_policy = yes
+			has_country_flag = synthetic_empire
+			is_individual_machine = yes
+		}
+	}
+
+	option = {
+		name = "ai_outlawed"
+
+		potential = {
+			is_individual_machine = no
+		}
+		valid = {
+			NOR = {
+				is_materialist = yes
+				has_origin = origin_synthetic_fertility
+				custom_tooltip = {
+					success_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
+				}
+				has_valid_civic = civic_machine_cult
+				is_individual_machine = yes
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			ai_outlawed
+		}
+
+		modifier = {
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_galacticstudies_advanced_xenostudies
+			}
+			{
+				key = resolution_galacticstudies_ethical_guideline_refactoring
+			}
+			{
+				key = resolution_galacticstudies_extradimensional_experimentation
+			}
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 0
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 5
+				is_spiritualist = yes
+			}
+			modifier = {
+				factor = 0.1
+				has_valid_ai_personality = yes
+				is_ai = yes
+				is_galactic_community_member = yes
+				OR = {
+					is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+					is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+					is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "ai_servitude"
+
+		potential = {
+			is_individual_machine = no
+		}
+
+		valid = {
+			NOT = {	has_origin = origin_synthetic_fertility }
+			custom_tooltip = {
+				fail_text = is_a_synthetic_empire_fail
+				NOT = { has_country_flag = synthetic_empire }
+			}
+			OR = {
+				is_country_type = fallen_empire
+				has_valid_civic = civic_machine_cult
+			}
+			is_individual_machine = no
+		}
+
+		policy_flags = {
+			ai_servitude
+		}
+
+		modifier = {
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_exploiter
+			}
+			modifier = {
+				factor = 2
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOR = {
+					has_valid_civic = civic_machine_cult
+					has_valid_civic = civic_machine_cult_machine
+				}
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+				NOT = {
+					has_valid_ai_personality = yes
+					is_ai = yes
+					is_galactic_community_member = yes
+					OR = {
+						is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
+						is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
+						is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_individual_machine = yes
+			}
+		}
+	}
+
+	option = {
+		name = "ai_full_rights"
+
+		valid = {
+			OR = {
+				custom_tooltip = {
+					fail_text = is_a_synthetic_empire
+					has_country_flag = synthetic_empire
+				}
+				AND = {
+					is_spiritualist = no
+					NOR = {
+						has_valid_civic = civic_machine_cult
+						has_valid_civic = civic_machine_cult_machine
+						has_ai_personality = peaceful_counterculture
+					}
+				}
+				is_individual_machine = yes
+			}
+			NOR = { 
+				has_policy_flag = robots_outlawed 
+				hidden_trigger = { has_origin = "origin_slavers" }
+			}
+		}
+
+		policy_flags = {
+			ai_full_rights
+		}
+
+		modifier = {
+		}
+
+		in_breach_of = {
+			{
+				key = resolution_divinity_a_defined_purpose
+			}
+		}
+
+		ai_weight = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				is_materialist = no
+				NOR = {
+					is_synthetic_empire = yes
+					has_technology = tech_synthetic_workers
+				}
+			}
+			modifier = {
+				factor = 5
+				has_valid_ai_personality = yes
+				has_ai_personality_behaviour = robot_liberator
+			}
+			modifier = {
+				factor = 0
+				is_spiritualist = yes
+			}
+		}
+	}
+}
