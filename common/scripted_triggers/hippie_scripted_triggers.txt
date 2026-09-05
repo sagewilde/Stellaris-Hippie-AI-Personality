@@ -1,3 +1,8 @@
+### Mod Identifier
+
+has_hippie_ai_personality = { always = yes }
+has_sage_expressive_personalities = { always = yes }
+
 ### Vanilla Overwrites
 
 values_others = {

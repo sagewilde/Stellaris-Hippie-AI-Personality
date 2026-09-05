@@ -1,0 +1,3 @@
+# Mod Identifier
+@has_hippie_ai_personality = 1
+@has_sage_expressive_personalities = 1
