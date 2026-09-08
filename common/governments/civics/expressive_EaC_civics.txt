@@ -368,7 +368,34 @@ civic_environmentalist = {
 				value = ethic_fanatic_green							# Modded
 			}
 		}
-		origin = { NOT = { value = origin_toxic_knights } }			# Modded
+		civics = {
+			NOT = { value = civic_dystopian_society }				# Removed Vanilla Code
+		}
+		origin = {
+			NOR = {	# Modded 
+				value = origin_toxic_knights
+				value = origin_shattered_ring	
+				value = origin_void_machines
+				value = origin_void_dwellers										# Modded
+			}
+		}
+		civics = {
+			NOR = {
+				text = origin_void_machines
+				value = civic_void_machines
+				value = PrimPlayer_civic_void_machines
+			}
+			NOR = {
+				text = origin_void_dwellers
+				value = civic_void_dwellers
+				value = PrimPlayer_civic_void_dwellers
+			}
+			NOR = {
+				text = origin_shattered_ring
+				value = civic_shattered_ring
+				value = PrimPlayer_civic_shattered_ring
+			}
+		}
 	}
 	random_weight = { base = @civic_rare_random_weight } # random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
@@ -573,6 +600,21 @@ civic_agrarian_idyll = {
 			}
 		}
 		civics = {
+			NOR = {
+				text = origin_void_machines
+				value = civic_void_machines
+				value = PrimPlayer_civic_void_machines
+			}
+			NOR = {
+				text = origin_void_dwellers
+				value = civic_void_dwellers
+				value = PrimPlayer_civic_void_dwellers
+			}
+			NOR = {
+				text = origin_shattered_ring
+				value = civic_shattered_ring
+				value = PrimPlayer_civic_shattered_ring
+			}
 			NOR = {
 				value = civic_dystopian_society
 				value = civic_tankbound
@@ -1205,6 +1247,9 @@ civic_technocracy = {
 				value = civic_philosopher_king
 				value = civic_executive_committee
 				value = civic_peaceful_republic
+				value = civic_shared_burden
+				value = civic_anarchy_utopia
+				value = civic_worker_coop
 			}
 			NOT = {	
 				value = civic_enlightment
@@ -1252,6 +1297,7 @@ civic_anarchy_utopia = {
 	alternate_civic_version = civic_anarchy_ideals
 	potential = {
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
 	}
 
 	possible = {
@@ -1269,16 +1315,12 @@ civic_anarchy_utopia = {
 			}
 		}
 		authority = {
-			OR = {
-				value = auth_direct_democratic
-				value = auth_corporate
-			}
+			value = auth_direct_democratic
 		}
 		civics = {
 			NOR = {
 				text = civic_tooltip_ethics_rebuild_communism
 				value = civic_shared_burden
-				value = civic_worker_coop
 			}
 			NOR = {
 				text = civic_tooltip_ethics_rebuild_advanced_government
@@ -1529,7 +1571,31 @@ civic_naturalism = {
 				value = ethic_fanatic_green
 			}
 		}
-		origin = { NOT = { value = origin_toxic_knights } }
+		origin = {
+			NOR = {	# Modded 
+				value = origin_toxic_knights
+				value = origin_shattered_ring	
+				value = origin_void_machines
+				value = origin_void_dwellers										# Modded
+			}
+		}
+		civics = {
+			NOR = {
+				text = origin_void_machines
+				value = civic_void_machines
+				value = PrimPlayer_civic_void_machines
+			}
+			NOR = {
+				text = origin_void_dwellers
+				value = civic_void_dwellers
+				value = PrimPlayer_civic_void_dwellers
+			}
+			NOR = {
+				text = origin_shattered_ring
+				value = civic_shattered_ring
+				value = PrimPlayer_civic_shattered_ring
+			}
+		}
 	}
 
 	random_weight = { base = @civic_rare_random_weight }
@@ -1602,7 +1668,31 @@ civic_keepers_harmony = {
 				value = ethic_fanatic_green
 			}
 		}
-		origin = { NOT = { value = origin_toxic_knights } }
+		origin = {
+			NOR = {	# Modded 
+				value = origin_toxic_knights
+				value = origin_shattered_ring	
+				value = origin_void_machines
+				value = origin_void_dwellers										# Modded
+			}
+		}
+		civics = {
+			NOR = {
+				text = origin_void_machines
+				value = civic_void_machines
+				value = PrimPlayer_civic_void_machines
+			}
+			NOR = {
+				text = origin_void_dwellers
+				value = civic_void_dwellers
+				value = PrimPlayer_civic_void_dwellers
+			}
+			NOR = {
+				text = origin_shattered_ring
+				value = civic_shattered_ring
+				value = PrimPlayer_civic_shattered_ring
+			}
+		}
 	}
 
 	random_weight = { base = @civic_default_random_weight }
@@ -1821,12 +1911,34 @@ civic_terraforming = {
 		}
 		origin = {
 			NOT = { value = origin_toxic_knights }
+			NOR = {								# Modded
+				value = origin_shattered_ring	
+				value = origin_void_machines
+				value = origin_void_dwellers										# Modded
+			}
 			NOR = {
 				text = origin_tooltip_atleast_early_space_age
 				value = origin_primitive_player_pre_industrial_age
 				value = origin_primitive_player_industrial_age
 				value = origin_primitive_player_machine_age
 				value = origin_primitive_player_atomic_age
+			}
+		}
+		civics = {
+			NOR = {
+				text = origin_void_machines
+				value = civic_void_machines
+				value = PrimPlayer_civic_void_machines
+			}
+			NOR = {
+				text = origin_void_dwellers
+				value = civic_void_dwellers
+				value = PrimPlayer_civic_void_dwellers
+			}
+			NOR = {
+				text = origin_shattered_ring
+				value = civic_shattered_ring
+				value = PrimPlayer_civic_shattered_ring
 			}
 		}
 	}
@@ -2053,21 +2165,11 @@ civic_peaceful_republic = {
 	description = "civic_tooltip_peaceful_republic_effects"
 	negative_description = "civic_tooltip_peaceful_republic_negative_effects"
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
-		ethics = {
-			value = ethic_fanatic_pacifist
-		}
+		ethics = { value = ethic_fanatic_pacifist }
 		authority = {
 			OR = {
 				value = auth_democratic
