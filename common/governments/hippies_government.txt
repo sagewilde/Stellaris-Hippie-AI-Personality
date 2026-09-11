@@ -16,6 +16,16 @@ gov_naturalist_commune = {
 			has_origin = origin_forever_cruise
 			has_origin = origin_sacred_path
 		}
+		NOR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			is_capitalism = yes
+		}
+		NOR = {
+			has_authority = auth_imperial
+			has_authority = auth_dictatorial
+			has_authority = auth_corporate
+		}
 	}
 
 	weight = {
@@ -76,6 +86,16 @@ gov_altruistic_utopia = {
 			has_ethic = ethic_fanatic_socialism
 		}
 		NOT = { has_murderous_civic_or_origin = yes	}
+		NOR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			is_capitalism = yes
+		}
+		NOR = {
+			has_authority = auth_imperial
+			has_authority = auth_dictatorial
+			has_authority = auth_corporate
+		}
 	}
 
 	weight = {
@@ -136,6 +156,16 @@ gov_monastic_collective = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		NOT = { has_murderous_civic_or_origin = yes	}
+		NOR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			is_capitalism = yes
+		}
+		NOR = {
+			has_authority = auth_imperial
+			has_authority = auth_dictatorial
+			has_authority = auth_corporate
+		}
 	}
 
 	weight = {
@@ -196,6 +226,16 @@ gov_star_travelers = {
 			has_ethic = ethic_fanatic_xenophile
 		}
 		NOT = { has_murderous_civic_or_origin = yes	}
+		NOR = {
+			is_authoritarian = yes
+			is_xenophobe = yes
+			is_capitalism = yes
+		}
+		NOR = {
+			has_authority = auth_imperial
+			has_authority = auth_dictatorial
+			has_authority = auth_corporate
+		}
 	}
 
 	weight = {
