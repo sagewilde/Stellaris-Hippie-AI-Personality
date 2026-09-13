@@ -35,15 +35,21 @@ gov_naturalist_commune = {
 			has_ethic = ethic_fanatic_green
 		}
 		modifier = {
-			factor = 10
+			factor = 2
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_astrometeorology
+				has_valid_civic = civic_guided_sapience
+				has_valid_civic = civic_primitive_enthusiasts
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
 				has_valid_civic = civic_circular_economy
 				has_valid_civic = civic_environmentalist
-				has_valid_civic = civic_guided_sapience
+				has_valid_civic = civic_keepers_harmony
 				has_valid_civic = civic_naturalism
-				has_valid_civic = civic_primitive_enthusiasts
 				has_valid_civic = civic_terraforming
 			}
 		}
@@ -108,19 +114,24 @@ gov_altruistic_utopia = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 2
 			OR = {
 				has_valid_civic = civic_anarchy_ideals
-				has_valid_civic = civic_anarchy_utopia
-				has_valid_civic = civic_bureaucracy
 				has_valid_civic = civic_civil_education
-				has_valid_civic = civic_executive_committee
 				has_valid_civic = civic_idealistic_foundation
 				has_valid_civic = civic_labour_unions
 				has_valid_civic = civic_parliamentary_system
+				has_valid_civic = civic_welfare_state
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_anarchy_utopia
+				has_valid_civic = civic_bureaucracy
+				has_valid_civic = civic_executive_committee
 				has_valid_civic = civic_peaceful_republic
 				has_valid_civic = civic_shared_burden
-				has_valid_civic = civic_welfare_state
 			}
 		}
 		modifier = {
@@ -175,17 +186,21 @@ gov_monastic_collective = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		modifier = {
-			factor = 10
+			factor = 2
 			OR = {
 				has_valid_civic = civic_asceticism
 				has_valid_civic = civic_dimensional_worship
-				has_valid_civic = civic_divine_council
 				has_valid_civic = civic_enlightment
 				has_valid_civic = civic_evangelism
-				has_valid_civic = civic_exalted_priesthood
-				has_valid_civic = civic_keepers_harmony
-				has_valid_civic = civic_spiritual_democracy
 				has_valid_civic = civic_spiritual_seekers
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_divine_council
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_spiritual_democracy
 			}
 		}
 		modifier = {
@@ -248,7 +263,7 @@ gov_star_travelers = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 2
 			OR = {
                 has_valid_civic = civic_exploration
 				has_valid_civic = civic_flight_schools
@@ -257,9 +272,16 @@ gov_star_travelers = {
 				has_valid_civic = civic_hyperspace_specialty
 				has_valid_civic = civic_innovative_economy
 				has_valid_civic = civic_memory_vault
-				has_valid_civic = civic_peacekeepers
 				has_valid_civic = civic_star_settlers
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_cyber_demos_cratos
+				has_valid_civic = civic_science_directorate
 				has_valid_civic = civic_technocracy
+				has_valid_civic = civic_peacekeepers
 			}
 		}
 		modifier = {
