@@ -51,8 +51,8 @@
  concept_ethics_rebuild_plutocracy_plural_desc: "$concept_ethics_rebuild_plutocracy_desc$"
 
  civic_tooltip_ethics_rebuild_communism: "Is NOT already a ['concept_ethics_rebuild_communism']"
- concept_ethics_rebuild_communism: "Post-Scarcity Society"
- concept_ethics_rebuild_communism_plural: "Post-Scarcity Societies"
+ concept_ethics_rebuild_communism: "Communal Parity"
+ concept_ethics_rebuild_communism_plural: "Communal Parities"
  concept_ethics_rebuild_communism_desc: "§L$concept_ethics_rebuild_communism$ Governments consist of: \n- ['civic:civic_anarchy_utopia']$NEW_LINE$- ['civic:civic_shared_burden']$NEW_LINE$- ['civic:civic_worker_coop']§!"
  concept_ethics_rebuild_communism_plural_desc: "$concept_ethics_rebuild_communism_desc$"
 

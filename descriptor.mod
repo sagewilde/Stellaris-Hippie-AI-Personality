@@ -1,5 +1,5 @@
 version="1.2.5"
-name="Hippie AI Personality (4.4.6)"
+name="Hippie AI Personality"
 tags = {
     "Gameplay"
     "Diplomacy"
