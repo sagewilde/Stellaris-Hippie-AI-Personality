@@ -3,7 +3,7 @@ hippies = {
 	name = "EMPIRE_DESIGN_hippies"
 	adjective = "PRESCRIPTED_adjective_hippies"
 	spawn_enabled = yes
-	spawn_as_fallen = no
+	spawn_as_fallen = yes
 	ignore_portrait_duplication = no
 
     flag = empire_hippies
