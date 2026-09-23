@@ -5,19 +5,10 @@
 tech_terrestrial_sculpting = {
 	cost = @tier2cost3
 	area = society
-	tier = 2
+	tier = 1	#Cog Note lowered this from Vanilla's tier = 2 so Primitive Players can get this easier
 	category = { new_worlds }
-	prerequisites = {
-		OR = {
-			tech_colonization_1
-			tech_planetary_engineering
-		}
-	}
+	prerequisites = { "tech_colonization_1" }
 	weight = @tier2weight3
-
-	potential = {
-		is_nomadic = no
-	}
 
 	feature_flags = {
 		build_terraform_station
@@ -36,11 +27,7 @@ tech_terrestrial_sculpting = {
 		}
 		modifier = { #if you're a fish, you're definitely gonna prioritise finding out how to make more oceans
 			factor = 1.25
-			has_trait = trait_aquatic
-		}
-		modifier = {
-			factor = 1.25
-			has_trait = trait_robot_aquatic
+			has_aquatic_trait = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -52,6 +39,7 @@ tech_terrestrial_sculpting = {
 		}
 		modifier = {
 			factor = 1.25
+			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
 	}
@@ -100,27 +88,22 @@ tech_terrestrial_sculpting = {
 		}
 		modifier = { #Hydrocentric is really good and needs this
 			factor = 1000
-			has_trait = trait_aquatic
-		}
-		modifier = {
-			factor = 1000
-			has_trait = trait_robot_aquatic
+			has_aquatic_trait = yes
 		}
 		modifier = {
 			factor = 100
 			has_origin = origin_life_seeded
 		}
 		modifier = {
-			factor = 1.25
-			has_ai_personality = peaceful_counterculture
-		}
-		modifier = {
 			factor = 2
 			is_ai = no #auto-research
 		}
+		modifier = {
+			factor = 5
+			has_ai_personality = peaceful_counterculture
+		}
 	}
 }
-
 #Ecological Adaptation
 tech_ecological_adaptation = {
 	cost = @tier3cost2
@@ -263,7 +246,7 @@ tech_psionic_theory = {
 
 	gateway = psionics
 
-	potential = {
+	potential = {	#Steam: This code and notes are from vanilla
 		OR = { #The OR is so that Gestalts can get Zro Distillation with that Resolution
 			has_shroud_dlc = yes # Shroud allows everyone to become psionic
 			NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -288,10 +271,6 @@ tech_psionic_theory = {
 		modifier = {
 			factor = 0.5
 			is_spiritualist = no
-		}
-		modifier = {
-			factor = 7
-			has_valid_civic = civic_spiritual_seekers
 		}
 		modifier = {
 			factor = 2
@@ -372,7 +351,23 @@ tech_psionic_theory = {
 			has_ascension_perk = ap_mind_over_matter
 		}
 		modifier = {
-			factor = 1000
+			factor = 1.25
+			has_valid_civic = civic_machine_cult_machine
+		}
+		modifier = {
+			factor = 7
+			has_valid_civic = civic_spiritual_seekers
+		}
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_machine_cult
+		}
+		modifier = {
+			factor = 7
+			has_valid_civic = civic_spiritual_seekers
+		}
+		modifier = {
+			factor = 100
 			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}

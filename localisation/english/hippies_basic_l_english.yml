@@ -51,3 +51,4 @@
  civic_anarchy_utopia_effects:0 "$civic_crowdsourcing_anarchy_effects$\n$civic_anarchy_ideals_effects$$TABBED_NEW_LINE$- The §HXenoist§! faction will provide higher §YFaction Output§! whenever a large number of §YUnique Species§! are within the empire (greater than 5, 7 or 10).$TABBED_NEW_LINE$- Allows the §Y$trade_policy_mutual_aid$§! Trade Policy, which converts $r_trade$ to $r_energy$, $r_minerals$ and $r_food$."
 
  TORTLE_POWER: "§G+ Groovy Affinity§!"
+ TURTLE_POWER: "Turtle Power"

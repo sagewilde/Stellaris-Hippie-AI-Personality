@@ -1,5 +1,6 @@
 
 artificial_intelligence_policy = {
+	category = society
 	potential = {
 		is_gestalt = no
 		OR = {
@@ -148,15 +149,10 @@ artificial_intelligence_policy = {
 					fail_text = is_a_synthetic_empire
 					has_country_flag = synthetic_empire
 				}
-				AND = {
-					is_spiritualist = no
-					NOR = {
-						has_valid_civic = civic_machine_cult
-						has_valid_civic = civic_machine_cult_machine
-						has_ai_personality = peaceful_counterculture
-					}
-				}
+				is_spiritualist = no
+				has_valid_civic = civic_machine_cult
 				is_individual_machine = yes
+				has_ai_personality = peaceful_counterculture
 			}
 			NOR = { 
 				has_policy_flag = robots_outlawed 
@@ -195,6 +191,8 @@ artificial_intelligence_policy = {
 			modifier = {
 				factor = 0
 				is_spiritualist = yes
+				is_industrial = no
+				NOT = { has_ai_personality = peaceful_counterculture }
 			}
 		}
 	}

@@ -48,13 +48,6 @@ tech_colossus = {
 	}
 }
 
-###		#		  ##	 #   #	 ###   ###	    #  #	 ###	 #		#		###		###		##
-#  #    #	     # #	 ##  #	 #		#		# #		  #		 #		#		#		# #	   #
-###		#		 ####	 # # #	 ##		#		##		  #	 	 #		#		##		###		#
-#		#		#   #	 #  ##	 #		#		# #		  #		 #		#		#		# #		 #
-#		####   #	 #   #	 #   ###	#		# #	     ###	 ###	###		###		# #	   ##
-
-
 # World Cracker
 tech_pk_cracker = {
 	area = engineering
@@ -64,7 +57,6 @@ tech_pk_cracker = {
 	is_reverse_engineerable = no
 	category = { voidcraft }
 	prerequisites = { "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 
 	potential = {
@@ -109,7 +101,6 @@ tech_pk_shielder = {
 	is_reverse_engineerable = no
 	category = { field_manipulation }
 	prerequisites = { "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 
 	potential = {
@@ -169,7 +160,6 @@ tech_pk_neutron = {
 	is_reverse_engineerable = no
 	category = { particles }
 	prerequisites = { "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 
 	potential = {
@@ -230,7 +220,6 @@ tech_pk_godray = {
 	is_reverse_engineerable = no
 	category = { psionics }
 	prerequisites = { "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 
 	potential = {
@@ -284,7 +273,6 @@ tech_pk_smelter = {
 	is_reverse_engineerable = no
 	category = { voidcraft }
 	prerequisites = { "tech_colossus" }
-	ai_update_type = military
 	weight = @tier5weight3
 
 	potential = {

@@ -39,7 +39,6 @@ ethic_pacifist = {
 			is_pacifist = yes
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FACTION_POS
 		trigger = {
@@ -47,7 +46,6 @@ ethic_pacifist = {
 			has_faction = prosperity
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_EMPIRE_PEACEFUL_POS
 		trigger = {
@@ -57,14 +55,12 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
 		trigger = {
 			has_valid_civic = civic_inwards_perfection
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_WEAK_POS
 		trigger = {
@@ -75,7 +71,6 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_NEIGHBOR_RIVALS_NEG
 		trigger = {
@@ -88,14 +83,12 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_FANATIC_PURIFIERS_NEG
 		trigger = {
 			has_valid_civic = civic_fanatic_purifiers
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_DUELIST_NEG
 		trigger = {
@@ -105,21 +98,18 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_UNRESTRICTED_WARS_NEG
 		trigger = {
 			has_policy_flag = unrestricted_wars
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_NON_AGGRESSION_PACTS_POS
 		trigger = {
 			num_non_aggression_pacts > 0
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_OVERLORD_POS
 		trigger = {
@@ -128,18 +118,6 @@ ethic_pacifist = {
 			overlord = { is_pacifist = yes }
 		}
 	}
-
-	pop_attraction_tag = {
-		desc = TORTLE_POWER		# Because it's funny.
-		trigger = {
-			any_owned_planet = {
-				any_owned_species = {
-					species_portrait = rep14
-				}
-			}
-		}
-	}
-
 	# Check for any leader on the Council with Faction's Ethic.
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_REPRESENTED_ON_COUNCIL
@@ -155,7 +133,6 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_GOVERNOR_POS
 		trigger = {
@@ -165,7 +142,6 @@ ethic_pacifist = {
 			}
 		}
 	}
-
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_STATELY_ACCLIAM
 		trigger = {
@@ -176,7 +152,18 @@ ethic_pacifist = {
 			}
 		}
 	}
+	pop_attraction_tag = {
+		desc = TORTLE_POWER		# Because it's funny.
+		trigger = {
+			any_owned_planet = {
+				any_owned_species = {
+					species_portrait = rep14
+				}
+			}
+		}
+	}
 
+	# This = Country
 	country_attraction = {
 		base = 1
 		modifier = {
@@ -185,6 +172,11 @@ ethic_pacifist = {
 				is_country_type = default
 				has_ethic = ethic_pacifist
 				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_gestalt_consciousness # No governing ethic
+				check_modifier_value = { # Allow foreign ethics if no governing ethics attraction
+					modifier = pop_government_ethic_attraction
+					value <= -1
+				}
 				AND = {
 					is_country_type = primitive
 					has_country_flag = preftl_societal_enlightenment_pact
@@ -199,11 +191,14 @@ ethic_pacifist = {
 					}
 				}
 			}
+			desc = FROM_EMPIRE
 		}
 		modifier = {
 			factor = 2
-			is_country_type = default
-			is_pacifist = no
+			hidden_trigger = {
+				is_country_type = default
+				is_pacifist = no
+			}
 			has_faction = prosperity
 		}
 		modifier = {
@@ -214,7 +209,6 @@ ethic_pacifist = {
 			factor = 0.5
 			has_valid_civic = civic_fanatic_purifiers
 		}
-
 		modifier = {
 			factor = 2
 			has_ethic = ethic_pacifist
@@ -227,65 +221,37 @@ ethic_pacifist = {
 			exists = overlord
 			has_loyalty > 0
 			mult = value:ethics_from_overlord|ETHIC|pacifist|
+			desc = FROM_OVERLORD
 		}
 		modifier = {
-			factor = 1.33
+			factor = value:pacifist_ethics_from_peace
 			is_country_type = default
 			years_of_peace = {
 				value > 20
 				delay = 50
 			}
-		}
-		modifier = {
-			factor = 1.33
-			is_country_type = default
-			years_of_peace = {
-				value > 40
-				delay = 50
-			}
-		}
-		modifier = {
-			factor = 1.33
-			is_country_type = default
-			years_of_peace = {
-				value > 60
-				delay = 50
-			}
-		}
-		modifier = {
-			factor = 1.33
-			is_country_type = default
-			years_of_peace = {
-				value > 80
-				delay = 50
-			}
-		}
-		modifier = {
-			factor = 1.33
-			is_country_type = default
-			years_of_peace = {
-				value > 100
-				delay = 50
-			}
+			desc = FROM_PEACE
 		}
 		# Effects of indoctrination mission
 		modifier = {
 			factor = 20
-			is_primitive = yes
+			is_country_type = primitive
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
 				observation_outpost_owner = { has_ethic = ethic_fanatic_pacifist }
 			}
+			desc = FROM_OBSERVER
 		}
 		modifier = {
 			factor = 10
-			is_primitive = yes
+			is_country_type = primitive
 			has_country_flag = preftl_societal_enlightenment_pact
 			capital_scope = {
 				has_observation_outpost = yes
 				observation_outpost_owner = { has_ethic = ethic_pacifist }
 			}
+			desc = FROM_OBSERVER
 		}
 		modifier = {
 			factor = 0.75
@@ -294,31 +260,41 @@ ethic_pacifist = {
 		# Check for any leader on the Council with Faction's Ethic.
 		modifier = {
 			factor = value:count_councilors_with_ethic|ETHIC|pacifist|
+			check_variable_arithmetic = {
+				which = value:count_councilors_with_ethic|ETHIC|pacifist|
+				value != 1
+			}
+			desc = FROM_COUNCIL
 		}
-		
-		modifier = {	# Ensures AI Hippies stay Hippies
+		modifier = {
+			factor = value:pacifist_ethics_from_pacts
+			check_variable_arithmetic = {
+				which = value:pacifist_ethics_from_pacts
+				value != 1
+			}
+			desc = FROM_EMPIRE_NON_AGGRESSION_PACTS
+		}
+		# Ensures Hippies stay Hippies
+		modifier = {
 			factor = 10
 			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
-		mult = value:pacifist_ethics_from_pacts
 	}
 
-	# from = planet
+	# This = Pop group
+	# From = Planet
 	pop_attraction = {
 		base = 1
-
 		inline_script = {
 			script = "ethics/governor_pop_attraction"
 			ETHIC = pacifist
 			ETHIC_OPPOSED = militarist
 		}
-
 		inline_script = {
 			script = "ethics/stately_acclaim_pop_attraction"
 			ETHIC = pacifist
 		}
-
 		modifier = {
 			factor = 0
 			has_trait = trait_hive_mind
@@ -345,10 +321,12 @@ ethic_pacifist = {
 					}
 				}
 			}
+			desc = FROM_HOSTILE_NEIGHBORS
 		}
 		modifier = {
 			factor = 1.1
 			species_portrait = rep14
+			desc = TURTLE_POWER
 		}
 	}
 }

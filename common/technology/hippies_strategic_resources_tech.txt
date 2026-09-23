@@ -98,6 +98,7 @@ tech_mine_zro = {
 		}
 		modifier = {
 			factor = 1.25
+			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
 		modifier = {

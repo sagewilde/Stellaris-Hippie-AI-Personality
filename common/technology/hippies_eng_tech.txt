@@ -54,6 +54,7 @@ tech_cruisers = {
 		}
 		modifier = {
 			factor = 1000
+			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
 	}
@@ -121,6 +122,7 @@ tech_battleships = {
 		}
 		modifier = {
 			factor = 1000
+			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
 	}
@@ -147,7 +149,6 @@ tech_titans = {
 		}
 	}
 	weight = @tier5weight1
-	ai_update_type = military
 
 	modifier = {
 		command_limit_add = 80
@@ -230,12 +231,18 @@ tech_titans = {
 		}
 		modifier = {
 			factor = 1000
+			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}
 	}
 
 	ai_weight = {
 		factor = @ai_ship_types_factor
+
+		inline_script = {
+			script = ai/weapon_preference_weight
+			WEAPON_TYPE = weapon_type_energy
+		}
 		modifier = {
 			factor = 1000
 			has_ai_personality = peaceful_counterculture
