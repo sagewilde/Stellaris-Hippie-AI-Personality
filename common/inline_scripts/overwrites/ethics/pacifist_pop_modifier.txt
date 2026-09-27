@@ -1,0 +1,5 @@
+modifier = {
+	factor = 1.1
+	species_portrait = rep14
+	desc = TURTLE_POWER
+}

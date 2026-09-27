@@ -1,0 +1,10 @@
+pop_attraction_tag = {
+	desc = TORTLE_POWER		# Because it's funny.
+	trigger = {
+		any_owned_planet = {
+			any_owned_species = {
+				species_portrait = rep14
+			}
+		}
+	}
+}

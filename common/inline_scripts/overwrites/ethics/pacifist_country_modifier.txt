@@ -1,0 +1,6 @@
+# Ensures Hippies stay Hippies
+modifier = {
+	factor = 100
+	is_ai = yes
+	has_ai_personality = peaceful_counterculture
+}
