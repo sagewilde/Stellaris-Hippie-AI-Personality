@@ -1,0 +1,16 @@
+l_groovy_advisor = {
+	name = "GROOVY_ADVISOR"
+	icon = "gfx/interface/icons/vo_groovy.dds"
+
+	weight = {
+		base = 0
+		modifier = {
+			add = 3
+			has_hippie_government = yes
+		}
+		modifier = {
+			add = 100
+			has_ai_personality = peaceful_counterculture
+		}
+	}
+}

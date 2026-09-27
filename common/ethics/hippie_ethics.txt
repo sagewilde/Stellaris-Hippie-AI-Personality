@@ -276,7 +276,7 @@ ethic_pacifist = {
 		}
 		# Ensures Hippies stay Hippies
 		modifier = {
-			factor = 10
+			factor = 100
 			is_ai = yes
 			has_ai_personality = peaceful_counterculture
 		}

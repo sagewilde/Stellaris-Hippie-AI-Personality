@@ -1,0 +1,105 @@
+
+trait_conservational = {
+	cost = 1
+	category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+		is_ai_hippie = no
+	}
+	species_possible_merge_remove = {
+		is_ai_hippie = no
+	}
+	opposites = { "trait_wasteful" "trait_hive_mind" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic positive upkeep consumer_goods individual }
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+	slave_cost = {
+		trade = 500
+	}
+}
+
+trait_docile = {
+	cost = 2
+	category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+		is_ai_hippie = no
+	}
+	species_possible_merge_remove = {
+		is_ai_hippie = no
+	}
+	opposites = { "trait_unruly" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic positive empire_size }
+	modifier = {
+		species_empire_size_mult = -0.10
+	}
+	slave_cost = {
+		trade = 500
+	}
+}
+
+trait_sedentary = {
+	cost = -1
+	category = normal
+	species_potential_add = {
+		can_add_negative_organic_traits = yes
+	}
+	species_potential_remove = {
+		is_ai_hippie = no
+	}
+	species_possible_merge_remove = {
+		is_ai_hippie = no
+	}
+	opposites = { "trait_nomadic" "trait_rooted" "trait_wilderness" "trait_pc_ark_preference" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic negative migration }
+	modifier = {
+		pop_resettlement_cost_mult = 0.35
+	}
+	ai_weight = {
+		weight = 0
+	}
+	slave_cost = {
+		trade = -200
+	}
+	forbidden_origins = {
+		origin_default_nomads
+		origin_sacred_path
+		origin_heirs_of_the_khan
+		origin_forever_cruise
+	}
+}
+
+trait_deviants = {
+	cost = -1
+	category = normal
+	species_potential_add = {
+		can_add_negative_organic_traits = yes
+	}
+	species_potential_remove = {
+		is_ai_hippie = no
+	}
+	species_possible_merge_remove = {
+		is_ai_hippie = no
+	}
+	modifier = { pop_government_ethic_attraction = -0.15 }
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	tags = { organic negative ethic_attraction individual }
+	opposites = { "trait_conformists" "trait_hive_mind" }
+	ai_weight = {
+		weight = 0
+	}
+	slave_cost = {
+		trade = -200
+	}
+}

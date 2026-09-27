@@ -97,3 +97,17 @@ is_special_personality = {
 		#has_ai_personality = mega_union
 	}
 }
+
+is_ai_hippie = {
+	hidden_trigger = {
+		exists = from
+		from = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				has_ai_personality = peaceful_counterculture
+			}
+		}
+	}
+}
