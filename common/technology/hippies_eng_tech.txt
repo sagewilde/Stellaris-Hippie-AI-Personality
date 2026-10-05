@@ -53,9 +53,8 @@ tech_cruisers = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1000
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			factor = 10
+			is_ai_hippie = yes
 		}
 	}
 
@@ -121,9 +120,8 @@ tech_battleships = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1000
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			factor = 10
+			is_ai_hippie = yes
 		}
 	}
 
@@ -230,9 +228,8 @@ tech_titans = {
 			has_tradition = tr_supremacy_adopt
 		}
 		modifier = {
-			factor = 1000
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			factor = 10
+			is_ai_hippie = yes
 		}
 	}
 
@@ -245,7 +242,7 @@ tech_titans = {
 		}
 		modifier = {
 			factor = 1000
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 	}
 }

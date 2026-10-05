@@ -1,0 +1,24 @@
+
+# No scope, like on_game_start
+on_decade_pulse = {
+	events = {
+		galactic_features.362 # Space fauna respawn
+		utopia.50		# Science Nexus (Think Tank) events
+		#		syndaw.10		# machine leader malfunction chance
+		syndaw.400		# machine uprising + warning events
+		galcom.14		# check if anyone's missing an invite to the Galactic Community
+		drones.100		# Ancient Mining Drone Expansion Fleet setup (unclaimed systems)
+		drones.120		# Ancient Mining Drone Expansion Fleet setup (claimed systems too)
+		drones.200		# triggers a possible Space Crystal Splitter expansion (any system)
+		paragon_2.1140	# Shroud Preacher trait effect
+		pirate.100		# assorted late-game pirates
+		fedev.600		# Federation Joint Operation - Trade League
+		hippie_tech.1	# Hippies gaining apocalypse tech
+	}
+}
+
+on_late_game_pulse = {
+	events = {
+		hippie_tech.2  # If hippies don't have the colossus by now, they get it anyway.
+	}
+}

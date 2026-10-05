@@ -98,8 +98,7 @@ tech_mine_zro = {
 		}
 		modifier = {
 			factor = 1.25
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 		modifier = {
 			factor = 2	# On top of regular bonus from trait.

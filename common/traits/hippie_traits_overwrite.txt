@@ -7,10 +7,10 @@ trait_conservational = {
 	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	species_possible_merge_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	opposites = { "trait_wasteful" "trait_hive_mind" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -31,10 +31,10 @@ trait_docile = {
 	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	species_possible_merge_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	opposites = { "trait_unruly" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -54,10 +54,10 @@ trait_sedentary = {
 		can_add_negative_organic_traits = yes
 	}
 	species_potential_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	species_possible_merge_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	opposites = { "trait_nomadic" "trait_rooted" "trait_wilderness" "trait_pc_ark_preference" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -86,10 +86,10 @@ trait_deviants = {
 		can_add_negative_organic_traits = yes
 	}
 	species_potential_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	species_possible_merge_remove = {
-		is_ai_hippie = no
+		is_ai_hippie_traits = no
 	}
 	modifier = { pop_government_ethic_attraction = -0.15 }
 

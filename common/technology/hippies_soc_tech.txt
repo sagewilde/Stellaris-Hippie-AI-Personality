@@ -39,8 +39,7 @@ tech_terrestrial_sculpting = {
 		}
 		modifier = {
 			factor = 1.25
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 	}
 
@@ -104,6 +103,7 @@ tech_terrestrial_sculpting = {
 		}
 	}
 }
+
 #Ecological Adaptation
 tech_ecological_adaptation = {
 	cost = @tier3cost2
@@ -124,7 +124,7 @@ tech_ecological_adaptation = {
 		}
 		modifier = {
 			factor = 1.25
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 
 	}
@@ -195,7 +195,7 @@ tech_climate_restoration = {
 		}
 		modifier = {
 			factor = 1.25
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 
 	}
@@ -368,8 +368,7 @@ tech_psionic_theory = {
 		}
 		modifier = {
 			factor = 100
-			is_ai = yes
-			has_ai_personality = peaceful_counterculture
+			is_ai_hippie = yes
 		}
 	}
 

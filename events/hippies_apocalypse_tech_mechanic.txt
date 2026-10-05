@@ -1,0 +1,814 @@
+namespace = hippie_tech
+namespace = apoc
+
+country_event = {
+	id = hippie_tech.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			is_ai_hippie = yes
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_ai_hippie = yes
+			}
+			if = {
+				limit = {
+					country_uses_bio_ships = yes
+					is_nomadic = no
+				}
+				inverted_switch = {
+					trigger = has_technology
+					tech_maulers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = mauler
+							PROGRESS = 0.75
+						}
+					}
+					tech_weavers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = weaver
+							PROGRESS = 0.75
+						}
+					}
+					tech_starbase_3 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_3
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+						}
+					}
+					tech_harbingers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = harbinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_starbase_4 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_4
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost2
+						}
+					}
+					tech_stingers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_stinger_growth_1 = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_starbase_5 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_5
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost2
+						}
+					}
+					tech_stinger_growth_2 = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_titans = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_titans
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier5cost1
+						}
+					}
+					tech_colossus = {
+						add_resource = {
+							engineering_research = @tier5cost3
+							unity = 15000
+						}
+					}
+					default = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+				inverted_switch = {
+					trigger = has_technology
+					tech_corvettes = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_corvettes
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost1
+							energy = 2000
+							alloys = 1000
+						}
+					}
+					tech_destroyers = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_destroyers
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+							energy = 8000
+							alloys = 5000
+						}
+					}
+					tech_waystation_2 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_waystation_2
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+							energy = 8000
+							alloys = 5000
+						}
+					}
+					tech_cruisers = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_cruisers
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost1
+							energy = 9000
+							alloys = 7000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_waystation_3 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_waystation_3
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost2
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_battleships = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_battleships
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier4cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_arkship_construction = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_arkship_construction
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+
+					}
+					tech_titans = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_titans
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier5cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_colossus = {
+						add_resource = {
+							engineering_research = @tier5cost3
+							unity = 15000
+							energy = 20000
+							alloys = 20000
+							exotic_gases = 300
+							volatile_motes = 300
+							rare_crystals = 300
+							sr_zro = 300
+						}
+					}
+					default = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					country_uses_bio_ships = yes
+					is_nomadic = yes
+				}
+				inverted_switch = {
+					trigger = has_technology
+					tech_maulers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = mauler
+							PROGRESS = 0.75
+						}
+					}
+					tech_weavers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = weaver
+							PROGRESS = 0.75
+						}
+					}
+					tech_waystation_2 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_waystation_2
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+						}
+					}
+					tech_harbingers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = harbinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_waystation_3 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_waystation_3
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost2
+						}
+					}
+					tech_stingers = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_stinger_growth_1 = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_arkship_construction = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_arkship_construction
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+
+					}
+					tech_stinger_growth_2 = {
+						give_next_bioship_tech_effect = {
+							BIOSHIP = stinger
+							PROGRESS = 0.75
+						}
+					}
+					tech_titans = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_titans
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier5cost1
+						}
+					}
+					tech_colossus = {
+						add_resource = {
+							engineering_research = @tier5cost3
+							unity = 15000
+						}
+					}
+					default = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+			else = {
+				inverted_switch = {
+					trigger = has_technology
+					tech_corvettes = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_corvettes
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost1
+							energy = 2000
+							alloys = 1000
+						}
+					}
+					tech_destroyers = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_destroyers
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+							energy = 8000
+							alloys = 5000
+						}
+					}
+					tech_starbase_3 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_3
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier2cost2
+							energy = 8000
+							alloys = 5000
+						}
+					}
+					tech_cruisers = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_cruisers
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost1
+							energy = 9000
+							alloys = 7000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_starbase_4 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_4
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier3cost2
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_battleships = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_battleships
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier4cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_starbase_5 = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_starbase_5
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier4cost2
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_titans = {
+						add_tech_option_or_research_effect = {
+							TECH = tech_titans
+							PROGRESS = 0.25
+							CATEGORY = engineering_research
+						}
+						add_resource = {
+							engineering_research = @tier5cost1
+							energy = 10000
+							alloys = 10000
+							exotic_gases = 100
+							volatile_motes = 100
+							rare_crystals = 100
+							sr_zro = 100
+						}
+					}
+					tech_colossus = {
+						add_resource = {
+							engineering_research = @tier5cost3
+							unity = 15000
+							energy = 20000
+							alloys = 20000
+							exotic_gases = 300
+							volatile_motes = 300
+							rare_crystals = 300
+							sr_zro = 300
+						}
+					}
+					default = {
+						add_monthly_resource_mult = {
+							resource = engineering_research
+							value = @tier3researchreward
+							min = @tier3researchmin
+							max = @tier3researchmax
+						}
+					}
+				}
+			}
+		}
+		log = "Hippies decade tech benefit given."
+	}
+}
+
+# Choose Planet-Killer Weapon on 50% project progress
+country_event = {
+	id = apoc.110
+	title = apoc.110.name
+	desc = {
+		text = apoc.110.desc
+		trigger = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	desc = {
+		text = apoc.110.desc.machine
+		trigger = { is_machine_empire = yes }
+	}
+	desc = {
+		text = apoc.110.desc.hive
+		trigger = { is_hive_empire = yes }
+	}
+	picture = GFX_evt_planet_beam
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLANET_KILLER_CRACKER
+		custom_tooltip = apoc.110.cracker.tooltip
+		hidden_effect = {
+			set_country_flag = pk_cracker
+		}
+
+		trigger = {
+			is_pacifist = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_SHIELDER
+		custom_tooltip = apoc.110.shielder.tooltip
+		hidden_effect = {
+			set_country_flag = pk_shielder
+		}
+
+		trigger = {
+			is_pacifist = yes
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_NEUTRON
+		custom_tooltip = apoc.110.neutron.tooltip
+		hidden_effect = {
+			set_country_flag = pk_neutron
+		}
+
+		trigger = {
+			is_pacifist = no
+			# Available to spiritualists if Divine Enforcer is locked out
+			OR = {
+				is_spiritualist = no
+				has_psionic_ascension = no
+			}
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_GODRAY
+		custom_tooltip = apoc.110.godray.tooltip
+		hidden_effect = {
+			set_country_flag = pk_godray
+		}
+
+		trigger = {
+			is_spiritualist = yes
+			has_psionic_ascension = yes
+			# Hippie safety override
+			is_ai_hippie = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_NANOBOTS
+		custom_tooltip = apoc.110.nanobots.tooltip
+		hidden_effect = {
+			set_country_flag = pk_nanobots
+		}
+
+		trigger = {
+			hidden_trigger = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_DEVOLUTION
+		custom_tooltip = apoc.110.devolution.tooltip
+		hidden_effect = {
+			set_country_flag = pk_devolution
+		}
+
+		trigger = {
+			OR = {
+				has_technology = tech_archaeo_pk_devolving_beam
+				has_tech_option = tech_archaeo_pk_devolving_beam
+			}
+			# Hippie safety override
+			is_ai_hippie = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_SMELTER
+		custom_tooltip = apoc.110.smelter.tooltip
+		hidden_effect = {
+			set_country_flag = pk_smelter
+		}
+
+		trigger = {
+			can_get_planet_smelter = yes
+			# Hippie safety override
+			is_ai_hippie = no
+		}
+	}
+}
+
+country_event = {
+	id = hippie_tech.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			is_ai_hippie = yes
+			NOT = { has_ascension_perk = ap_colossus }
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_ai_hippie = yes
+				NOT = { has_ascension_perk = ap_colossus }
+			}
+			if = {
+				limit = {
+					country_uses_bio_ships = yes
+					is_nomadic = yes
+				}
+				give_technology = {
+					tech = tech_stingers
+				}
+				give_technology = {
+					tech = tech_stinger_growth_1
+				}
+				give_technology = {
+					tech = tech_stinger_growth_2
+				}
+				give_technology = {
+					tech = tech_waystation_2
+				}
+				give_technology = {
+					tech = tech_waystation_3
+				}
+				give_technology = {
+					tech = tech_arkship_construction
+				}
+				give_technology = {
+					tech = tech_titans
+				}
+				hidden_effect = {
+					country_event = { id = apoc.100 }
+				}
+				add_resource = {
+					minerals = 500
+					energy = 500
+					food = 500
+					alloys = 125
+					unity = 250
+					sr_zro = 50
+					engineering_research = 100
+					mult = trigger:years_passed
+				}
+			}
+			else_if = {
+				limit = {
+					country_uses_bio_ships = yes
+					is_nomadic = no
+				}
+				give_technology = {
+					tech = tech_stingers
+				}
+				give_technology = {
+					tech = tech_stinger_growth_1
+				}
+				give_technology = {
+					tech = tech_stinger_growth_2
+				}
+				give_technology = {
+					tech = tech_starbase_3
+				}
+				give_technology = {
+					tech = tech_starbase_4
+				}
+				give_technology = {
+					tech = tech_starbase_5
+				}
+				give_technology = {
+					tech = tech_titans
+				}
+				hidden_effect = {
+					country_event = { id = apoc.100 }
+				}
+				add_resource = {
+					energy = 500
+					food = 500
+					alloys = 125
+					unity = 250
+					volatile_motes = 50
+					exotic_gases = 50
+					rare_crystals = 50
+					sr_zro = 50
+					engineering_research = 100
+					mult = trigger:years_passed
+				}
+			}
+			else_if = {
+				limit = {
+					country_uses_bio_ships = no
+					is_nomadic = yes
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_waystation_2
+				}
+				give_technology = {
+					tech = tech_waystation_3
+				}
+				give_technology = {
+					tech = tech_arkship_construction
+				}
+				give_technology = {
+					tech = tech_titans
+				}
+				hidden_effect = {
+					country_event = { id = apoc.100 }
+				}
+				add_resource = {
+					energy = 500
+					minerals = 200
+					alloys = 500
+					unity = 250
+					sr_zro = 50
+					engineering_research = 100
+					mult = trigger:years_passed
+				}
+			}
+			else = {
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_starbase_3
+				}
+				give_technology = {
+					tech = tech_starbase_4
+				}
+				give_technology = {
+					tech = tech_starbase_5
+				}
+				give_technology = {
+					tech = tech_titans
+				}
+				hidden_effect = {
+					country_event = { id = apoc.100 }
+				}
+				add_resource = {
+					energy = 500
+					minerals = 200
+					alloys = 500
+					unity = 250
+					volatile_motes = 50
+					exotic_gases = 50
+					rare_crystals = 50
+					sr_zro = 50
+					engineering_research = 100
+					mult = trigger:years_passed
+				}
+			}
+		}
+		log = "Hippies force-added Colossus event."
+	}
+}
