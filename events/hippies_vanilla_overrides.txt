@@ -1,3 +1,5 @@
+namespace = apoc
+namespace = utopia
 
 # Keeps hippies from turning into dictatorial theocracies
 # Chosen One becomes ruler
@@ -142,6 +144,130 @@ country_event = {
 				country_event = { id = utopia.3401 days = 4 }
 			}
 			country_event = { id = utopia.3402 days = 5 }
+		}
+	}
+}
+
+# Guarantees hippies choose shielder no matter what
+# Choose Planet-Killer Weapon on 50% project progress
+country_event = {
+	id = apoc.110
+	title = apoc.110.name
+	desc = {
+		text = apoc.110.desc
+		trigger = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+	desc = {
+		text = apoc.110.desc.machine
+		trigger = { is_machine_empire = yes }
+	}
+	desc = {
+		text = apoc.110.desc.hive
+		trigger = { is_hive_empire = yes }
+	}
+	picture = GFX_evt_planet_beam
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	option = {
+		name = PLANET_KILLER_CRACKER
+		custom_tooltip = apoc.110.cracker.tooltip
+		hidden_effect = {
+			set_country_flag = pk_cracker
+		}
+
+		trigger = {
+			is_pacifist = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_SHIELDER
+		custom_tooltip = apoc.110.shielder.tooltip
+		hidden_effect = {
+			set_country_flag = pk_shielder
+		}
+
+		trigger = {
+			is_pacifist = yes
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_NEUTRON
+		custom_tooltip = apoc.110.neutron.tooltip
+		hidden_effect = {
+			set_country_flag = pk_neutron
+		}
+
+		trigger = {
+			is_pacifist = no
+			# Available to spiritualists if Divine Enforcer is locked out
+			OR = {
+				is_spiritualist = no
+				has_psionic_ascension = no
+			}
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_GODRAY
+		custom_tooltip = apoc.110.godray.tooltip
+		hidden_effect = {
+			set_country_flag = pk_godray
+		}
+
+		trigger = {
+			is_spiritualist = yes
+			has_psionic_ascension = yes
+			# Hippie safety override
+			is_ai_hippie = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_NANOBOTS
+		custom_tooltip = apoc.110.nanobots.tooltip
+		hidden_effect = {
+			set_country_flag = pk_nanobots
+		}
+
+		trigger = {
+			hidden_trigger = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_DEVOLUTION
+		custom_tooltip = apoc.110.devolution.tooltip
+		hidden_effect = {
+			set_country_flag = pk_devolution
+		}
+
+		trigger = {
+			OR = {
+				has_technology = tech_archaeo_pk_devolving_beam
+				has_tech_option = tech_archaeo_pk_devolving_beam
+			}
+			# Hippie safety override
+			is_ai_hippie = no
+		}
+	}
+
+	option = {
+		name = PLANET_KILLER_SMELTER
+		custom_tooltip = apoc.110.smelter.tooltip
+		hidden_effect = {
+			set_country_flag = pk_smelter
+		}
+
+		trigger = {
+			can_get_planet_smelter = yes
+			# Hippie safety override
+			is_ai_hippie = no
 		}
 	}
 }
