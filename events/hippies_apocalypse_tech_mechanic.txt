@@ -12,7 +12,7 @@ event = {
 			}
 			if = {
 				limit = {
-					country_uses_bio_ships = yes
+					country_uses_bio_ships = no
 					is_nomadic = no
 				}
 				inverted_switch = {
@@ -519,46 +519,6 @@ event = {
 			if = {
 				limit = {
 					country_uses_bio_ships = yes
-					is_nomadic = yes
-				}
-				give_technology = {
-					tech = tech_stingers
-				}
-				give_technology = {
-					tech = tech_stinger_growth_1
-				}
-				give_technology = {
-					tech = tech_stinger_growth_2
-				}
-				give_technology = {
-					tech = tech_waystation_2
-				}
-				give_technology = {
-					tech = tech_waystation_3
-				}
-				give_technology = {
-					tech = tech_arkship_construction
-				}
-				give_technology = {
-					tech = tech_titans
-				}
-				hidden_effect = {
-					country_event = { id = apoc.100 }
-				}
-				add_resource = {
-					minerals = 500
-					energy = 500
-					food = 500
-					alloys = 125
-					unity = 250
-					sr_zro = 50
-					engineering_research = 100
-					mult = trigger:years_passed
-				}
-			}
-			if = {
-				limit = {
-					country_uses_bio_ships = yes
 					is_nomadic = no
 				}
 				give_technology = {
@@ -593,6 +553,46 @@ event = {
 					volatile_motes = 50
 					exotic_gases = 50
 					rare_crystals = 50
+					sr_zro = 50
+					engineering_research = 100
+					mult = trigger:years_passed
+				}
+			}
+			if = {
+				limit = {
+					country_uses_bio_ships = yes
+					is_nomadic = yes
+				}
+				give_technology = {
+					tech = tech_stingers
+				}
+				give_technology = {
+					tech = tech_stinger_growth_1
+				}
+				give_technology = {
+					tech = tech_stinger_growth_2
+				}
+				give_technology = {
+					tech = tech_waystation_2
+				}
+				give_technology = {
+					tech = tech_waystation_3
+				}
+				give_technology = {
+					tech = tech_arkship_construction
+				}
+				give_technology = {
+					tech = tech_titans
+				}
+				hidden_effect = {
+					country_event = { id = apoc.100 }
+				}
+				add_resource = {
+					minerals = 500
+					energy = 500
+					food = 500
+					alloys = 125
+					unity = 250
 					sr_zro = 50
 					engineering_research = 100
 					mult = trigger:years_passed
