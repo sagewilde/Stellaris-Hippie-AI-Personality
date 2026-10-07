@@ -24,9 +24,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier2cost2
-							energy = 8000
-							alloys = 5000
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_starbase_3 = {
@@ -36,9 +38,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier2cost2
-							energy = 8000
-							alloys = 5000
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_cruisers = {
@@ -48,13 +52,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier3cost1
-							energy = 9000
-							alloys = 7000
-							exotic_gases = 100
-							volatile_motes = 100
-							rare_crystals = 100
-							sr_zro = 100
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_starbase_4 = {
@@ -64,13 +66,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier3cost2
-							energy = 10000
-							alloys = 10000
-							exotic_gases = 100
-							volatile_motes = 100
-							rare_crystals = 100
-							sr_zro = 100
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_battleships = {
@@ -80,13 +80,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier4cost1
-							energy = 10000
-							alloys = 10000
-							exotic_gases = 100
-							volatile_motes = 100
-							rare_crystals = 100
-							sr_zro = 100
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_starbase_5 = {
@@ -96,13 +94,11 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier4cost2
-							energy = 10000
-							alloys = 10000
-							exotic_gases = 100
-							volatile_motes = 100
-							rare_crystals = 100
-							sr_zro = 100
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					tech_titans = {
@@ -112,33 +108,20 @@ event = {
 							CATEGORY = engineering_research
 						}
 						add_resource = {
-							engineering_research = @tier5cost1
-							energy = 10000
-							alloys = 10000
-							exotic_gases = 100
-							volatile_motes = 100
-							rare_crystals = 100
-							sr_zro = 100
-						}
-					}
-					tech_colossus = {
-						add_resource = {
-							engineering_research = @tier5cost3
-							unity = 15000
-							energy = 20000
-							alloys = 20000
-							exotic_gases = 300
-							volatile_motes = 300
-							rare_crystals = 300
-							sr_zro = 300
+							energy = 500
+							minerals = 200
+							alloys = 500
+							engineering_research = 100
+							mult = trigger:years_passed
 						}
 					}
 					default = {
-						add_monthly_resource_mult = {
-							resource = engineering_research
-							value = @tier3researchreward
-							min = @tier3researchmin
-							max = @tier3researchmax
+						add_resource = {
+							energy = 1000
+							minerals = 400
+							alloys = 900
+							engineering_research = 300
+							mult = trigger:years_passed
 						}
 					}
 				}

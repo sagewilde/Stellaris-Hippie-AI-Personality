@@ -111,10 +111,8 @@ is_ai_hippie_traits = {
 }
 
 is_ai_hippie = {
-	if = {
-		limit = {
-			is_ai = yes
-		}
+	AND = {
+		is_ai = yes
 		has_ai_personality = peaceful_counterculture
 	}
 }
