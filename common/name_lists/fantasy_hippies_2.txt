@@ -5,7 +5,6 @@
 
 fantasy_hippies_2 = {
 	category = "Humanoid"
-
 	randomized = no
 
     ### SHIPS
@@ -13,7 +12,7 @@ fantasy_hippies_2 = {
     ship_names = {
 
         generic = {
-            HIP_1_SHIP_Aden HIP_1_SHIP_Adriana HIP_1_SHIP_Alastair HIP_1_SHIP_Alma HIP_1_SHIP_Amanda HIP_1_SHIP_Angel HIP_1_SHIP_Apollo HIP_1_SHIP_Ariel HIP_1_SHIP_Aries HIP_1_SHIP_Arwen HIP_1_SHIP_Ash HIP_1_SHIP_AstralPlane HIP_1_SHIP_AuroraAshton HIP_1_SHIP_AutumnFlowers HIP_1_SHIP_Azura HIP_1_SHIP_BalboShrooms HIP_1_SHIP_Basil HIP_1_SHIP_Beetle HIP_1_SHIP_Belou HIP_1_SHIP_BieboSuncloud HIP_1_SHIP_Blaze HIP_1_SHIP_Blu HIP_1_SHIP_Blue HIP_1_SHIP_BobDylan HIP_1_SHIP_Brandon HIP_1_SHIP_Brave HIP_1_SHIP_Breeze HIP_1_SHIP_BrianJosephLane HIP_1_SHIP_BurgundySkye HIP_1_SHIP_Capucine HIP_1_SHIP_Carmel HIP_1_SHIP_CarrieAnne HIP_1_SHIP_Chana HIP_1_SHIP_ChasidyRainbowMarie HIP_1_SHIP_ChelseaMorning HIP_1_SHIP_ChinaRose HIP_1_SHIP_Christian HIP_1_SHIP_Clarity HIP_1_SHIP_CloudFlower HIP_1_SHIP_CloverDeva HIP_1_SHIP_CosmicRiver HIP_1_SHIP_Creedence HIP_1_SHIP_CrimsonRainbow HIP_1_SHIP_Crystal HIP_1_SHIP_CrystalDove HIP_1_SHIP_CrystalRain HIP_1_SHIP_Cypress HIP_1_SHIP_Daisie HIP_1_SHIP_Dakota HIP_1_SHIP_Dancer HIP_1_SHIP_Danna HIP_1_SHIP_Dawn HIP_1_SHIP_DaydreamBeliever HIP_1_SHIP_Deja HIP_1_SHIP_Delilah HIP_1_SHIP_Destiny HIP_1_SHIP_Dream HIP_1_SHIP_Drew HIP_1_SHIP_DylanAlexander HIP_1_SHIP_Echo HIP_1_SHIP_Eclipse HIP_1_SHIP_Elm HIP_1_SHIP_EmberRose HIP_1_SHIP_Emerald HIP_1_SHIP_Fire HIP_1_SHIP_Flame HIP_1_SHIP_Fleetwood HIP_1_SHIP_Flow HIP_1_SHIP_Flower HIP_1_SHIP_FlyingMachine HIP_1_SHIP_FortunateSon HIP_1_SHIP_Free HIP_1_SHIP_Freedom HIP_1_SHIP_FreshAir HIP_1_SHIP_Freya HIP_1_SHIP_Genesis HIP_1_SHIP_GeorgiaRain HIP_1_SHIP_Ghost HIP_1_SHIP_Grace HIP_1_SHIP_Grainne HIP_1_SHIP_Gretta HIP_1_SHIP_GriffenLiberty HIP_1_SHIP_Griffin HIP_1_SHIP_HaleyBop HIP_1_SHIP_Harbor HIP_1_SHIP_Henna HIP_1_SHIP_HolidaisPeace HIP_1_SHIP_Honest HIP_1_SHIP_Honey HIP_1_SHIP_Honor HIP_1_SHIP_Ideal HIP_1_SHIP_IliaRaye HIP_1_SHIP_Indica HIP_1_SHIP_Infinity HIP_1_SHIP_Jaco HIP_1_SHIP_JacobEltonMichael HIP_1_SHIP_JanisBobbyMcGee HIP_1_SHIP_Jay HIP_1_SHIP_Jefferson HIP_1_SHIP_JimiBeach HIP_1_SHIP_Jodi HIP_1_SHIP_John HIP_1_SHIP_Jolene HIP_1_SHIP_Joy HIP_1_SHIP_Jude HIP_1_SHIP_Jules HIP_1_SHIP_Jupiter HIP_1_SHIP_Justice HIP_1_SHIP_Karma HIP_1_SHIP_Kelsey HIP_1_SHIP_Kyley HIP_1_SHIP_Lake HIP_1_SHIP_Laurel HIP_1_SHIP_Layna HIP_1_SHIP_Leaf HIP_1_SHIP_LennonKarma HIP_1_SHIP_Liberty HIP_1_SHIP_Light HIP_1_SHIP_LittleFlower HIP_1_SHIP_Loki HIP_1_SHIP_Lore HIP_1_SHIP_LoveStreet HIP_1_SHIP_LucyInTheSky HIP_1_SHIP_Lucky HIP_1_SHIP_Lyric HIP_1_SHIP_Maida HIP_1_SHIP_Maple HIP_1_SHIP_MariaJuanita HIP_1_SHIP_MarieJuana HIP_1_SHIP_Marley HIP_1_SHIP_MaryJane HIP_1_SHIP_Mercury HIP_1_SHIP_MicahSunrise HIP_1_SHIP_Micha HIP_1_SHIP_Michaela HIP_1_SHIP_MichaelRainbow HIP_1_SHIP_Milo HIP_1_SHIP_Miracle HIP_1_SHIP_Moon HIP_1_SHIP_MoonBeam HIP_1_SHIP_MoonDanceMoonLove HIP_1_SHIP_Moss HIP_1_SHIP_MountainGirl HIP_1_SHIP_NewSage HIP_1_SHIP_NicoBlue HIP_1_SHIP_NiteSmile HIP_1_SHIP_Nova HIP_1_SHIP_OceanBlue HIP_1_SHIP_OceanBreezes HIP_1_SHIP_OceanLilly HIP_1_SHIP_Ode HIP_1_SHIP_Orion HIP_1_SHIP_Osiris HIP_1_SHIP_Paisley HIP_1_SHIP_Passion HIP_1_SHIP_Peace HIP_1_SHIP_PeacefulWillow HIP_1_SHIP_Petal HIP_1_SHIP_Petrichor HIP_1_SHIP_Phoenix HIP_1_SHIP_PinkFloyd HIP_1_SHIP_Poetry HIP_1_SHIP_Polaris HIP_1_SHIP_Promise HIP_1_SHIP_Quest HIP_1_SHIP_Quinn HIP_1_SHIP_Rainbow HIP_1_SHIP_RainbowRose HIP_1_SHIP_RainbowSky HIP_1_SHIP_RainbowStar HIP_1_SHIP_RainDancer HIP_1_SHIP_Raine HIP_1_SHIP_RainyDaylee HIP_1_SHIP_Remi HIP_1_SHIP_Renee HIP_1_SHIP_RiverStone HIP_1_SHIP_RollingStone HIP_1_SHIP_Rose HIP_1_SHIP_Ruth HIP_1_SHIP_Saga HIP_1_SHIP_Sagebrush HIP_1_SHIP_SaharaSunshine HIP_1_SHIP_SandyMoon HIP_1_SHIP_Sapphire HIP_1_SHIP_SaraAria HIP_1_SHIP_Saturn HIP_1_SHIP_SeagullDream HIP_1_SHIP_Serenity HIP_1_SHIP_ShamicaSativa HIP_1_SHIP_ShelbyMagnolia HIP_1_SHIP_Shine HIP_1_SHIP_Silver HIP_1_SHIP_Simon HIP_1_SHIP_SingingHawk HIP_1_SHIP_SkyLarrisa HIP_1_SHIP_Skyler HIP_1_SHIP_Snowflake HIP_1_SHIP_Sparrow HIP_1_SHIP_Spirit HIP_1_SHIP_Starbuck HIP_1_SHIP_Starchild HIP_1_SHIP_Stella HIP_1_SHIP_StormyCarl HIP_1_SHIP_Sun HIP_1_SHIP_Sundance HIP_1_SHIP_Sunny HIP_1_SHIP_Sunray HIP_1_SHIP_SunshineDaydream HIP_1_SHIP_Sydney HIP_1_SHIP_TangerineDream HIP_1_SHIP_Thyme HIP_1_SHIP_Tranquill HIP_1_SHIP_Trent HIP_1_SHIP_TrickleRain HIP_1_SHIP_True HIP_1_SHIP_Tuesday HIP_1_SHIP_TyKurt HIP_1_SHIP_Vega HIP_1_SHIP_Velma HIP_1_SHIP_VioletSkye HIP_1_SHIP_WendyCrystalSky HIP_1_SHIP_WhiteRabbit HIP_1_SHIP_Wind HIP_1_SHIP_WolfSong HIP_1_SHIP_Zen HIP_1_SHIP_ZoeRenee
+            HIP_1_SHIP_Aden HIP_1_SHIP_Adriana HIP_1_SHIP_Alastair HIP_1_SHIP_Alma HIP_1_SHIP_Amanda HIP_1_SHIP_Angel HIP_1_SHIP_Apollo HIP_1_SHIP_Ariel HIP_1_SHIP_Aries HIP_1_SHIP_Arwen HIP_1_SHIP_Ash HIP_1_SHIP_AstralPlane HIP_1_SHIP_AuroraAshton HIP_1_SHIP_AutumnFlowers HIP_1_SHIP_Azura HIP_1_SHIP_BalboShrooms HIP_1_SHIP_Basil HIP_1_SHIP_Beetle HIP_1_SHIP_Belou HIP_1_SHIP_BieboSuncloud HIP_1_SHIP_Blaze HIP_1_SHIP_Blu HIP_1_SHIP_Blue HIP_1_SHIP_BobDylan HIP_1_SHIP_Brandon HIP_1_SHIP_Brave HIP_1_SHIP_Breeze HIP_1_SHIP_BrianJosephLane HIP_1_SHIP_BurgundySkye HIP_1_SHIP_Capucine HIP_1_SHIP_Carmel HIP_1_SHIP_CarrieAnne HIP_1_SHIP_Chana HIP_1_SHIP_ChasidyRainbowMarie HIP_1_SHIP_ChelseaMorning HIP_1_SHIP_ChinaRose HIP_1_SHIP_Clarity HIP_1_SHIP_CloudFlower HIP_1_SHIP_CloverDeva HIP_1_SHIP_CosmicRiver HIP_1_SHIP_Creedence HIP_1_SHIP_CrimsonRainbow HIP_1_SHIP_Crystal HIP_1_SHIP_CrystalDove HIP_1_SHIP_CrystalRain HIP_1_SHIP_Cypress HIP_1_SHIP_Daisie HIP_1_SHIP_Dakota HIP_1_SHIP_Dancer HIP_1_SHIP_Danna HIP_1_SHIP_Dawn HIP_1_SHIP_DaydreamBeliever HIP_1_SHIP_Deja HIP_1_SHIP_Delilah HIP_1_SHIP_Destiny HIP_1_SHIP_Dream HIP_1_SHIP_Drew HIP_1_SHIP_DylanAlexander HIP_1_SHIP_Echo HIP_1_SHIP_Eclipse HIP_1_SHIP_Elm HIP_1_SHIP_EmberRose HIP_1_SHIP_Emerald HIP_1_SHIP_Fire HIP_1_SHIP_Flame HIP_1_SHIP_Fleetwood HIP_1_SHIP_Flow HIP_1_SHIP_Flower HIP_1_SHIP_FlyingMachine HIP_1_SHIP_FortunateSon HIP_1_SHIP_Free HIP_1_SHIP_Freedom HIP_1_SHIP_FreshAir HIP_1_SHIP_Freya HIP_1_SHIP_Genesis HIP_1_SHIP_GeorgiaRain HIP_1_SHIP_Ghost HIP_1_SHIP_Grace HIP_1_SHIP_Grainne HIP_1_SHIP_Gretta HIP_1_SHIP_GriffenLiberty HIP_1_SHIP_Griffin HIP_1_SHIP_HaleyBop HIP_1_SHIP_Harbor HIP_1_SHIP_Henna HIP_1_SHIP_HolidaisPeace HIP_1_SHIP_Honest HIP_1_SHIP_Honey HIP_1_SHIP_Honor HIP_1_SHIP_Ideal HIP_1_SHIP_IliaRaye HIP_1_SHIP_Indica HIP_1_SHIP_Infinity HIP_1_SHIP_Jaco HIP_1_SHIP_JacobEltonMichael HIP_1_SHIP_JanisBobbyMcGee HIP_1_SHIP_Jay HIP_1_SHIP_Jefferson HIP_1_SHIP_JimiBeach HIP_1_SHIP_Jodi HIP_1_SHIP_John HIP_1_SHIP_Jolene HIP_1_SHIP_Joy HIP_1_SHIP_Jude HIP_1_SHIP_Jules HIP_1_SHIP_Jupiter HIP_1_SHIP_Justice HIP_1_SHIP_Karma HIP_1_SHIP_Kelsey HIP_1_SHIP_Kyley HIP_1_SHIP_Lake HIP_1_SHIP_Laurel HIP_1_SHIP_Layna HIP_1_SHIP_Leaf HIP_1_SHIP_LennonKarma HIP_1_SHIP_Liberty HIP_1_SHIP_Light HIP_1_SHIP_LittleFlower HIP_1_SHIP_Loki HIP_1_SHIP_Lore HIP_1_SHIP_LoveStreet HIP_1_SHIP_LucyInTheSky HIP_1_SHIP_Lucky HIP_1_SHIP_Lyric HIP_1_SHIP_Maida HIP_1_SHIP_Maple HIP_1_SHIP_MariaJuanita HIP_1_SHIP_MarieJuana HIP_1_SHIP_Marley HIP_1_SHIP_MaryJane HIP_1_SHIP_Mercury HIP_1_SHIP_MicahSunrise HIP_1_SHIP_Micha HIP_1_SHIP_Michaela HIP_1_SHIP_MichaelRainbow HIP_1_SHIP_Milo HIP_1_SHIP_Miracle HIP_1_SHIP_Moon HIP_1_SHIP_MoonBeam HIP_1_SHIP_MoonDanceMoonLove HIP_1_SHIP_Moss HIP_1_SHIP_MountainGirl HIP_1_SHIP_NewSage HIP_1_SHIP_NicoBlue HIP_1_SHIP_NiteSmile HIP_1_SHIP_Nova HIP_1_SHIP_OceanBlue HIP_1_SHIP_OceanBreezes HIP_1_SHIP_OceanLilly HIP_1_SHIP_Ode HIP_1_SHIP_Orion HIP_1_SHIP_Osiris HIP_1_SHIP_Paisley HIP_1_SHIP_Passion HIP_1_SHIP_Peace HIP_1_SHIP_PeacefulWillow HIP_1_SHIP_Petal HIP_1_SHIP_Petrichor HIP_1_SHIP_Phoenix HIP_1_SHIP_PinkFloyd HIP_1_SHIP_Poetry HIP_1_SHIP_Polaris HIP_1_SHIP_Promise HIP_1_SHIP_Quest HIP_1_SHIP_Quinn HIP_1_SHIP_Rainbow HIP_1_SHIP_RainbowRose HIP_1_SHIP_RainbowSky HIP_1_SHIP_RainbowStar HIP_1_SHIP_RainDancer HIP_1_SHIP_Raine HIP_1_SHIP_RainyDaylee HIP_1_SHIP_Remi HIP_1_SHIP_Renee HIP_1_SHIP_RiverStone HIP_1_SHIP_RollingStone HIP_1_SHIP_Rose HIP_1_SHIP_Ruth HIP_1_SHIP_Saga HIP_1_SHIP_Sagebrush HIP_1_SHIP_SaharaSunshine HIP_1_SHIP_SandyMoon HIP_1_SHIP_Sapphire HIP_1_SHIP_SaraAria HIP_1_SHIP_Saturn HIP_1_SHIP_SeagullDream HIP_1_SHIP_Serenity HIP_1_SHIP_ShamicaSativa HIP_1_SHIP_ShelbyMagnolia HIP_1_SHIP_Shine HIP_1_SHIP_Silver HIP_1_SHIP_Simon HIP_1_SHIP_SingingHawk HIP_1_SHIP_SkyLarrisa HIP_1_SHIP_Skyler HIP_1_SHIP_Snowflake HIP_1_SHIP_Sparrow HIP_1_SHIP_Spirit HIP_1_SHIP_Starbuck HIP_1_SHIP_Starchild HIP_1_SHIP_Stella HIP_1_SHIP_StormyCarl HIP_1_SHIP_Sun HIP_1_SHIP_Sundance HIP_1_SHIP_Sunny HIP_1_SHIP_Sunray HIP_1_SHIP_SunshineDaydream HIP_1_SHIP_Sydney HIP_1_SHIP_TangerineDream HIP_1_SHIP_Thyme HIP_1_SHIP_Tranquill HIP_1_SHIP_Trent HIP_1_SHIP_TrickleRain HIP_1_SHIP_True HIP_1_SHIP_Tuesday HIP_1_SHIP_TyKurt HIP_1_SHIP_Vega HIP_1_SHIP_Velma HIP_1_SHIP_VioletSkye HIP_1_SHIP_WendyCrystalSky HIP_1_SHIP_WhiteRabbit HIP_1_SHIP_Wind HIP_1_SHIP_WolfSong HIP_1_SHIP_Zen HIP_1_SHIP_ZoeRenee
         }
 
         corvette = {
@@ -32,6 +31,9 @@ fantasy_hippies_2 = {
             HIP_1_SHIP_RedTelephone
         }
 
+        juggernaut = {
+        }
+
         science = {
         }
         
@@ -43,11 +45,6 @@ fantasy_hippies_2 = {
 
         mining_station = { }
         research_station = { }
-        #wormhole_station = { }
-        #terraform_station = { }
-        #observation_station = { }
-        #outpost_station = {
-        #}
 		
 		transport = {
             HIP_1_SHIP_PeaceTour
@@ -58,6 +55,10 @@ fantasy_hippies_2 = {
 
 		ion_cannon = {
 		} 
+    }
+
+    ship_class_names = {
+
     }
 
     fleet_names = {
@@ -250,6 +251,7 @@ fantasy_hippies_2 = {
             regnal_second_names = {
                 HIP_1_CHR_ofLove HIP_1_CHR_ofSunshine HIP_1_CHR_ofHappiness HIP_1_CHR_ofJoy HIP_1_CHR_ofPeace HIP_1_CHR_ofWisdom
             }
+            use_full_regnal_name = yes
         }
     }
 }

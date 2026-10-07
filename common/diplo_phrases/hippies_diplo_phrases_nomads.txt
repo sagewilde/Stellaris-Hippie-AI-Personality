@@ -245,9 +245,11 @@ action_form_waystation_pact = {
 		PC_GRANT_WAYSTATION_PACT_PROPOSE = {
 			weight = { weight = 10000 }
 			trigger = {
-				FROM = { is_nomadic = no }
-				ROOT = { 
+				FROM = { 
+					is_nomadic = no 
 					has_ai_personality = peaceful_counterculture
+				}
+				ROOT = { 
 					is_nomadic = yes 
 				}
 			}
@@ -255,9 +257,11 @@ action_form_waystation_pact = {
 		PC_REQUEST_WAYSTATION_PACT_PROPOSE = {
 			weight = { weight = 10000 }
 			trigger = {
-				FROM = { is_nomadic = yes }
-				ROOT = { 
+				FROM = {
+					is_nomadic = yes
 					has_ai_personality = peaceful_counterculture
+				}
+				ROOT = { 
 					is_nomadic = no
 				}
 			}
@@ -265,9 +269,11 @@ action_form_waystation_pact = {
 		PC_SHARE_WAYSTATION_PACT_PROPOSE = {
 			weight = { weight = 10000 }
 			trigger = {
-				FROM = { is_nomadic = yes }
-				ROOT = { 
+				FROM = {
+					is_nomadic = yes
 					has_ai_personality = peaceful_counterculture
+				}
+				ROOT = { 
 					is_nomadic = yes 
 				}
 			}
