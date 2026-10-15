@@ -4,7 +4,7 @@ Thanks for opening the Readme! Here are my notes on making this mod.
 I figured you were going to ask that. Here's what you need to do.
 
 1- Start with a script. No, not a code script (unless you want to do that), I'm talking about an actual script for character dialogue. How does this empire want to be perceived by the galaxy? Think very carefully about the kind of image you want to project here. 
-! Remember, if their civics, ethics, or government form chanegs, depending on how you key their personality, it could obliterate all the dialogue you have planned. If you can, try to key the personality requirements to something that can't change later in the game, like the Chosen civic, or a species portrait.
+! Remember, if their civics, ethics, or government form changes, depending on how you key their personality, it could obliterate all the dialogue you have planned. If you can, try to key the personality requirements to something that can't change later in the game, like the Chosen civic, or a species portrait.
 ! Don't try to skip out on work and only write a few lines. The way that the diplo-phrases files I wrote work, you'll have to deal with replacing EVERYTHING. You can always key default phrases in vanilla $using_dollar_quotes_like_this$, but you do still have to make a MYPERSONALITY_GREETING_01 statement. 
 ! Relax, and take your time. Writing is hard work. And it's worth it to do it on your own, with your own brain. If you rush it, it'll come out like crap.
 
@@ -12,7 +12,7 @@ I figured you were going to ask that. Here's what you need to do.
 As you've noticed, the Hippies and both of the Pirates have specific behaviors related to their personalities. That back-end functionality is difficult to maintain because it requires overwriting code in blocks frequently used by other mods. If you don't stay on top of things like updates and patches, you could end up breaking a lot of things without meaning to. The only reason I touch as many files as I do is because I'm one of the maintainers of E&CC. I know what changes are coming down the line, so I can prepare for them.
 ! Avoid editing load-bearing files like ethics.txt or civics.txt unless you know you can maintain this mod, know what changes are happening, or otherwise know what you're doing.
 
-3- All hail the almight, all-wise KISS... Keep It Simple, Stupid.
+3- All hail the almighty, all-wise KISS... Keep It Simple, Stupid.
 This is a rule I need to remember to follow more often. When you keep a task simple, you're setting yourself up for success. The more complicated it becomes, the more likely it is to break. As awesome as it would be to have this empire have a specific catch-phrase that they say only with empires that have this specific civic after they've developed this specific technology, that's involving a lot of conditions, triggers, and otherwise iffy variables that your players might not even see. Ask me how often I've had players encounter Hippies that have successfully made the Planetary Shielder colossus.
 
 4- The files you need to write.
