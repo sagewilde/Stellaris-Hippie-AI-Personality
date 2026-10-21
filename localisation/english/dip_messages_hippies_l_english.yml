@@ -145,6 +145,7 @@
  PC_VASSAL_GREETING_DISLOYAL_03_BIO:0 "Dude, could I borrow your shuttle for a-- you know what, never mind. Yours eats like a Behemoth anyway."
  PC_VASSAL_GREETING_DISLOYAL_04:0 "They say that Mother Nature is a bitch. Turns out, she ain't one. She's several."
  PC_VASSAL_GREETING_DISLOYAL_05:0 "We're going to keep sticking it to the Man! Even if we have to pay you rent, we'll pay it in wheelbarrows of greasy pennies!"
+ PC_VASSAL_GREETING_DISLOYAL_06:0 "Dude, I found some suspiciously [From.GetSpeciesAdj]-like [From.GetSpeciesShavings] in the bathroom sink. Please, I'm begging you dude, stop doing that, it's so friggin' gross!"
 ## Hippie Landlord / Overlord
  PC_OVERLORD_GREETING_01:0 "You sure do have a comfy couch!"
  PC_OVERLORD_GREETING_02:0 "Hey, bud! Got something on your mind? We're always here to listen."
@@ -171,7 +172,7 @@
  PC_INSULT_HIPPIE_08:0 "We're officially uninviting you from free cheese fondue night."
  PC_INSULT_HIPPIE_09:0 "And people think I need to clean my room! [Root.Capital.GetName] is a garbage dump! Thousands of years of you occupying her, and she looks ready to quit! You wanna do the same thing to our galaxy? For money? Get outta here!"
  PC_INSULT_HIPPIE_10:0 "Living in harmony with your people and your planet is the most important thing in life. That's not me preaching; that's me warning you. You should cleanse your energies before you end up in front of a _really_ angry mob, dude."
- PC_INSULT_HIPPIE_11:0 "Hey, could you pass this book to [Root.GetRulerName]? We think whatever [Root.Leader.GetSheHe] [Root.Leader.GetIsAre] doing in the bedroom isn't working, and maybe [Root.Leader.GetSheHe] [Root.Leader.GetIsAre] only making war because [Root.Leader.GetSheHe] [Root.Leader.GetHasHave] no rhythm."
+ PC_INSULT_HIPPIE_11:0 "Hey, could you pass this book to [Root.GetRulerName]? We think whatever [Root.Leader.GetSheHe][Root.Leader.GetSRe] doing in the bedroom isn't working, and maybe [Root.Leader.GetSheHe][Root.Leader.GetSRe] only making war because [Root.Leader.GetSheHe] [Root.Leader.GetHasHave] no rhythm."
 ## Hippies being insulted
  PC_INSULTED_HIPPIE_01:0 "Dude! Harsh... I'm feeling kinda hurt right now..."
  PC_INSULTED_HIPPIE_02:0 "Yeah, well-- well, so's your mom's face!"
