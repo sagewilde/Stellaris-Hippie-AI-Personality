@@ -8,10 +8,10 @@ peaceful_counterculture = {
 	colony_spending = 1.2
 
 	federation_acceptance = 10
-	nap_acceptance = 25
+	nap_acceptance = 100
 	commercial_pact_acceptance = 10
 	research_agreement_acceptance = 10
-	defensive_pact_acceptance = 0
+	defensive_pact_acceptance = -10
 	migration_pact_acceptance = 20
 	loyalty_acceptance = 1.0
 
@@ -43,7 +43,6 @@ peaceful_counterculture = {
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
-		sneak_attacker = no
 	}
 
 	allow = {
