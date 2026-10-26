@@ -1,127 +1,61 @@
 room_selector = {
+    # Script may point to textures in 'gfx\portraits\city_sets\' that end with "_room.dds" while ignoring the file ending, e.g.: "room = machine_room" will find 'machine_room(.dds)'.
+
     default = "default_room"
+
     game_setup = {
-        "default_room" = {
-            always = yes
-        }
-        "personality_hegemonic_imperialists_room" = {
-            always = yes
-        }
-        "personality_federation_builders_room" = {
-            always = yes
-        }
-        "personality_democratic_crusaders_room" = {
-            always = yes
-        }
-        "personality_evangelizing_zealots_room" = {
-            always = yes
-        }
-        "personality_migrating_flock_room" = {
-            always = yes
-        }
-        "personality_spiritual_seekers_room" = {
-            always = yes
-        }
-        "personality_decadent_hierarchy_room" = {
-            always = yes
-        }
-        "personality_slaving_despots_room" = {
-            always = yes
-        }
-        "personality_erudite_explorers_room" = {
-            always = yes
-        }
-        "personality_fanatic_purifier_room" = {
-            always = yes
-        }
-        "personality_metalheads_room" = {
-            always = yes
-        }
-        "personality_harmonious_hierarchy_room" = {
-            always = yes
-        }
-        "personality_peaceful_traders_room" = {
-            always = yes
-        }
-        "personality_xenophobic_isolationists_room" = {
-            always = yes
-        }
-        "personality_ruthless_capitalists_room" = {
-            always = yes
-        }
-        "personality_honorbound_warriors_room" = {
-            always = yes
-        }
-        "personality_fanatic_befrienders_room" = {
-            always = yes
-        }
-        "personality_hive_mind_room" = {
-            always = yes
-        }
-        "runic_room" = {
-            always = yes
-        }
-        "scrappy_room" = {
-            always = yes
-        }
-        "crystalline_room" = {
-            always = yes
-        }
-        "organic_room" = {
-            always = yes
-        }
-        "gilded_room" = {
-            always = yes
-        }
-        "machine_room" = {
-            always = yes
-        }
-        "lithoid_room" = {
-            always = yes
-        }
-        "necroids_room" = {
-            always = yes
-        }
-        "aquatics_room" = {
-            always = yes
-        }
-        "toxoids_room" = {
-            always = yes
-        }
-        "solarpunk_room" = {
-            always = yes
-        }
-        "ethic_ai_room" = {
-            always = yes
-        }
-        "cybernetics_room" = {
-            always = yes
-        }
-        "synthetics_room" = {
-            always = yes
-        }
-        "biogenesis_01_room" = {
-            always = yes
-        }
-        "biogenesis_02_room" = {
-            always = yes
-        }
-        "psionic_room" = {
-            always = yes
-        }
-        "wilderness_room" = {
-            always = yes
-        }
+        "default_room"								= { always = yes }
+        "personality_hegemonic_imperialists_room" 	= { always = yes }
+        "personality_federation_builders_room" 		= { always = yes }
+        "personality_democratic_crusaders_room" 	= { always = yes }
+        "personality_evangelizing_zealots_room" 	= { always = yes }
+        "personality_migrating_flock_room" 			= { always = yes }
+        "personality_spiritual_seekers_room" 		= { always = yes }
+        "personality_decadent_hierarchy_room" 		= { always = yes }
+        "personality_slaving_despots_room" 			= { always = yes }
+        "personality_erudite_explorers_room" 		= { always = yes }
+        "personality_fanatic_purifier_room" 		= { always = yes }
+        "personality_metalheads_room" 				= { always = yes }
+        "personality_harmonious_hierarchy_room" 	= { always = yes }
+        "personality_peaceful_traders_room" 		= { always = yes }
+        "personality_xenophobic_isolationists_room" = { always = yes }
+        "personality_ruthless_capitalists_room" 	= { always = yes }
+        "personality_honorbound_warriors_room" 		= { always = yes }
+        "personality_fanatic_befrienders_room" 		= { always = yes }
+        "personality_hive_mind_room" 				= { always = yes }
+        "runic_room"								= { always = yes }
+        "scrappy_room"								= { always = yes }
+        "crystalline_room"							= { always = yes }
+        "organic_room"								= { always = yes }
+        "gilded_room"								= { always = yes }
+        "machine_room"								= { always = yes }
+        "lithoid_room"								= { always = yes }
+        "necroids_room"								= { always = yes }
+        "aquatics_room"								= { always = yes }
+        "toxoids_room"								= { always = yes }
+        "solarpunk_room" 							= { always = yes }
+        "ethic_ai_room"								= { always = yes }
+        "cybernetics_room"							= { always = yes }
+        "synthetics_room"							= { always = yes }
+        "biogenesis_01_room"						= { always = yes }
+        "biogenesis_02_room"						= { always = yes }
+        "psionic_room"								= { always = yes }
+        "wilderness_room"							= { always = yes }
+        "infernal_room"								= { always = yes }
+        "nomads_civilian_room"						= { always = yes }
+        "nomads_military_room"						= { always = yes }
+        "nomads_science_room"						= { always = yes }
+        "personality_mirthful_bandits_room"         = { always = yes }
     }
+
     ruler = {
         "default_room" = {
             always = no
         }
+
         "personality_fallen_empire_machine_room" = {
             exists = owner
-            owner = {
-                is_fallen_empire_machine = yes
-            }
+            owner = { is_fallen_empire_machine = yes }
         }
         "personality_fallen_empire_blue_room" = {
             exists = owner
@@ -179,9 +113,7 @@ room_selector = {
         }
         "crisis_room" = {
             exists = owner
-            owner = {
-                has_crisis_level = crisis_level_5
-            }
+            owner = { has_crisis_level = crisis_level_5 }
         }
         "cosmogenesis_room" = {
             exists = owner
@@ -194,39 +126,60 @@ room_selector = {
         }
         "galactic_emperor_room" = {
             exists = owner
-            owner = {
-                is_galactic_emperor = yes
-            }
+            owner = { is_galactic_emperor = yes }
         }
         "galactic_custodian_room" = {
             exists = owner
+            owner = { is_galactic_custodian = yes }
+        }
+        "marauder_room" = {
+            owner? = {
+                is_country_type = marauder_raiders
+            }
+        }
+        "khan_room" = {
+            owner? = {
+                OR = {
+                    is_country_type = awakened_marauders
+                    has_country_flag = heir_of_the_khan_khan
+                }
+            }
+        }
+        "nomads_civilian_room" = {
+            exists = owner
             owner = {
-                is_galactic_custodian = yes
+                capital_scope.ship? = {
+                    is_civilian_arkship = yes
+                }
+            }
+        }
+        "nomads_military_room" = {
+            exists = owner
+            owner = {
+                capital_scope.ship? = {
+                    is_military_arkship = yes
+                }
+            }
+        }
+        "nomads_science_room" = {
+            exists = owner
+            owner = {
+                capital_scope.ship? = {
+                    is_science_arkship = yes
+                }
             }
         }
         "specialist_bulwark_room" = {
             exists = owner
-            owner = {
-                is_specialist_subject_type = {
-                    TYPE = bulwark
-                }
-            }
+            owner = { is_specialist_subject_type = { TYPE = bulwark } }
         }
         "specialist_prospectorium_room" = {
             exists = owner
-            owner = {
-                is_specialist_subject_type = {
-                    TYPE = prospectorium
-                }
-            }
+            owner = { is_specialist_subject_type = { TYPE = prospectorium } }
         }
         "specialist_scholarium_room" = {
             exists = owner
-            owner = {
-                is_specialist_subject_type = {
-                    TYPE = scholarium
-                }
-            }
+            owner = { is_specialist_subject_type = { TYPE = scholarium } }
         }
         "paragon_azaryn_room" = {
             always = no
@@ -242,43 +195,33 @@ room_selector = {
         }
         "scrappy_room" = {
             exists = owner
-            owner = {
-                has_country_flag = ratling_country
-            }
+            owner = { has_country_flag = ratling_country }
         }
         "gilded_room" = {
             exists = owner
-            owner = {
-                has_origin = origin_imperial_vassal_overlord
+            owner = { has_origin = origin_imperial_vassal_overlord }
+        }
+        "solarpunk_room" = {
+            exists = owner
+            owner = { 
+                OR = {
+                    has_country_flag = solarpunk_country
+                    has_ai_personality = peaceful_counterculture
+                }
             }
         }
-		"solarpunk_room" = {
-			exists = owner
-			owner = {
-				OR = {
-					has_country_flag = solarpunk_country
-					has_ai_personality = peaceful_counterculture
-				}
-			}
-		}
         "slaver_room" = {
             exists = owner
-            owner = {
-                has_origin = origin_slavers
-            }
+            owner = { has_origin = origin_slavers }
         }
         "organic_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = devouring_swarm
-            }
+            owner = { has_ai_personality = devouring_swarm }
         }
         "lithoid_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 lithoids_portrait = yes
             }
@@ -286,9 +229,7 @@ room_selector = {
         "necroids_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 necroids_portrait = yes
             }
@@ -296,9 +237,7 @@ room_selector = {
         "aquatics_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 aquatics_portrait = yes
             }
@@ -306,9 +245,7 @@ room_selector = {
         "toxoids_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 toxoids_portrait = yes
             }
@@ -316,9 +253,7 @@ room_selector = {
         "solarpunk_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 city_graphical_culture = solarpunk_01
             }
@@ -326,9 +261,7 @@ room_selector = {
         "cybernetics_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 cybernetic_portrait = yes
             }
@@ -336,9 +269,7 @@ room_selector = {
         "synthetics_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 synthetic_portrait = yes
             }
@@ -346,9 +277,7 @@ room_selector = {
         "biogenesis_01_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 graphical_culture = biogenesis_01
             }
@@ -356,9 +285,7 @@ room_selector = {
         "psionic_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 graphical_culture = psionic_01
             }
@@ -366,132 +293,94 @@ room_selector = {
         "wilderness_room" = {
             exists = owner
             owner = {
-                NOT = {
-                    is_country_type = primitive
-                }
+                NOT = { is_country_type = primitive }
                 is_fallen_empire = no
                 city_graphical_culture = wilderness_01
             }
         }
         "ethic_ai_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = exterminators
-            }
+            owner = { has_ai_personality = exterminators }
         }
         "personality_hive_mind_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = hive_mind
-            }
+            owner = { has_ai_personality = hive_mind }
         }
         "machine_room" = {
             exists = owner
-            owner = {
-                has_authority = auth_machine_intelligence
-            }
+            owner = { has_authority = auth_machine_intelligence }
         }
         "personality_hegemonic_imperialists_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = hegemonic_imperialists
-            }
+            owner = { has_ai_personality = hegemonic_imperialists }
         }
         "personality_federation_builders_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = federation_builders
-            }
+            owner = { has_ai_personality = federation_builders }
         }
         "personality_democratic_crusaders_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = democratic_crusaders
-            }
+            owner = { has_ai_personality = democratic_crusaders }
         }
         "personality_evangelizing_zealots_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = evangelising_zealots
-            }
+            owner = { has_ai_personality = evangelising_zealots }
         }
         "personality_migrating_flock_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = migrating_flock
-            }
+            owner = { has_ai_personality = migrating_flock }
         }
         "personality_spiritual_seekers_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = spiritual_seekers
-            }
+            owner = { has_ai_personality = spiritual_seekers }
         }
         "personality_decadent_hierarchy_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = decadent_hierarchy
-            }
+            owner = { has_ai_personality = decadent_hierarchy }
         }
         "personality_slaving_despots_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = slaving_despots
-            }
+            owner = { has_ai_personality = slaving_despots }
         }
         "personality_erudite_explorers_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = erudite_explorers
-            }
+            owner = { has_ai_personality = erudite_explorers }
         }
         "personality_fanatic_purifier_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = fanatic_purifiers
-            }
+            owner = { has_ai_personality = fanatic_purifiers }
         }
         "personality_metalheads_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = metalhead
-            }
+            owner = { has_ai_personality = metalhead }
         }
         "personality_harmonious_hierarchy_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = harmonious_hierarchy
-            }
+            owner = { has_ai_personality = harmonious_hierarchy }
         }
         "personality_peaceful_traders_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = peaceful_traders
-            }
+            owner = { has_ai_personality = peaceful_traders }
         }
         "personality_xenophobic_isolationists_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = xenophobic_isolationists
-            }
+            owner = { has_ai_personality = xenophobic_isolationists }
         }
         "personality_ruthless_capitalists_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = ruthless_capitalists
-            }
+            owner = { has_ai_personality = ruthless_capitalists }
         }
         "personality_honorbound_warriors_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = honorbound_warriors
-            }
+            owner = { has_ai_personality = honorbound_warriors }
         }
         "personality_fanatic_befrienders_room" = {
             exists = owner
-            owner = {
-                has_ai_personality = fanatic_befrienders
-            }
+            owner = { has_ai_personality = fanatic_befrienders }
+        }
+        "personality_mirthful_bandits_room" = {
+            exists = owner
+            owner = { has_ai_personality = mirthful_bandits }
         }
         "pre_ftl_ancient_room" = {
             exists = owner
