@@ -933,6 +933,18 @@ greetings = {
 			FROM = { is_megacorp = yes }
 		}
 	}
+	PC_VASSAL_GREETING_DISLOYAL_06 = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			NOT = { has_technology = tech_pk_shielder }
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
+			FROM = { is_megacorp = yes }
+		}
+	}
 	PC_OVERLORD_GREETING_01 = {
 		weight = { weight = 10000 }
 		trigger = {

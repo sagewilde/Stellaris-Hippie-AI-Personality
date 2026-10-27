@@ -171,7 +171,7 @@
 ## Hippies insulting Empires
  PC_INSULT_HIPPIE_08:0 "We're officially uninviting you from free cheese fondue night."
  PC_INSULT_HIPPIE_09:0 "And people think I need to clean my room! [Root.Capital.GetName] is a garbage dump! Thousands of years of you occupying her, and she looks ready to quit! You wanna do the same thing to our galaxy? For money? Get outta here!"
- PC_INSULT_HIPPIE_10:0 "Living in harmony with your people and your planet is the most important thing in life. That's not me preaching; that's me warning you. You should cleanse your energies before you end up in front of a _really_ angry mob, dude."
+ PC_INSULT_HIPPIE_10:0 "Living in harmony with your people and your planet is the most important thing in life. That's not me preaching; that's me warning you. You should cleanse your energies before you end up in front of a really angry mob, dude."
  PC_INSULT_HIPPIE_11:0 "Hey, could you pass this book to [Root.GetRulerName]? We think whatever [Root.Leader.GetSheHe][Root.Leader.GetSRe] doing in the bedroom isn't working, and maybe [Root.Leader.GetSheHe][Root.Leader.GetSRe] only making war because [Root.Leader.GetSheHe] [Root.Leader.GetHasHave] no rhythm."
 ## Hippies being insulted
  PC_INSULTED_HIPPIE_01:0 "Dude! Harsh... I'm feeling kinda hurt right now..."
@@ -242,7 +242,7 @@
  PC_FORM_NAP_SELECT:0 "You want to celebrate peace with the [Root.GetName]?"
  PC_FORM_NAP_PROPOSE_01:0 "You dudes seem to have good vibes, and we wanted to invite you dudes to our next Galactic Love music festival. The [Root.GetName] and the [From.GetName] should be celebrating peace together!"
  PC_FORM_NAP_PROPOSE_02:0 "Peace doesn't work unless we at least try to trust our enemies sometimes. If that means that we hand an olive branch to the Man, then, well, here's the olive branch. Do you wanna give peace a chance?"
- PC_FORM_NAP_ACCEPT:0 "Peace with the [From.GetName]?  Radical notion! Let's get ready to party, dudes!"
+ PC_FORM_NAP_ACCEPT:0 "Peace with the [From.GetName]? Radical notion! Let's get ready to party, dudes!"
  PC_FORM_NAP_REFUSE:0 "We sense a disturbance in the Farce. The 'farce' here being that you actually want to try peace. We're not buying it."
  PC_BREAK_NAP_SELECT:0 "Aw, really? C'mon, dudes, feel the love...?"
  PC_BREAK_NAP_PROPOSE:0 "We think we can trust you dudes. Maybe we don't gotta be so formal about peace agreements, y'know?"
@@ -317,7 +317,7 @@
  PC_HIP_DFLT_MAKE_RIVAL_ACCEPT_FRIENDLY:0 "What?! But we were buds!"
  PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_HOSTILE:0 "Your envoys are not permitted in our capital until further notice. This is a hall of law! Not some... some vegan rally!"
  PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_NEUTRAL:0 "We expect nothing less from capricious and unreliable freeloaders!"
- PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_FRIENDLY:0 "Surely you must be, how do you say it? \"Tripping out\"?"
+ PC_DFLT_HIP_MAKE_RIVAL_ACCEPT_FRIENDLY:0 "Surely you must be, how do you say it? "Tripping out"?"
  PC_HIPPIE_TO_CORPO_MAKE_RIVAL_ACCEPT:0 "We'll never sell out! It's time for us to take the Man down for good!"
  PC_CORPO_TO_HIPPIE_MAKE_RIVAL_ACCEPT:0 "Is this a joke? Are you joking right now? Or are you just high?"
  PC_HUM_HIP_MAKE_RIVAL_ACCEPT:0 "Will you shut up about John Lennon already!?"
