@@ -58,7 +58,9 @@ fantasy_hippies_2 = {
     }
 
     ship_class_names = {
-
+        generic = {
+            HIP_1_CLASS_PsychedelicFunk HIP_1_CLASS_AcidRock HIP_1_CLASS_Chillwave HIP_1_CLASS_StonerRock HIP_1_CLASS_Shoegaze HIP_1_CLASS_Reggae HIP_1_CLASS_FolkPunk HIP_1_CLASS_JazzFusion HIP_1_CLASS_WorldBeat HIP_1_CLASS_SpaceRock HIP_1_CLASS_ElectroTrance HIP_1_CLASS_TripHop HIP_1_CLASS_SoulJazz HIP_1_CLASS_RhythmAndBlues HIP_1_CLASS_HardBop HIP_1_CLASS_PopSoul HIP_1_CLASS_SoftRock HIP_1_CLASS_FolkRock
+        }
     }
 
     fleet_names = {
