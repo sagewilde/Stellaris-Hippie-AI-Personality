@@ -4,8 +4,8 @@ peaceful_counterculture = {
 	bravery = 1.1
 	combat_bravery = 1.5
 
-	military_spending = 1.0
-	colony_spending = 1.2
+	military_spending = 1.2
+	colony_spending = 1.0
 
 	federation_acceptance = 10
 	nap_acceptance = 100
@@ -15,7 +15,7 @@ peaceful_counterculture = {
 	migration_pact_acceptance = 20
 	loyalty_acceptance = 1.0
 
-	advanced_start_chance = 50
+	advanced_start_chance = 100
 
 	weapon_preferences = weapon_type_energy
 	armor_ratio = 0.3
