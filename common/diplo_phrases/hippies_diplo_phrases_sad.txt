@@ -456,6 +456,30 @@ greetings = {
 			FROM = { is_human_species = yes }
 		}
     }
+	PC_VASSAL_GREETING_01_PK = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_loyal_to = FROM
+			FROM = { is_megacorp = yes }
+		}
+	}
+	PC_VASSAL_GREETING_02_PK = {
+		weight = { weight = 10000 }
+		trigger = {
+			has_ai_personality = peaceful_counterculture
+			has_technology = tech_pk_shielder
+			exists = overlord
+			overlord = { is_same_value = FROM }
+			NOT = { is_at_war_with = FROM }
+			is_disloyal_to = FROM
+			FROM = { is_megacorp = yes }
+		}
+	}
 }
 
 action_insult = {

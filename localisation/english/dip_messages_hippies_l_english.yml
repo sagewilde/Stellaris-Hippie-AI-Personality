@@ -146,6 +146,8 @@
  PC_VASSAL_GREETING_DISLOYAL_04:0 "They say that Mother Nature is a bitch. Turns out, she ain't one. She's several."
  PC_VASSAL_GREETING_DISLOYAL_05:0 "We're going to keep sticking it to the Man! Even if we have to pay you rent, we'll pay it in wheelbarrows of greasy pennies!"
  PC_VASSAL_GREETING_DISLOYAL_06:0 "Dude, I found some suspiciously [From.GetSpeciesAdj]-like [From.GetSpeciesShavings] in the bathroom sink. Please, I'm begging you dude, stop doing that, it's so friggin' gross!"
+ PC_VASSAL_GREETING_01_PK:0 "Long as the drum circle's open, we can talk. But don't be surprised if we're a little cautious."
+ PC_VASSAL_GREETING_02_PK:0 "Drum circle's closed, dude. We're not in the mood to talk with you."
 ## Hippie Landlord / Overlord
  PC_OVERLORD_GREETING_01:0 "You sure do have a comfy couch!"
  PC_OVERLORD_GREETING_02:0 "Hey, bud! Got something on your mind? We're always here to listen."
