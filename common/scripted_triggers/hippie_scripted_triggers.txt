@@ -45,6 +45,7 @@ has_phalanx_doctrine_personality = {
 		has_ai_personality = harmonious_hierarchy
 		has_ai_personality = imperial_origin_overlord_ai
 		has_ai_personality = decadent_hierarchy
+		has_ai_personality = utopia_builders
 		has_ai_personality = peaceful_counterculture
 	}
 }
