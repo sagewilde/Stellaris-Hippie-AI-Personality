@@ -39,9 +39,9 @@ hippies = {
 	authority = auth_direct_democratic
 	government = gov_naturalist_commune
     civics = {
-		"civic_beastmasters"
+		"civic_functional_architecture"
+		"civic_peacekeepers"
 		"civic_naturalism"
-		"civic_peaceful_republic"
 	}
 	origin = "origin_default"
 	
