@@ -17,7 +17,7 @@
  PRESCRIPTED_ship_prefix_hippies: "PAX"
  PRESCRIPTED_species_hippies: "Tortle"
  PRESCRIPTED_species_plural_hippies: "Tortles"
- PRESCRIPTED_species_adjective_hippies: "Tortle"
+ PRESCRIPTED_species_adjective_hippies: "Tortle $1$"
  PRESCRIPTED_planet_name_hippies: "Mother Gaia"
  PRESCRIPTED_system_name_hippies: "Beautiful Dream"
  PRESCRIPTED_ruler_name_hippies: "Starchild"
