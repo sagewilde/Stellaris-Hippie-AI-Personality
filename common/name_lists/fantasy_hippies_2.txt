@@ -5,7 +5,9 @@
 
 fantasy_hippies_2 = {
 	category = "Humanoid"
+    customize_random_override = HUM1
 	randomized = no
+    alias = "Hippies"
 
     ### SHIPS
 
