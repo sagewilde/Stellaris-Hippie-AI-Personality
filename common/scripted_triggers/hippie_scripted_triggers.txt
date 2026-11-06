@@ -33,6 +33,7 @@ has_federator_personality = {
 		has_ai_personality = peaceful_traders
 		has_ai_personality = hive_mind_friend
 		has_ai_personality = peaceful_counterculture
+		has_ai_personality = humble_cooperative
 	}
 }
 
