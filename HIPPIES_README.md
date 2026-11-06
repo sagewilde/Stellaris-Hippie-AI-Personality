@@ -30,7 +30,6 @@ If you're using my files to make your personality, you need to add your own entr
 		    has_ai_personality = peaceful_counterculture
 		    has_ai_personality = mirthful_bandits
 		    has_ai_personality = cunning_raiders
-		    #has_ai_personality = mega_union
             has_ai_personality = my_expressive_personality
 	    }
     }

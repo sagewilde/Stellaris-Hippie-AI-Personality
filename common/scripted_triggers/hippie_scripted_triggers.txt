@@ -106,11 +106,11 @@ is_anti_hippie = {
 is_special_personality = {
 	OR = {
 		has_ai_personality = peaceful_counterculture
-		has_ai_personality = mirthful_bandits			# For compatibility with Pirate AI Personalities
+		has_ai_personality = mirthful_bandits
 		has_ai_personality = cunning_raiders
-		#has_ai_personality = mega_union
 	}
 }
+
 
 is_ai_hippie_traits = {
 	hidden_trigger = { exists = from }

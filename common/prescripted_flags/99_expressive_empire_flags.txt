@@ -1,0 +1,11 @@
+empire_hippies = {
+	flags = { hippies custom_start_screen }
+}
+
+empire_teians = {
+	flags = { teians custom_start_screen }
+}
+
+empire_free_fleets_of_lore = {
+	flags = { lore_spacers custom_start_screen }
+}
