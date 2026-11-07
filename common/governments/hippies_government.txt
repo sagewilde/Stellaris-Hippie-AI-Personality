@@ -117,7 +117,6 @@ gov_altruistic_utopia = {
 			factor = 2
 			OR = {
 				has_valid_civic = civic_anarchy_ideals
-				has_valid_civic = civic_civil_education
 				has_valid_civic = civic_idealistic_foundation
 				has_valid_civic = civic_labour_unions
 				has_valid_civic = civic_parliamentary_system
@@ -131,6 +130,7 @@ gov_altruistic_utopia = {
 				has_valid_civic = civic_bureaucracy
 				has_valid_civic = civic_executive_committee
 				has_valid_civic = civic_peaceful_republic
+				has_valid_civic = civic_peacekeepers
 				has_valid_civic = civic_shared_burden
 			}
 		}
@@ -278,10 +278,10 @@ gov_star_travelers = {
 		modifier = {
 			factor = 2
 			OR = {
+				has_valid_civic = civic_civil_education
 				has_valid_civic = civic_cyber_demos_cratos
 				has_valid_civic = civic_science_directorate
 				has_valid_civic = civic_technocracy
-				has_valid_civic = civic_peacekeepers
 			}
 		}
 		modifier = {
