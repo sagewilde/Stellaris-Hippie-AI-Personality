@@ -3,7 +3,7 @@
 ###
 ### This is a load-bearing file! Be advised; deleting, renaming, or otherwise fucking with this file or anything
 ### in it could break important moving parts. Likewise, fucking with the "is_special_personality" trigger from 
-### the hippies_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
+### the pirate_scripted_triggers.txt file WILL break dialogue if you don't know what you're doing (or even if 
 ### you do, sometimes). 
 ###
 ### If you are using this as a template to make your own hyper-detailed AI Personalities, then I'm sorry to say 
@@ -666,7 +666,6 @@ action_close_borders = {
 action_invite_to_federation = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -691,7 +690,6 @@ action_invite_to_federation = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -715,7 +713,6 @@ action_invite_to_federation = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1079,7 +1076,6 @@ action_invite_to_federation = {
 	}
 	accept = {
 		01_ITOA_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1093,7 +1089,6 @@ action_invite_to_federation = {
 			}
 		}
 		02_ITOA_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1429,7 +1424,6 @@ action_invite_to_federation = {
 action_ask_to_join_federation = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1454,7 +1448,6 @@ action_ask_to_join_federation = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1478,7 +1471,6 @@ action_ask_to_join_federation = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1599,7 +1591,6 @@ action_ask_to_join_federation = {
 			}
 		}
 		02_ASK_JOIN_A_SELECT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1773,7 +1764,6 @@ action_ask_to_join_federation = {
 	}
 	accept = {
 		01_ASK_JOIN_A_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1864,7 +1854,6 @@ action_ask_to_join_federation = {
 	}
 	refuse = {
 		01_ASK_JOIN_A_REFUSE = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -1946,7 +1935,6 @@ action_ask_to_join_federation = {
 action_leave_federation = {
 	select = {
 		01_LEAVE_A_SELECT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2107,7 +2095,6 @@ action_leave_federation = {
 	}
 	accept = {
 		01_LEAVE_A_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2305,7 +2292,6 @@ action_kick_from_federation = {
 action_offer_federation_association_status = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2330,7 +2316,6 @@ action_offer_federation_association_status = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2354,7 +2339,6 @@ action_offer_federation_association_status = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2749,7 +2733,6 @@ action_revoke_federation_association_status = {
 action_ask_for_federation_association_status = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2774,7 +2757,6 @@ action_ask_for_federation_association_status = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -2798,7 +2780,6 @@ action_ask_for_federation_association_status = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3181,7 +3162,6 @@ action_end_federation_association_status = {
 action_ask_to_leave_federation = {
 	select = {
 		01_ASK_TO_LEAVE_SELECT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3238,7 +3218,6 @@ action_ask_to_leave_federation = {
 
 	propose = {
 		01_ASK_TO_LEAVE_PROPOSE = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3296,7 +3275,6 @@ action_ask_to_leave_federation = {
 
 	accept = {
 		01_ASK_TO_LEAVE_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3354,7 +3332,6 @@ action_ask_to_leave_federation = {
 
 	refuse = {
 		01_ASK_TO_LEAVE_REFUSE = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3416,7 +3393,6 @@ action_ask_to_leave_federation = {
 action_demand_subjugation = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3441,7 +3417,6 @@ action_demand_subjugation = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3465,7 +3440,6 @@ action_demand_subjugation = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3616,6 +3590,7 @@ action_demand_subjugation = {
 					is_special_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3633,6 +3608,7 @@ action_demand_subjugation = {
 					is_special_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -3825,7 +3801,6 @@ action_demand_subjugation = {
 		}
 		# Accept Xenophobe
 		02_DEMAND_VASS_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -3965,6 +3940,7 @@ action_demand_subjugation = {
 					is_special_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				is_xenophobe = yes
 				OR = {
 					is_friendly_to = FROM
@@ -3987,6 +3963,7 @@ action_demand_subjugation = {
 					is_special_personality = yes
 				}
 				is_megacorp = no
+				is_megaunion = no
 				is_xenophobe = yes
 				NOT = {
 					is_friendly_to = FROM
@@ -4066,7 +4043,6 @@ action_demand_subjugation = {
 action_ask_to_become_subjugated = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -4091,7 +4067,6 @@ action_ask_to_become_subjugated = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -4115,7 +4090,6 @@ action_ask_to_become_subjugated = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -4505,7 +4479,6 @@ action_demand_subsidiary = {
 			}
 		}
 		01_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -4969,7 +4942,6 @@ action_release_subject = {
 action_ask_to_be_released_subject = {
 	select = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_SELECT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -5148,7 +5120,6 @@ action_ask_to_be_released_subject = {
 	}
 	accept = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_ACCEPT = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -5265,7 +5236,6 @@ action_ask_to_be_released_subject = {
 	}
 	refuse = {
 		01_ASK_TO_BE_RELEASED_SUBJECT_REFUSE = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -5365,7 +5335,6 @@ action_ask_to_be_released_subject = {
 			}
 		}
 		01_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -5444,7 +5413,6 @@ action_ask_to_be_released_subject = {
 action_demand_tributary = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -5748,7 +5716,6 @@ action_ask_to_become_tributary = {
 			}
 		}
 		01_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6642,7 +6609,6 @@ action_ask_to_become_satellite = {
 action_form_commercial_pact = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6667,7 +6633,6 @@ action_form_commercial_pact = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6691,7 +6656,6 @@ action_form_commercial_pact = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6898,7 +6862,6 @@ action_break_commercial_pact = {
 action_form_research_agreement = {
 	consider = {
 		02_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6913,7 +6876,6 @@ action_form_research_agreement = {
 			}
 		}
 		03_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
@@ -6927,7 +6889,6 @@ action_form_research_agreement = {
 			}
 		}
 		04_CONSIDER = {
-			
 			trigger = {
 				NOR = {
 					has_ethic = ethic_gestalt_consciousness
