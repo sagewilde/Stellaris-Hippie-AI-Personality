@@ -109,13 +109,7 @@ greetings = {
 			NOT = { has_technology = tech_pk_shielder }
 			NOT = { is_at_war_with = FROM }
 			FROM = {
-				OR = {
-					is_capitalism = yes
-					AND = {
-						is_megacorp = yes
-						is_worker_coop_empire = no
-					}
-				}
+				is_capitalism = yes
 			}
 			OR = {
 				is_hostile_to = FROM
@@ -1142,7 +1136,6 @@ action_insult = {
 				FROM = { has_ai_personality = peaceful_counterculture }
 				is_megacorp = yes
 				NOR = {
-					has_valid_civic = civic_worker_coop
 					has_ethic = ethic_green
 					has_ethic = ethic_fanatic_green
 				}
