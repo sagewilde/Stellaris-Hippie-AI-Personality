@@ -23,9 +23,9 @@ Here's all the stuff you need to get your own Expressive personality working:
  - common/scripted_triggers/mypersonality_scripted_triggers.txt (more later)
  - localisation/klingon/mypersonality_l_klingon.yml
 
-If you're using my files to make your personality, you need to add your own entry to the is_special_personality trigger.
+If you're using my files to make your personality, you need to add your own entry to the is_seap_personality trigger.
 
-    is_special_personality = {
+    is_seap_personality = {
 	    OR = {
 		    has_ai_personality = peaceful_counterculture
 		    has_ai_personality = mirthful_bandits
