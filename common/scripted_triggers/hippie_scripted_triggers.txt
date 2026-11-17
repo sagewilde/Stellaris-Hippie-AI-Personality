@@ -1,55 +1,6 @@
 ### Mod Identifier
 
 has_hippie_ai_personality = { always = yes }
-has_sage_expressive_personalities = { always = yes }
-
-### Vanilla Overwrites
-
-values_others = {
-	AND = {
-		OR = {
-			is_xenophile = yes
-			has_valid_civic = civic_hive_empath
-			has_valid_civic = civic_machine_servitor
-			has_valid_civic = civic_machine_exploration_protocol
-			has_origin = origin_fruitful
-			has_animal_handler_job = yes
-			has_symbiosis_integrator_job = yes
-			has_valid_civic = civic_hive_familiar_face
-			has_hippie_government = yes
-			has_ai_personality = mirthful_bandits		# For compatibility with Pirate AI Personalities
-		}
-		NOT = {
-			has_menace_perk = menp_behemoth_ever_hungry
-		}
-	}
-}
-
-has_federator_personality = {
-	OR = {
-		has_ai_personality = federation_builders
-		has_ai_personality = spiritual_seekers
-		has_ai_personality = migrating_flock
-		has_ai_personality = peaceful_traders
-		has_ai_personality = hive_mind_friend
-		has_ai_personality = peaceful_counterculture
-		has_ai_personality = humble_cooperative
-	}
-}
-
-has_phalanx_doctrine_personality = {
-	OR = {
-		has_ai_personality = spiritual_seekers
-		has_ai_personality = federation_builders
-		has_ai_personality = xenophobic_isolationists
-		has_ai_personality = servitors
-		has_ai_personality = harmonious_hierarchy
-		has_ai_personality = imperial_origin_overlord_ai
-		has_ai_personality = decadent_hierarchy
-		has_ai_personality = utopia_builders
-		has_ai_personality = peaceful_counterculture
-	}
-}
 
 ### Hippie Mod Only
 
