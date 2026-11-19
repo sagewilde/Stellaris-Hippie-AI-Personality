@@ -1,5 +1,5 @@
-version="1.2.9"
-name="Expressive Hippie AI Personality"
+version="1.3.0"
+name="SEAP: Hippie AI Personality"
 tags={
 	"Gameplay"
 	"Diplomacy"
